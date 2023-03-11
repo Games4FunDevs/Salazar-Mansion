@@ -1,0 +1,126 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+// using UnityEngine.SceneManagement;
+
+public class PlayerController : MonoBehaviour
+{
+    // controles (new input system)
+    private Controles controles;
+
+    // movimentação
+    private CharacterController controller;
+    private Vector2 inputs;
+    private Transform cam; // direcao da camera
+    private float curSpeed, walkSpeed = 6f, runSpeed = 12f; // velocidades
+    private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
+    private Vector3 mover; // direcao e velocidade pra
+    // public Animator anim;
+
+    // gravidade
+    [SerializeField] private bool isGrounded;
+    [SerializeField] private LayerMask Ground; // layer dos objs q sao chão
+    private Vector3 _velocity;
+    private float gravidade = -20f;
+
+    public int player = 0;
+
+    void Awake()
+    {
+        // configura variaveis
+        this.controller = GetComponent<CharacterController>();
+        cam = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
+        // anim = transform.GetChild(2).GetComponent<Animator>(); // acessa o corpo
+        // habilita controles
+        controles = new Controles();
+        controles.Enable();
+
+        switch (this.gameObject.name)
+        {
+            case "P1":
+                this.player = 1;
+                break;
+            case "P2":
+                this.player = 2;
+                break;
+        }
+    }
+
+    void Update()
+    {
+        Movement();
+        Gravity();
+        Run();
+        HideCursor();
+    }
+
+    void Movement() // movimentação baseada no input e direção da camera
+    {
+        
+        if (this.player == 1)
+            this.inputs = controles.P1.Andar.ReadValue<Vector2>();
+
+        if (this.player == 2)
+            this.inputs = controles.P2.Andar.ReadValue<Vector2>();
+
+        if (this.inputs.magnitude >= 0.01f) // se ta movendo pra qualquer direcao == apertou botão
+        {
+            float targetAngle = Mathf.Atan2(this.inputs.x, this.inputs.y) * Mathf.Rad2Deg + cam.eulerAngles.y;  // direcao que player vai rotacionar + onde a camera tiver olhando
+            this.angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TURNSMOOTHTIME); // calcula o angulo e tempo pra virar smooth
+            this.transform.rotation = Quaternion.Euler(0f, this.angle, 0f); // rotaciona player
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
+            this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
+            this.controller.Move(mover); // actually move player
+        }
+    }
+
+    void Gravity() // adiciona gravidade
+    {
+        // checa se ta no chao
+        isGrounded = Physics.CheckSphere(GameObject.FindWithTag("GCheck").transform.position, 0.2f, Ground, QueryTriggerInteraction.Ignore);
+        _velocity.y += gravidade * Time.deltaTime; // direcao da gravidade
+        controller.Move(_velocity * Time.deltaTime); // aplica gravidade
+
+        if (isGrounded && _velocity.y < 0)
+            _velocity.y = -2f;
+    }
+
+    void Run() 
+    {
+        switch (player)
+        {
+            case 1:
+                if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
+                {
+                    curSpeed = runSpeed;
+                }
+                if (isGrounded && controles.P1.Correr.ReadValue<float>() == 0)
+                {
+                    curSpeed = walkSpeed;
+                }
+                break;
+            case 2:
+                if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
+                {
+                    curSpeed = runSpeed;
+                }
+                if (isGrounded && controles.P2.Correr.ReadValue<float>() == 0)
+                {
+                    curSpeed = walkSpeed;
+                }
+                break;
+        }
+    }
+
+    // void ShowCursor()
+    // {
+    //     Cursor.lockState = CursorLockMode.Confined;
+    //     Cursor.visible = true;
+    // }
+
+    void HideCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
+    }
+}
