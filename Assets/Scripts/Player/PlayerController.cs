@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     // movimentação
     private CharacterController controller;
     private Vector2 inputs;
-    private Transform cam; // direcao da camera
+    public Transform cam; // direcao da camera
     private float curSpeed, walkSpeed = 6f, runSpeed = 12f; // velocidades
     private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
     private Vector3 mover; // direcao e velocidade pra
@@ -25,11 +25,14 @@ public class PlayerController : MonoBehaviour
 
     public int player = 0;
 
+    // teste
+    public bool hasKey = false;
+
     void Awake()
     {
         // configura variaveis
         this.controller = GetComponent<CharacterController>();
-        cam = GameObject.FindWithTag("MainCamera").GetComponent<Transform>();
+        // cam = GameObject.FindWithTag("P1 cam").GetComponent<Transform>();
         // anim = transform.GetChild(2).GetComponent<Animator>(); // acessa o corpo
         // habilita controles
         controles = new Controles();
@@ -54,9 +57,17 @@ public class PlayerController : MonoBehaviour
         HideCursor();
     }
 
+    void OnTriggerStay(Collider col)
+    {
+        if (col.gameObject.name.Contains("Key") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasKey = true;
+            Destroy(col.gameObject);
+        }
+    }
+
     void Movement() // movimentação baseada no input e direção da camera
     {
-        
         if (this.player == 1)
             this.inputs = controles.P1.Andar.ReadValue<Vector2>();
 
