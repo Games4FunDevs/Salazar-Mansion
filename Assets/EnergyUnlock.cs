@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoon : MonoBehaviour
+public class EnergyUnlock : MonoBehaviour
 {
     private Controles controles;
     private Vector2 inputs;
@@ -21,13 +21,9 @@ public class OpenDoon : MonoBehaviour
     {
         if (col.CompareTag("P1") || col.CompareTag("P2")) 
         {
-            if (col.gameObject.GetComponent<PlayerController>().hasKey)
-                this.unlocked = true;
-
-            if (unlocked && (controles.P1.Interagir.ReadValue<float>() == 1 || controles.P2.Interagir.ReadValue<float>() == 1))
+            if (controles.P1.Interagir.ReadValue<float>() == 1 || controles.P2.Interagir.ReadValue<float>() == 1)
             {
-                this.gameObject.SetActive(false); // anim
-                col.gameObject.GetComponent<PlayerController>().hasKey = false;
+                Destroy(this.transform.GetChild(0).gameObject);
             }
         }
     }
