@@ -5,14 +5,11 @@ using UnityEngine;
 public class EmpurrarObj : MonoBehaviour
 {
     public int players = 1, count = 0;
-    public string eixo = "x";
-    public float forceMagnitude = 1;
     public bool pushing;
-
-    public GameObject parent, col_;
 
     private Controles controles;
     private Vector2 inputs;
+    public Vector3 direction;
     
     void Awake()
     {
@@ -28,25 +25,41 @@ public class EmpurrarObj : MonoBehaviour
     void Update()
     {
         if (GameObject.Find("P1").GetComponent<PlayerController>().movelCol == true && GameObject.Find("P2").GetComponent<PlayerController>().movelCol == true)
-            count = 2;
+            this.count = 2;
+        else
+            this.count = 0; 
     }
 
     void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
-            count = 1;
-
-        if ((players == 1 && count == 1) || (players == 2 && count == 2))
+        if ((col.gameObject.tag == "P1" && controles.P1.Andar.ReadValue<Vector2>().magnitude > 0f) || (col.gameObject.tag == "P2" && controles.P2.Andar.ReadValue<Vector2>().magnitude > 0f)) 
         {
-            if ((col.gameObject.tag == "P1" && controles.P1.Andar.ReadValue<Vector2>().magnitude > 0f) || (col.gameObject.tag == "P2" && controles.P2.Andar.ReadValue<Vector2>().magnitude > 0f)) 
+            if ((players == 1 && count == 1) || (players == 2 && count == 2))
             {
-                this.gameObject.transform.position += new Vector3(.01f, 0, 0);
-                pushing = true;
+                if (this.gameObject.name.Contains("Pesado"))
+                    this.gameObject.transform.position += direction;
+                
+                if (this.gameObject.name.Contains("Leve"))
+                    this.gameObject.transform.position += direction;
             }
-            else if ((col.gameObject.tag == "P1" && controles.P1.Andar.ReadValue<Vector2>().magnitude == 0f) || (col.gameObject.tag == "P2" && controles.P2.Andar.ReadValue<Vector2>().magnitude == 0f))
-            {
-                pushing = false;
-            }
+        }
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
+        {
+            count++;
+            pushing = true;
+        }
+    }
+    
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
+        {
+            count--;
+            pushing = false;
         }
     }
 }

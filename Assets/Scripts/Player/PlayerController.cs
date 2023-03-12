@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
         if (col.gameObject.name.Contains("Móvel"))
         {
-            movelCol = true;
+            this.movelCol = true;
             if (col.GetComponent<EmpurrarObj>().pushing)
                 curSpeed = pushSpeed;
             else
@@ -77,7 +77,12 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            movelCol = false;
+            this.movelCol = false;
+        }
+
+        if (col.gameObject.name == "EndGame")
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 
