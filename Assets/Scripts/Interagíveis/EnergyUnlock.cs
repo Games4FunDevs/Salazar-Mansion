@@ -19,12 +19,10 @@ public class EnergyUnlock : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if (col.CompareTag("P1") || col.CompareTag("P2")) 
+        if ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)) 
         {
-            if (controles.P1.Interagir.ReadValue<float>() == 1 || controles.P2.Interagir.ReadValue<float>() == 1)
-            {
-                Destroy(this.transform.GetChild(0).gameObject);
-            }
+            Destroy(this.transform.GetChild(0).gameObject);
+            this.gameObject.GetComponent<EnergyUnlock>().enabled = false;
         }
     }
 }

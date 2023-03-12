@@ -24,7 +24,7 @@ public class OpenDoon : MonoBehaviour
             if (col.gameObject.GetComponent<PlayerController>().hasKey)
                 this.unlocked = true;
 
-            if (unlocked && (controles.P1.Interagir.ReadValue<float>() == 1 || controles.P2.Interagir.ReadValue<float>() == 1))
+            if (unlocked && (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1))
             {
                 this.gameObject.SetActive(false); // anim
                 col.gameObject.GetComponent<PlayerController>().hasKey = false;
