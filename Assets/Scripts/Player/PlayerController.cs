@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     // movimentação
     private CharacterController controller;
-    private Vector2 inputs;
+    public Vector2 inputs;
     public Transform cam; // direcao da camera
     private float curSpeed, walkSpeed = 6f, runSpeed = 12f; // velocidades
     private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
