@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public Vector2 inputs;
     public Transform cam; // direcao da camera
-    private float curSpeed, walkSpeed = 6f, runSpeed = 12f; // velocidades
+    public float curSpeed, walkSpeed = 6f, runSpeed = 12f, pushSpeed = .2f; // velocidades
     private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
     private Vector3 mover; // direcao e velocidade pra
     // public Animator anim;
@@ -57,12 +57,27 @@ public class PlayerController : MonoBehaviour
         HideCursor();
     }
 
+    public bool movelCol;
+
     void OnTriggerStay(Collider col)
     {
         if (col.gameObject.name.Contains("Key") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasKey = true;
             Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.name.Contains("Móvel"))
+        {
+            movelCol = true;
+            if (col.GetComponent<EmpurrarObj>().pushing)
+                curSpeed = pushSpeed;
+            else
+                curSpeed = walkSpeed;
+        }
+        else
+        {
+            movelCol = false;
         }
     }
 
