@@ -8,13 +8,13 @@ public class OpenDoon : MonoBehaviour
     private Vector2 inputs;
 
     public bool unlocked = false;
-    // private Animator anim;
+    public Animator anim;
 
     void Awake()
     {
         controles = new Controles();
         controles.Enable();
-        // anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     void OnTriggerStay(Collider col)
@@ -26,7 +26,8 @@ public class OpenDoon : MonoBehaviour
 
             if (unlocked && (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1))
             {
-                this.gameObject.SetActive(false); // anim
+                // this.gameObject.SetActive(false); // anim
+                anim.SetBool("open", true);
                 col.gameObject.GetComponent<PlayerController>().hasKey = false;
             }
         }
