@@ -21,7 +21,7 @@ public class SwitchCam : MonoBehaviour
         Cam.gameObject.layer = 0; 
         }
         }
-        Debug.Log(estaoNaCena);
+        
     }
     void OnTriggerEnter(Collider other)
     {
@@ -75,7 +75,6 @@ public class SwitchCam : MonoBehaviour
         }
         if(P1naCena == false && P2naCena == false)
         {
-            Debug.Log(other.name);
             Cam.SetActive(false);
             Cam.layer = 0;
             virtualCamera.Follow = null; virtualCamera.LookAt = null; 
