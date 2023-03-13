@@ -17,16 +17,10 @@ public class SwitchCam : MonoBehaviour
         {estaoNaCena = true;
         if(estaoNaCena == true)
         {
-        Maincam.SetActive(true); 
-        P1cam.SetActive(false);
-        P2cam.SetActive(false);
         virtualCamera.Follow = target.transform; virtualCamera.LookAt = target.transform;
         Cam.gameObject.layer = 0; 
         }
-       
         }
-        else{estaoNaCena = false; if(estaoNaCena == false){Maincam.SetActive(false); P1cam.SetActive(true);
-        P2cam.SetActive(true);}}
         Debug.Log(estaoNaCena);
     }
     void OnTriggerEnter(Collider other)
@@ -37,9 +31,7 @@ public class SwitchCam : MonoBehaviour
             P1naCena = true;
             P1 = other.gameObject;
             if(P1naCena == true && P2naCena == false)
-            { 
-            Maincam.SetActive(false);
-            P1cam.SetActive(true);
+            {
             virtualCamera.Follow = P1.transform; virtualCamera.LookAt = P1.transform;
             Cam.gameObject.layer = 6;
             } 
@@ -51,21 +43,11 @@ public class SwitchCam : MonoBehaviour
             P2 = other.gameObject;
             if(P2naCena == true && P1naCena == false)
             {
-            Maincam.SetActive(false);
-            P2cam.SetActive(true);
             virtualCamera.Follow = P2.transform; virtualCamera.LookAt = P2.transform;
             Cam.gameObject.layer = 7;
             }
         }
     }
-    // void OnTriggerStay(Collider other) 
-    // {
-    //     if(other.CompareTag("P1") || other.CompareTag("P2"))
-    //     {
-    //         Debug.Log(other.name);
-    //         Cam.SetActive(true);
-    //     }
-    // }
     void OnTriggerExit(Collider other)
     {
         
