@@ -22,6 +22,7 @@ public class EnergyUnlock : MonoBehaviour
         if ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)) 
         {
             Destroy(this.transform.GetChild(0).gameObject);
+            this.transform.GetChild(1).gameObject.SetActive(true);
             this.gameObject.GetComponent<EnergyUnlock>().enabled = false;
         }
     }
