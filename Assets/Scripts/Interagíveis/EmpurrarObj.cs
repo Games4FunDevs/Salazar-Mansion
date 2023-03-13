@@ -36,11 +36,7 @@ public class EmpurrarObj : MonoBehaviour
         {
             if ((players == 1 && count == 1) || (players == 2 && count == 2))
             {
-                if (this.gameObject.name.Contains("Pesado"))
-                    this.gameObject.transform.position += direction;
-                
-                if (this.gameObject.name.Contains("Leve"))
-                    this.gameObject.transform.position += direction;
+                this.gameObject.transform.position += direction;
             }
         }
     }
