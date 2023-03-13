@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-// using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,10 +12,10 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public Vector2 inputs;
     public Transform cam; // direcao da camera
-    private float curSpeed, walkSpeed = 6f, runSpeed = 12f; // velocidades
+    public float curSpeed, walkSpeed = 6f, runSpeed = 12f, pushSpeed = .2f; // velocidades
     private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
     private Vector3 mover; // direcao e velocidade pra
-    // public Animator anim;
+    public Animator anim;
 
     // gravidade
     [SerializeField] private bool isGrounded;
@@ -27,13 +27,14 @@ public class PlayerController : MonoBehaviour
 
     // teste
     public bool hasKey = false;
+    public bool movelCol;
 
     void Awake()
     {
         // configura variaveis
         this.controller = GetComponent<CharacterController>();
         // cam = GameObject.FindWithTag("P1 cam").GetComponent<Transform>();
-        // anim = transform.GetChild(2).GetComponent<Animator>(); // acessa o corpo
+        anim = transform.GetChild(1).GetComponent<Animator>(); // acessa o corpo
         // habilita controles
         controles = new Controles();
         controles.Enable();
@@ -55,6 +56,7 @@ public class PlayerController : MonoBehaviour
         Gravity();
         Run();
         HideCursor();
+        Animations();
     }
 
     void OnTriggerStay(Collider col)
@@ -63,6 +65,24 @@ public class PlayerController : MonoBehaviour
         {
             this.hasKey = true;
             Destroy(col.gameObject);
+        }
+
+        if (col.gameObject.name.Contains("Móvel"))
+        {
+            this.movelCol = true;
+            if (col.GetComponent<EmpurrarObj>().pushing)
+                curSpeed = pushSpeed;
+            else
+                curSpeed = walkSpeed;
+        }
+        else
+        {
+            this.movelCol = false;
+        }
+
+        if (col.gameObject.name == "EndGame")
+        {
+            SceneManager.LoadScene("Menu");
         }
     }
 
@@ -121,6 +141,22 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    void Animations()
+    {
+        switch (curSpeed)
+        {
+            case 6:
+                anim.SetInteger("state", 1);
+                break;
+            case 12:
+                anim.SetInteger("state", 2);
+                break;
+        }
+
+        if (inputs.magnitude <= 0)
+            anim.SetInteger("state", 0);
     }
 
     // void ShowCursor()

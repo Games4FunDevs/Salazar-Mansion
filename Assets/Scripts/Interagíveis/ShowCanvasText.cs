@@ -37,13 +37,8 @@ public class ShowCanvasText : MonoBehaviour
  
     void OnTriggerStay(Collider col)
     {
-        if (col.CompareTag("P1") || col.CompareTag("P2")) 
-        {
-            if (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered)
-            {
-                showing = !showing;
-            }
-        }
+        if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
+            showing = !showing;
 
         if (col.CompareTag("P1")) 
             player = 1;
