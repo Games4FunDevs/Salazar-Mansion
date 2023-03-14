@@ -10,26 +10,43 @@ public class OpenDoon : MonoBehaviour
     public bool unlocked = false;
     public Animator anim;
 
+    private bool openTrigger, closeTrigger;
+    public string openDoor = "OpenDoor1", closeDoor = "CloseDoor1";
+    public GameObject other;
+
     void Awake()
     {
         controles = new Controles();
         controles.Enable();
-        anim = GetComponent<Animator>();
     }
 
     void OnTriggerStay(Collider col)
     {
         if (col.CompareTag("P1") || col.CompareTag("P2")) 
         {
-            if (col.gameObject.GetComponent<PlayerController>().hasKey)
-                this.unlocked = true;
-
-            if (unlocked && (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1))
+            if (col.gameObject.GetComponent<PlayerController>().hasKey == true)
             {
-                // this.gameObject.SetActive(false); // anim
-                anim.SetBool("open", true);
-                col.gameObject.GetComponent<PlayerController>().hasKey = false;
+                this.unlocked = true;
+                other.GetComponent<OpenDoon>().unlocked = true;
             }
+        }
+
+        if (this.unlocked == true && (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)
+            && this.openTrigger)
+        {
+            this.anim.Play(openDoor, 0, 0);
+            this.other.GetComponent<OpenDoon>().closeTrigger = true;
+            this.openTrigger = false;
+        }
+    }
+
+    void OnTriggerExit(Collider col) 
+    {
+        if ((col.CompareTag("P1") || col.CompareTag("P2")) && closeTrigger)
+        {
+            anim.Play(closeDoor, 0, 0);
+            this.other.GetComponent<OpenDoon>().openTrigger = true;
+            closeTrigger = false;
         }
     }
 }
