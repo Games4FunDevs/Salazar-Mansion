@@ -147,10 +147,10 @@ public class PlayerController : MonoBehaviour
     {
         switch (curSpeed)
         {
-            case 6:
+            case 3:
                 anim.SetInteger("state", 1);
                 break;
-            case 12:
+            case 6:
                 anim.SetInteger("state", 2);
                 break;
         }
