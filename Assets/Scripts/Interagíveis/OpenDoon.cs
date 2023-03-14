@@ -24,15 +24,15 @@ public class OpenDoon : MonoBehaviour
     {
         if (col.CompareTag("P1") || col.CompareTag("P2")) 
         {
-            if (col.gameObject.GetComponent<PlayerController>().hasKey)
+            if (col.gameObject.GetComponent<PlayerController>().hasKey == true)
             {
                 this.unlocked = true;
                 other.GetComponent<OpenDoon>().unlocked = true;
             }
         }
 
-        if ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)
-            && this.unlocked && this.openTrigger)
+        if (this.unlocked == true && (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)
+            && this.openTrigger)
         {
             this.anim.Play(openDoor, 0, 0);
             this.other.GetComponent<OpenDoon>().closeTrigger = true;
