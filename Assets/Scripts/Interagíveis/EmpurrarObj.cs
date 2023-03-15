@@ -10,6 +10,8 @@ public class EmpurrarObj : MonoBehaviour
     private Controles controles;
     private Vector2 inputs;
     public Vector3 direction;
+
+    public GameObject gp1, gp2;
     
     void Awake()
     {
@@ -24,8 +26,8 @@ public class EmpurrarObj : MonoBehaviour
 
     void Update()
     {
-        // if (GameObject.Find("P1").GetComponent<PlayerController>().movelCol == true && GameObject.Find("P2").GetComponent<PlayerController>().movelCol == true)
-        //     this.count = 2;
+        if (gp1 != null && gp2 != null)
+            this.count = 2;
     }
 
     void OnTriggerStay(Collider col)
@@ -41,16 +43,33 @@ public class EmpurrarObj : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
+        if (gp1 != null || gp2 != null)
         {
             if (GameObject.Find("DescItemMovelL") != null)
             {
                 GameObject.Find("DescItemMovelL").gameObject.GetComponent<BoxCollider>().enabled = false;
             }
-                
-            this.count++;
+            // if (GameObject.Find("DescItemMovelP") != null)
+            // {
+            //     GameObject.Find("DescItemMovelP").gameObject.GetComponent<BoxCollider>().enabled = false;
+            // }
             pushing = true;
         }
+
+        if ((gp1 != null && gp2 == null) || ((gp1 == null && gp2 != null)))
+        {
+            this.count = 1;
+        }
+        else if (gp1 != null && gp2 != null)
+        {
+            this.count = 2;
+        }
+
+        if (col.gameObject.name == "P1")
+            gp1 = col.gameObject;
+            
+        if (col.gameObject.name == "P2")
+            gp2 = col.gameObject;
 
         if (col.gameObject.name == "stopMovel")
         {
@@ -64,7 +83,9 @@ public class EmpurrarObj : MonoBehaviour
                 GameObject.Find("FalaP2").SetActive(false);
                 
             Destroy(GameObject.Find("DescItemMovelL").gameObject);
+            // Destroy(GameObject.Find("DescItemMovelP").gameObject);
             Destroy(col.gameObject);
+            this.gameObject.GetComponent<EmpurrarObj>().enabled = false;
         }
     }
     
@@ -72,8 +93,14 @@ public class EmpurrarObj : MonoBehaviour
     {
         if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
         {
-            this.count--;
+            //this.count--;
             pushing = false;
         }
+
+        if (col.gameObject.name == "P1")
+            gp1 = null;
+            
+        if (col.gameObject.name == "P2")
+            gp2 = null;
     }
 }
