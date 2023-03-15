@@ -13,6 +13,8 @@ public class FluxoCut : MonoBehaviour
     {
         controles = new Controles();
         controles.Enable();
+
+        p2cam.SetActive(false);
     }
 
     void OnTriggerStay(Collider col)
