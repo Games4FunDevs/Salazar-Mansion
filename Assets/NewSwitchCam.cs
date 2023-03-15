@@ -5,8 +5,8 @@ using Cinemachine;
 
 public class NewSwitchCam : MonoBehaviour
 {
-    public Transform P1, P2;
-    public bool P1naCena, P2naCena;
+    public Transform P1, P2, target;
+    public bool P1naCena, P2naCena, target_2, switchMov;
     public CinemachineVirtualCamera activeCam;
     public GameObject Cam;
     // Start is called before the first frame update
@@ -30,9 +30,19 @@ public class NewSwitchCam : MonoBehaviour
         }
         if(P1naCena == true && P2naCena == true)
         {
+            if(target_2 == true)
+            {
+            activeCam.Priority = 1;
+            activeCam.LookAt = target;
+            Cam.layer = 0;
+            }
+            else
+            {
             activeCam.Priority = 1;
             activeCam.LookAt = null;
             Cam.layer = 0;
+            }
+           
         }
     }
      void OnTriggerExit(Collider other)

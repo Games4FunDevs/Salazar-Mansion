@@ -103,6 +103,7 @@ public class PlayerController : MonoBehaviour
             this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
             this.controller.Move(mover); // actually move player
         }
+        
     }
 
     void Gravity() // adiciona gravidade
