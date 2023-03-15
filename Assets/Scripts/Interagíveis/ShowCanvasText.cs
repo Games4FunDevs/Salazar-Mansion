@@ -84,6 +84,12 @@ public class ShowCanvasText : MonoBehaviour
             player = 2;
     }
 
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.GetComponent<PlayerController>().hasKey && this.gameObject.name == "DescItem Tranca")
+            Destroy(this.gameObject);
+    }
+
     void OnTriggerExit(Collider col)
     {
         // if ((col.CompareTag("P1") || col.CompareTag("P2")))
