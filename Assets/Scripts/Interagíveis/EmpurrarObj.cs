@@ -26,8 +26,6 @@ public class EmpurrarObj : MonoBehaviour
     {
         if (GameObject.Find("P1").GetComponent<PlayerController>().movelCol == true && GameObject.Find("P2").GetComponent<PlayerController>().movelCol == true)
             this.count = 2;
-        else
-            this.count = 0; 
     }
 
     void OnTriggerStay(Collider col)
@@ -45,7 +43,7 @@ public class EmpurrarObj : MonoBehaviour
     {
         if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
         {
-            count++;
+            this.count++;
             pushing = true;
         }
     }
@@ -54,7 +52,7 @@ public class EmpurrarObj : MonoBehaviour
     {
         if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
         {
-            count--;
+            this.count--;
             pushing = false;
         }
     }

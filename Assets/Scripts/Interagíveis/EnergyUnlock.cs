@@ -8,13 +8,11 @@ public class EnergyUnlock : MonoBehaviour
     private Vector2 inputs;
 
     public bool unlocked = false;
-    // private Animator anim;
 
     void Awake()
     {
         controles = new Controles();
         controles.Enable();
-        // anim = GetComponent<Animator>();
     }
 
     void OnTriggerStay(Collider col)
