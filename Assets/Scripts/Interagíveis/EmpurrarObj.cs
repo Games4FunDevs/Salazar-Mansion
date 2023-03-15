@@ -33,8 +33,8 @@ public class EmpurrarObj : MonoBehaviour
         if (gp1 != null && gp2 != null)
             this.count = 2;
 
-        if (pushing)
-            audio_.Play();
+        // if (pushing)
+        //     audio_.Play();
     }
 
     void OnTriggerStay(Collider col)
