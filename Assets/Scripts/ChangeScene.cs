@@ -9,4 +9,8 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene(name);
     }
+
+    public void Sair() {
+        Application.Quit();
+    }
 }
