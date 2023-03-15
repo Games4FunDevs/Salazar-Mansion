@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2482461408084719316}
   - component: {fileID: 2721288260044671795}
   m_Layer: 0
-  m_Name: bater
+  m_Name: FluxoCut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,6 +59,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa35e18a78a7f94b964b191fdfb39f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p2cam: {fileID: 0}
+  p1cam: {fileID: 0}
 --- !u!82 &2721288260044671795
 AudioSource:
   m_ObjectHideFlags: 0
