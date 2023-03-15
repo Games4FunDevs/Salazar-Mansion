@@ -15,6 +15,7 @@ public class FluxoCut : MonoBehaviour
         controles.Enable();
 
         p2cam.SetActive(false);
+        p1cam.GetComponent<Camera>().rect = new Rect(0, 0, 1, 1);
     }
 
     void OnTriggerStay(Collider col)
