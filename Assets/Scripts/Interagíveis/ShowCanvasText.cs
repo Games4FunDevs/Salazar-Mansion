@@ -89,12 +89,6 @@ public class ShowCanvasText : MonoBehaviour
                 CloseText();
             }
         }
-
-        if (this.gameObject.name == "DescItemMovelL" && col.gameObject.name == "colDestroy")
-        {
-            CloseText();
-            Destroy(col.gameObject);
-        }
     }
 
     void OnTriggerExit(Collider col)
@@ -106,7 +100,7 @@ public class ShowCanvasText : MonoBehaviour
         }
     }
 
-    void CloseText()
+    public void CloseText()
     {
         showing = false;
         this.cAuto = false;

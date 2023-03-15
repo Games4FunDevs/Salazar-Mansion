@@ -44,7 +44,9 @@ public class EmpurrarObj : MonoBehaviour
         if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
         {
             if (GameObject.Find("DescItemMovelL") != null)
-                GameObject.Find("DescItemMovelL").gameObject.SetActive(false);
+            {
+                GameObject.Find("DescItemMovelL").gameObject.GetComponent<BoxCollider>().enabled = false;
+            }
                 
             this.count++;
             pushing = true;
@@ -54,6 +56,14 @@ public class EmpurrarObj : MonoBehaviour
         {
             canMove = false;
             this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            GameObject.Find("DescItemMovelL").GetComponent<ShowCanvasText>().showing = false;
+            if (GameObject.Find("FalaP1") != null)
+                GameObject.Find("FalaP1").SetActive(false);
+            
+            if (GameObject.Find("FalaP2") != null)
+                GameObject.Find("FalaP2").SetActive(false);
+                
+            Destroy(GameObject.Find("DescItemMovelL").gameObject);
             Destroy(col.gameObject);
         }
     }
