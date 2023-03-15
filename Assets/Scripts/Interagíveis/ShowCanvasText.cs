@@ -31,6 +31,7 @@ public class ShowCanvasText : MonoBehaviour
                 if (controles.P1.Interagir.triggered)
                 {
                     showing = false;
+                    gObject[0].SetActive(false);
                     StartCoroutine("ShowCollider", 0.15f);
                 }
             } 
@@ -42,17 +43,18 @@ public class ShowCanvasText : MonoBehaviour
                 if (controles.P2.Interagir.triggered)
                 {
                     showing = false;
+                    gObject[1].SetActive(false);
                     StartCoroutine("ShowCollider", 0.15f);
                 }
             }
         }
-        else
-        {
-            if (player == 1)
-                gObject[0].SetActive(false);
-            if (player == 2)
-                gObject[1].SetActive(false);
-        }
+        // else
+        // {
+        //     if (player == 1)
+                
+        //     if (player == 2)
+                
+        // }
     }
  
     void OnTriggerStay(Collider col)
@@ -69,14 +71,14 @@ public class ShowCanvasText : MonoBehaviour
         //     this.cAuto = false;
         // }
 
-        if (!this.auto)
-        {
+        // if (!this.auto)
+        // {
             if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
             {
                 this.showing = true;
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
             }
-        }
+        // }
 
         if (col.CompareTag("P1")) 
             player = 1;
@@ -86,7 +88,8 @@ public class ShowCanvasText : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.GetComponent<PlayerController>().hasKey && this.gameObject.name == "DescItem Tranca")
+        if (col.GetComponent<PlayerController>().hasKey && this.gameObject.name == "DescItem Tranca" ||
+            this.gameObject.name == "DescItem Tranca 1" && GameObject.Find("door (5)").transform.GetChild(0).GetComponent<OpenDoon>().unlocked)
             Destroy(this.gameObject);
     }
 
