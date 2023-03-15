@@ -235,7 +235,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -759,18 +759,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143762120}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.54}
-  m_LocalScale: {x: 0.016689079, y: 0.016689083, z: 0.016689079}
+  m_LocalRotation: {x: 0.70710677, y: 0.70710677, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0066162716}
+  m_LocalScale: {x: 0.00084937684, y: 0.00084937713, z: 0.00084937684}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1128901595}
-  m_Father: {fileID: 1619389662}
-  m_RootOrder: 4
+  m_Father: {fileID: 1116149312}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.13, y: 2.07}
+  m_AnchoredPosition: {x: 0.10535124, y: -0.02748394}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &143762122
@@ -1927,7 +1927,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2286,7 +2286,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2380,7 +2380,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5080,7 +5080,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5617,7 +5617,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5883,7 +5883,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5933,6 +5933,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &1116149312 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2574624472430357274, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+  m_PrefabInstance: {fileID: 1619389661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1128901594
 GameObject:
   m_ObjectHideFlags: 0
@@ -8798,6 +8803,10 @@ PrefabInstance:
       propertyPath: unlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6995038291320674529, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8304984106181528698, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
       propertyPath: m_Name
       value: door (3)
@@ -9690,7 +9699,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -10567,7 +10576,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.74967307, b: 0.5896226, a: 1}
-  m_Intensity: 2
+  m_Intensity: 3
   m_Range: 12
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
