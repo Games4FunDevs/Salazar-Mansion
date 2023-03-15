@@ -33,6 +33,7 @@ public class BotoesAcionaveis1 : MonoBehaviour
         if ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)) 
         {
             this.status = true;
+            this.GetComponent<Animator>().Play("botao", 0, 0);
             this.ctime = timer;
         }
     }

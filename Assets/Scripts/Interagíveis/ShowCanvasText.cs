@@ -30,63 +30,89 @@ public class ShowCanvasText : MonoBehaviour
 
                 if (controles.P1.Interagir.triggered)
                 {
-                    showing = false;
+                    this.showing = false;
+                    this.cAuto = false;
+                    gObject[0].SetActive(false);
+                    StartCoroutine("ShowCollider", 0.15f);
                 }
             } 
-            else if (player == 2)
+            if (player == 2)
             {
                 gObject[1].SetActive(true);
                 gObject[1].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
 
                 if (controles.P2.Interagir.triggered)
                 {
-                    showing = false;
+                    this.showing = false;
+                    this.cAuto = false;
+                    gObject[1].SetActive(false);
+                    StartCoroutine("ShowCollider", 0.15f);
                 }
             }
         }
-        else
+
+        if (this.gameObject.name == "DescItem Tranca 1" && GameObject.Find("door (5)").transform.GetChild(0).GetComponent<OpenDoon>().unlocked)
         {
-            if (player == 1)
-                gObject[0].SetActive(false);
-            else if (player == 2)
-                gObject[1].SetActive(false);
+           CloseText();
         }
     }
  
     void OnTriggerStay(Collider col)
     {
-        if (auto && cAuto)
+        if (this.auto && this.cAuto && (col.CompareTag("P1") || col.CompareTag("P2")))
         {
-            showing = true;
+            this.showing = true;
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
-            if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
-            {
-                showing = false;
-                cAuto = false;
-            }
         }
-        if (!auto)
+
+        if (!this.auto)
         {
             if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
             {
-                showing = true;
+                this.showing = true;
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
             }
         }
 
         if (col.CompareTag("P1")) 
-            player = 1;
+            this.player = 1;
         else if (col.CompareTag("P2"))
-            player = 2;
+            this.player = 2;
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.CompareTag("P1") || col.CompareTag("P2"))
+        {
+            if (col.GetComponent<PlayerController>().hasKey && this.gameObject.name == "DescItem Tranca") 
+            {
+                CloseText();
+            }
+        }
     }
 
     void OnTriggerExit(Collider col)
     {
-        if ((col.CompareTag("P1") || col.CompareTag("P2")))
+        if (col.CompareTag("P1") || col.CompareTag("P2"))
         {
-            this.gameObject.GetComponent<BoxCollider>().enabled = true;
-            if (auto && !cAuto)
-                cAuto = true;
+            if (!this.cAuto && this.auto)
+                this.cAuto = true;
         }
+    }
+
+    public void CloseText()
+    {
+        this.showing = false;
+        this.cAuto = false;
+        gObject[0].SetActive(false);
+        gObject[1].SetActive(false);
+        StartCoroutine("ShowCollider", 0.15f);
+        Destroy(this.gameObject);
+    }
+
+    IEnumerator ShowCollider()
+    {
+        yield return new WaitForSeconds(.15f);
+        this.gameObject.GetComponent<BoxCollider>().enabled = true;
     }
 }

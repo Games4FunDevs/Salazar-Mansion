@@ -13,6 +13,9 @@ public class BotoesAcionaveisManager : MonoBehaviour
         botoes[1] = this.transform.GetChild(1).gameObject.GetComponent<BotoesAcionaveis1>().status; 
 
         if (botoes[0] && botoes[1])
-            door.GetComponent<OpenDoon>().anim.SetBool("open", true);
+        {
+            door.transform.GetChild(0).GetComponent<OpenDoon>().unlocked = true;
+            door.GetComponent<Animator>().Play("OpenDoor2", 0, 0);
+        }
     }
 }

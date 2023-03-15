@@ -8,13 +8,11 @@ public class EnergyUnlock : MonoBehaviour
     private Vector2 inputs;
 
     public bool unlocked = false;
-    // private Animator anim;
 
     void Awake()
     {
         controles = new Controles();
         controles.Enable();
-        // anim = GetComponent<Animator>();
     }
 
     void OnTriggerStay(Collider col)
@@ -23,6 +21,7 @@ public class EnergyUnlock : MonoBehaviour
         {
             this.transform.GetChild(1).gameObject.SetActive(true);
             this.transform.GetChild(0).gameObject.SetActive(false);
+            this.GetComponent<Animator>().Play("alavanca", 0, 0);
             this.gameObject.GetComponent<EnergyUnlock>().enabled = false;
         }
     }

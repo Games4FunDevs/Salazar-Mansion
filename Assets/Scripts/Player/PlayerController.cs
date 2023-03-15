@@ -27,7 +27,8 @@ public class PlayerController : MonoBehaviour
 
     // teste
     public bool hasKey = false;
-    public bool movelCol;
+
+    AudioSource audio;
 
     void Awake()
     {
@@ -38,6 +39,8 @@ public class PlayerController : MonoBehaviour
         // habilita controles
         controles = new Controles();
         controles.Enable();
+
+        audio = GetComponent<AudioSource>();
 
         switch (this.gameObject.name)
         {
@@ -67,19 +70,6 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
         }
 
-        if (col.gameObject.name.Contains("Móvel"))
-        {
-            this.movelCol = true;
-            if (col.GetComponent<EmpurrarObj>().pushing)
-                curSpeed = pushSpeed;
-            else
-                curSpeed = walkSpeed;
-        }
-        else
-        {
-            this.movelCol = false;
-        }
-
         if (col.gameObject.name == "EndGame")
         {
             SceneManager.LoadScene("Menu");
@@ -102,6 +92,7 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
             this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
             this.controller.Move(mover); // actually move player
+            this.gameObject.GetComponent<AudioSource>().enabled = true;
         }
         
     }
@@ -157,7 +148,10 @@ public class PlayerController : MonoBehaviour
         }
 
         if (inputs.magnitude <= 0)
+        {
             anim.SetInteger("state", 0);
+            this.gameObject.GetComponent<AudioSource>().enabled = false;
+        }
     }
 
     // void ShowCursor()
