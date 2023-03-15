@@ -12,11 +12,15 @@ public class EmpurrarObj : MonoBehaviour
     public Vector3 direction;
 
     public GameObject gp1, gp2;
+
+    AudioSource audio_;
     
     void Awake()
     {
         controles = new Controles();
         controles.Enable();
+
+        audio_ = GetComponent<AudioSource>();
 
         if (this.gameObject.name.Contains("Leve"))
             this.players = 1;
@@ -28,6 +32,9 @@ public class EmpurrarObj : MonoBehaviour
     {
         if (gp1 != null && gp2 != null)
             this.count = 2;
+
+        if (pushing)
+            audio_.Play();
     }
 
     void OnTriggerStay(Collider col)
@@ -49,10 +56,6 @@ public class EmpurrarObj : MonoBehaviour
             {
                 GameObject.Find("DescItemMovelL").gameObject.GetComponent<BoxCollider>().enabled = false;
             }
-            // if (GameObject.Find("DescItemMovelP") != null)
-            // {
-            //     GameObject.Find("DescItemMovelP").gameObject.GetComponent<BoxCollider>().enabled = false;
-            // }
             pushing = true;
         }
 
@@ -77,7 +80,6 @@ public class EmpurrarObj : MonoBehaviour
             this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
 
             if (GameObject.Find("DescItemMovelL") != null) GameObject.Find("DescItemMovelL").GetComponent<ShowCanvasText>().showing = false;
-            // if (GameObject.Find("DescItemMovelP") != null) GameObject.Find("DescItemMovelP").GetComponent<ShowCanvasText>().showing = false;
             
             if (GameObject.Find("FalaP1") != null) GameObject.Find("FalaP1").SetActive(false);
             if (GameObject.Find("FalaP2") != null) GameObject.Find("FalaP2").SetActive(false);
@@ -90,7 +92,7 @@ public class EmpurrarObj : MonoBehaviour
 
         if (count == 2)
         {
-            if (GameObject.Find("DescItemMovelP") != null) GameObject.Find("DescItemMovelL").GetComponent<ShowCanvasText>().showing = false;
+            if (GameObject.Find("DescItemMovelP") != null) GameObject.Find("DescItemMovelP").GetComponent<ShowCanvasText>().showing = false;
 
             if (GameObject.Find("FalaP1") != null) GameObject.Find("FalaP1").SetActive(false);
             if (GameObject.Find("FalaP2") != null) GameObject.Find("FalaP2").SetActive(false);
@@ -103,7 +105,6 @@ public class EmpurrarObj : MonoBehaviour
     {
         if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
         {
-            //this.count--;
             pushing = false;
         }
 

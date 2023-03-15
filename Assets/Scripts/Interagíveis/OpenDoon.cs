@@ -15,14 +15,14 @@ public class OpenDoon : MonoBehaviour
     public GameObject other;
 
     public AudioClip[] sons;
-    AudioSource audio;
+    AudioSource audio_;
 
     void Awake()
     {
         controles = new Controles();
         controles.Enable();
 
-        audio = GetComponent<AudioSource>();
+        audio_ = GetComponent<AudioSource>();
     }
 
     void OnTriggerStay(Collider col)
@@ -40,8 +40,8 @@ public class OpenDoon : MonoBehaviour
             && this.openTrigger)
         {
             this.anim.Play(openDoor, 0, 0);
-            audio.clip = sons[0];
-            audio.Play();
+            GetComponent<AudioSource>().clip = sons[0];
+            GetComponent<AudioSource>().Play();
             this.other.GetComponent<OpenDoon>().closeTrigger = true;
             this.openTrigger = false;
         }
@@ -52,8 +52,8 @@ public class OpenDoon : MonoBehaviour
         if ((col.CompareTag("P1") || col.CompareTag("P2")) && closeTrigger)
         {
             anim.Play(closeDoor, 0, 0);
-            audio.clip = sons[1];
-            audio.Play();
+            audio_.clip = sons[1];
+            audio_.Play();
             this.other.GetComponent<OpenDoon>().openTrigger = true;
             closeTrigger = false;
         }
