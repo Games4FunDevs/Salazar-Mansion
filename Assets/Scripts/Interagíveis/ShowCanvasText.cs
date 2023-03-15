@@ -30,7 +30,7 @@ public class ShowCanvasText : MonoBehaviour
 
                 if (controles.P1.Interagir.triggered)
                 {
-                    showing = false;
+                    this.showing = false;
                     this.cAuto = false;
                     gObject[0].SetActive(false);
                     StartCoroutine("ShowCollider", 0.15f);
@@ -43,7 +43,7 @@ public class ShowCanvasText : MonoBehaviour
 
                 if (controles.P2.Interagir.triggered)
                 {
-                    showing = false;
+                    this.showing = false;
                     this.cAuto = false;
                     gObject[1].SetActive(false);
                     StartCoroutine("ShowCollider", 0.15f);
@@ -59,7 +59,7 @@ public class ShowCanvasText : MonoBehaviour
  
     void OnTriggerStay(Collider col)
     {
-        if (this.auto && this.cAuto)
+        if (this.auto && this.cAuto && (col.CompareTag("P1") || col.CompareTag("P2")))
         {
             this.showing = true;
             this.gameObject.GetComponent<BoxCollider>().enabled = false;
@@ -75,9 +75,9 @@ public class ShowCanvasText : MonoBehaviour
         }
 
         if (col.CompareTag("P1")) 
-            player = 1;
+            this.player = 1;
         else if (col.CompareTag("P2"))
-            player = 2;
+            this.player = 2;
     }
 
     void OnTriggerEnter(Collider col)
@@ -102,7 +102,7 @@ public class ShowCanvasText : MonoBehaviour
 
     public void CloseText()
     {
-        showing = false;
+        this.showing = false;
         this.cAuto = false;
         gObject[0].SetActive(false);
         gObject[1].SetActive(false);

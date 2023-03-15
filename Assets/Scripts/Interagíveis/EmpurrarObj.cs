@@ -71,21 +71,31 @@ public class EmpurrarObj : MonoBehaviour
         if (col.gameObject.name == "P2")
             gp2 = col.gameObject;
 
-        if (col.gameObject.name == "stopMovel")
+        if (col.gameObject.name == "stopMovel")//
         {
             canMove = false;
             this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
-            GameObject.Find("DescItemMovelL").GetComponent<ShowCanvasText>().showing = false;
-            if (GameObject.Find("FalaP1") != null)
-                GameObject.Find("FalaP1").SetActive(false);
+
+            if (GameObject.Find("DescItemMovelL") != null) GameObject.Find("DescItemMovelL").GetComponent<ShowCanvasText>().showing = false;
+            // if (GameObject.Find("DescItemMovelP") != null) GameObject.Find("DescItemMovelP").GetComponent<ShowCanvasText>().showing = false;
             
-            if (GameObject.Find("FalaP2") != null)
-                GameObject.Find("FalaP2").SetActive(false);
+            if (GameObject.Find("FalaP1") != null) GameObject.Find("FalaP1").SetActive(false);
+            if (GameObject.Find("FalaP2") != null) GameObject.Find("FalaP2").SetActive(false);
                 
-            Destroy(GameObject.Find("DescItemMovelL").gameObject);
-            // Destroy(GameObject.Find("DescItemMovelP").gameObject);
+            if (GameObject.Find("DescItemMovelL") != null) Destroy(GameObject.Find("DescItemMovelL").gameObject);
+
             Destroy(col.gameObject);
             this.gameObject.GetComponent<EmpurrarObj>().enabled = false;
+        }
+
+        if (count == 2)
+        {
+            if (GameObject.Find("DescItemMovelP") != null) GameObject.Find("DescItemMovelL").GetComponent<ShowCanvasText>().showing = false;
+
+            if (GameObject.Find("FalaP1") != null) GameObject.Find("FalaP1").SetActive(false);
+            if (GameObject.Find("FalaP2") != null) GameObject.Find("FalaP2").SetActive(false);
+
+            if (GameObject.Find("DescItemMovelP") != null) Destroy(GameObject.Find("DescItemMovelP").gameObject);
         }
     }
     
