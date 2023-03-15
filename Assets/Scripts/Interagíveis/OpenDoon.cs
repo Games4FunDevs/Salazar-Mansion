@@ -10,7 +10,7 @@ public class OpenDoon : MonoBehaviour
     public bool unlocked = false;
     public Animator anim;
 
-    private bool openTrigger, closeTrigger;
+    public bool openTrigger, closeTrigger;
     public string openDoor = "OpenDoor1", closeDoor = "CloseDoor1";
     public GameObject other;
 
