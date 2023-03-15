@@ -52,6 +52,7 @@ public class NewSwitchCam : MonoBehaviour
             P1naCena = false;
             P1 = other.transform;
             activeCam.Priority = 0;
+            activeCam.LookAt = null;
             Cam.layer = 0;
         }
           if(other.CompareTag("P2"))
@@ -59,6 +60,7 @@ public class NewSwitchCam : MonoBehaviour
             P2naCena = false;
             P2 = other.transform;
             activeCam.Priority = 0;
+            activeCam.LookAt = null;
             Cam.layer = 0;
         }
     }
