@@ -31,6 +31,7 @@ public class ShowCanvasText : MonoBehaviour
                 if (controles.P1.Interagir.triggered)
                 {
                     showing = false;
+                    this.cAuto = false;
                     gObject[0].SetActive(false);
                     StartCoroutine("ShowCollider", 0.15f);
                 }
@@ -43,6 +44,7 @@ public class ShowCanvasText : MonoBehaviour
                 if (controles.P2.Interagir.triggered)
                 {
                     showing = false;
+                    this.cAuto = false;
                     gObject[1].SetActive(false);
                     StartCoroutine("ShowCollider", 0.15f);
                 }
@@ -59,26 +61,20 @@ public class ShowCanvasText : MonoBehaviour
  
     void OnTriggerStay(Collider col)
     {
-        // if (this.auto && this.cAuto)
-        // {
-        //     this.showing = true;
-        //     this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        // }
-        // if (this.showing && this.cAuto && ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered)))
-        // {
-        //     this.showing = false;
-        //     StartCoroutine("ShowCollider", 0.15f);
-        //     this.cAuto = false;
-        // }
+        if (this.auto && this.cAuto)
+        {
+            this.showing = true;
+            this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        }
 
-        // if (!this.auto)
-        // {
+        if (!this.auto)
+        {
             if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
             {
                 this.showing = true;
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
             }
-        // }
+        }
 
         if (col.CompareTag("P1")) 
             player = 1;
@@ -95,11 +91,11 @@ public class ShowCanvasText : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        // if ((col.CompareTag("P1") || col.CompareTag("P2")))
-        // {
-        //     if (this.auto && !this.cAuto)
-        //         this.cAuto = true;
-        // }
+        if ((col.CompareTag("P1") || col.CompareTag("P2")))
+        {
+            if (!this.cAuto && this.auto)
+                this.cAuto = true;
+        }
     }
 
     IEnumerator ShowCollider()
