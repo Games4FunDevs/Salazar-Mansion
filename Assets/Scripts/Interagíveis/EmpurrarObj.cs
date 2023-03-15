@@ -5,7 +5,7 @@ using UnityEngine;
 public class EmpurrarObj : MonoBehaviour
 {
     public int players = 1, count = 0;
-    public bool pushing;
+    public bool pushing, canMove = true;
 
     private Controles controles;
     private Vector2 inputs;
@@ -32,7 +32,7 @@ public class EmpurrarObj : MonoBehaviour
     {
         if ((col.gameObject.tag == "P1" && controles.P1.Andar.ReadValue<Vector2>().magnitude > 0f) || (col.gameObject.tag == "P2" && controles.P2.Andar.ReadValue<Vector2>().magnitude > 0f)) 
         {
-            if ((players == 1 && count == 1) || (players == 2 && count == 2))
+            if (((players == 1 && count == 1) || (players == 2 && count == 2)) && canMove)
             {
                 this.gameObject.transform.position += direction;
             }
@@ -43,8 +43,18 @@ public class EmpurrarObj : MonoBehaviour
     {
         if (col.gameObject.name == "P1" || col.gameObject.name == "P2")
         {
+            if (GameObject.Find("DescItemMovelL") != null)
+                GameObject.Find("DescItemMovelL").gameObject.SetActive(false);
+                
             this.count++;
             pushing = true;
+        }
+
+        if (col.gameObject.name == "stopMovel")
+        {
+            canMove = false;
+            this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            Destroy(col.gameObject);
         }
     }
     

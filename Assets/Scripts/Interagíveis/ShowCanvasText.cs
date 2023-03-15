@@ -50,6 +50,11 @@ public class ShowCanvasText : MonoBehaviour
                 }
             }
         }
+
+        if (this.gameObject.name == "DescItem Tranca 1" && GameObject.Find("door (5)").transform.GetChild(0).GetComponent<OpenDoon>().unlocked)
+        {
+           CloseText();
+        }
     }
  
     void OnTriggerStay(Collider col)
@@ -77,18 +82,38 @@ public class ShowCanvasText : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.GetComponent<PlayerController>().hasKey && this.gameObject.name == "DescItem Tranca" ||
-            this.gameObject.name == "DescItem Tranca 1" && GameObject.Find("door (5)").transform.GetChild(0).GetComponent<OpenDoon>().unlocked)
-            Destroy(this.gameObject);
+        if (col.CompareTag("P1") || col.CompareTag("P2"))
+        {
+            if (col.GetComponent<PlayerController>().hasKey && this.gameObject.name == "DescItem Tranca") 
+            {
+                CloseText();
+            }
+        }
+
+        if (this.gameObject.name == "DescItemMovelL" && col.gameObject.name == "colDestroy")
+        {
+            CloseText();
+            Destroy(col.gameObject);
+        }
     }
 
     void OnTriggerExit(Collider col)
     {
-        if ((col.CompareTag("P1") || col.CompareTag("P2")))
+        if (col.CompareTag("P1") || col.CompareTag("P2"))
         {
             if (!this.cAuto && this.auto)
                 this.cAuto = true;
         }
+    }
+
+    void CloseText()
+    {
+        showing = false;
+        this.cAuto = false;
+        gObject[0].SetActive(false);
+        gObject[1].SetActive(false);
+        StartCoroutine("ShowCollider", 0.15f);
+        Destroy(this.gameObject);
     }
 
     IEnumerator ShowCollider()
