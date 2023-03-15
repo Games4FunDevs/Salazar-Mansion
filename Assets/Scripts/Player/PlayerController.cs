@@ -123,20 +123,20 @@ public class PlayerController : MonoBehaviour
         switch (player)
         {
             case 1:
-                if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
-                {
-                    curSpeed = runSpeed;
-                }
+                // if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
+                // {
+                //     curSpeed = runSpeed;
+                // }
                 if (isGrounded && controles.P1.Correr.ReadValue<float>() == 0)
                 {
                     curSpeed = walkSpeed;
                 }
                 break;
             case 2:
-                if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
-                {
-                    curSpeed = runSpeed;
-                }
+                // if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
+                // {
+                //     curSpeed = runSpeed;
+                // }
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 0)
                 {
                     curSpeed = walkSpeed;
