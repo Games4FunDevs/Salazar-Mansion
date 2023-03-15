@@ -50,13 +50,6 @@ public class ShowCanvasText : MonoBehaviour
                 }
             }
         }
-        // else
-        // {
-        //     if (player == 1)
-                
-        //     if (player == 2)
-                
-        // }
     }
  
     void OnTriggerStay(Collider col)
