@@ -24,8 +24,8 @@ public class EmpurrarObj : MonoBehaviour
 
     void Update()
     {
-        if (GameObject.Find("P1").GetComponent<PlayerController>().movelCol == true && GameObject.Find("P2").GetComponent<PlayerController>().movelCol == true)
-            this.count = 2;
+        // if (GameObject.Find("P1").GetComponent<PlayerController>().movelCol == true && GameObject.Find("P2").GetComponent<PlayerController>().movelCol == true)
+        //     this.count = 2;
     }
 
     void OnTriggerStay(Collider col)
