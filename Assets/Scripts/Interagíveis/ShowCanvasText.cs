@@ -31,9 +31,10 @@ public class ShowCanvasText : MonoBehaviour
                 if (controles.P1.Interagir.triggered)
                 {
                     showing = false;
+                    StartCoroutine("ShowCollider", 0.15f);
                 }
             } 
-            else if (player == 2)
+            if (player == 2)
             {
                 gObject[1].SetActive(true);
                 gObject[1].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
@@ -41,6 +42,7 @@ public class ShowCanvasText : MonoBehaviour
                 if (controles.P2.Interagir.triggered)
                 {
                     showing = false;
+                    StartCoroutine("ShowCollider", 0.15f);
                 }
             }
         }
@@ -48,28 +50,30 @@ public class ShowCanvasText : MonoBehaviour
         {
             if (player == 1)
                 gObject[0].SetActive(false);
-            else if (player == 2)
+            if (player == 2)
                 gObject[1].SetActive(false);
         }
     }
  
     void OnTriggerStay(Collider col)
     {
-        if (auto && cAuto)
+        // if (this.auto && this.cAuto)
+        // {
+        //     this.showing = true;
+        //     this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        // }
+        // if (this.showing && this.cAuto && ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered)))
+        // {
+        //     this.showing = false;
+        //     StartCoroutine("ShowCollider", 0.15f);
+        //     this.cAuto = false;
+        // }
+
+        if (!this.auto)
         {
-            showing = true;
-            this.gameObject.GetComponent<BoxCollider>().enabled = false;
             if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
             {
-                showing = false;
-                cAuto = false;
-            }
-        }
-        if (!auto)
-        {
-            if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
-            {
-                showing = true;
+                this.showing = true;
                 this.gameObject.GetComponent<BoxCollider>().enabled = false;
             }
         }
@@ -82,11 +86,16 @@ public class ShowCanvasText : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        if ((col.CompareTag("P1") || col.CompareTag("P2")))
-        {
-            this.gameObject.GetComponent<BoxCollider>().enabled = true;
-            if (auto && !cAuto)
-                cAuto = true;
-        }
+        // if ((col.CompareTag("P1") || col.CompareTag("P2")))
+        // {
+        //     if (this.auto && !this.cAuto)
+        //         this.cAuto = true;
+        // }
+    }
+
+    IEnumerator ShowCollider()
+    {
+        yield return new WaitForSeconds(.15f);
+        this.gameObject.GetComponent<BoxCollider>().enabled = true;
     }
 }
