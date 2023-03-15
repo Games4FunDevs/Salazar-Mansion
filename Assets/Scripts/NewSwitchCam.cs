@@ -10,7 +10,7 @@ public class NewSwitchCam : MonoBehaviour
     public CinemachineVirtualCamera activeCam;
     public GameObject Cam;
     // Start is called before the first frame update
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if(other.CompareTag("P1"))
         {
