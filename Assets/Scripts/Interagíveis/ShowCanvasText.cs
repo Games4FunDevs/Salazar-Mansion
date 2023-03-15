@@ -7,7 +7,7 @@ public class ShowCanvasText : MonoBehaviour
 {
     public GameObject[] gObject;
     public string texto;
-    private int player = 0, showedTo = 0;
+    private int player = 0;
     public bool showing, auto, cAuto;
 
     private Controles controles;
@@ -30,7 +30,6 @@ public class ShowCanvasText : MonoBehaviour
 
                 if (controles.P1.Interagir.triggered)
                 {
-                    this.gameObject.GetComponent<BoxCollider>().enabled = true;
                     showing = false;
                 }
             } 
@@ -41,7 +40,6 @@ public class ShowCanvasText : MonoBehaviour
 
                 if (controles.P2.Interagir.triggered)
                 {
-                    this.gameObject.GetComponent<BoxCollider>().enabled = true;
                     showing = false;
                 }
             }
@@ -84,7 +82,11 @@ public class ShowCanvasText : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        if (auto && !cAuto && (col.CompareTag("P1") || col.CompareTag("P2")))
-            cAuto = true;
+        if ((col.CompareTag("P1") || col.CompareTag("P2")))
+        {
+            this.gameObject.GetComponent<BoxCollider>().enabled = true;
+            if (auto && !cAuto)
+                cAuto = true;
+        }
     }
 }

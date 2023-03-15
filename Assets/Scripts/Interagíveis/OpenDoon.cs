@@ -30,8 +30,8 @@ public class OpenDoon : MonoBehaviour
                 other.GetComponent<OpenDoon>().unlocked = true;
             }
         }
-
-        if (this.unlocked == true && (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)
+        
+        if (this.unlocked == true && ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1))
             && this.openTrigger)
         {
             this.anim.Play(openDoor, 0, 0);
