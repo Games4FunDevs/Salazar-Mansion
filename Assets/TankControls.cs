@@ -31,6 +31,6 @@ public class TankControls : MonoBehaviour
         // moves the character in horizontal direction
         controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f);    
         }
-        }
+    }
        
 }
