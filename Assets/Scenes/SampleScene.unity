@@ -991,6 +991,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1449329426}
   Cam: {fileID: 1449329424}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &87296739
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1426,6 +1430,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1134685674}
   Cam: {fileID: 1134685672}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &211899285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1768,6 +1776,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1264942463}
   Cam: {fileID: 1264942461}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &271810950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2579,6 +2591,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1230485771}
   Cam: {fileID: 1230485769}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &503731681
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2712,6 +2728,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1617193779}
   Cam: {fileID: 1617193777}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &571380803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3240,6 +3260,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1862405165}
   Cam: {fileID: 1862405163}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &701533471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3413,6 +3437,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 744781115}
   Cam: {fileID: 744781113}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &727494767
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4119,6 +4147,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 865522975}
   Cam: {fileID: 865522973}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &860220655
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5202,6 +5234,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9562fd7381ed6984cb6b8a45c5332aaf, type: 3}
+--- !u!1 &956647372 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8708216137328140640, guid: 9562fd7381ed6984cb6b8a45c5332aaf, type: 3}
+  m_PrefabInstance: {fileID: 956647371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &956647373
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956647372}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37031257, y: 0.61249995, z: 0.32484373}
+  m_Center: {x: -0.29703173, y: 0, z: 0.16211009}
 --- !u!1001 &959932271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5775,11 +5825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbbf87857a36f504ba31a1d835d42eda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.231
+      value: 22.55
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbbf87857a36f504ba31a1d835d42eda, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81900024
+      value: 1.122
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cbbf87857a36f504ba31a1d835d42eda, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5906,7 +5956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058836581}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.9, y: 0, z: 1.82336}
+  m_LocalPosition: {x: 14.331, y: 0, z: 1.82336}
   m_LocalScale: {x: 1, y: 1, z: 0.7283776}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6008,8 +6058,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073790746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.9, y: 0.2157, z: 1.36673}
-  m_LocalScale: {x: 1, y: 0.5686, z: 0.19390652}
+  m_LocalPosition: {x: 14.331, y: 0.2157, z: 1.36673}
+  m_LocalScale: {x: 1, y: 0.5686, z: 2.160381}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 121613912}
@@ -6532,6 +6582,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1296056825}
   Cam: {fileID: 1296056823}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1107441886
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6601,6 +6655,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1982917644}
   Cam: {fileID: 1982917642}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1111687319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6768,6 +6826,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 769674162}
   Cam: {fileID: 769674160}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1116064496
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7789,7 +7851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264228359}
   m_LocalRotation: {x: 0.23895536, y: -0, z: -0, w: 0.9710306}
-  m_LocalPosition: {x: 19.3, y: 0.634, z: -0.46500012}
+  m_LocalPosition: {x: 19.3, y: 0.634, z: -0.418}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7906,6 +7968,100 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1961246068}
+--- !u!1 &1274910462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1274910463}
+  - component: {fileID: 1274910464}
+  m_Layer: 0
+  m_Name: Point Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!4 &1274910463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274910462}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalPosition: {x: 0.628, y: 1.357, z: 0.896}
+  m_LocalScale: {x: 0.27349305, y: 0.2734931, z: 0.2734931}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1019260144}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &1274910464
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274910462}
+  m_Enabled: 1
+  serializedVersion: 10
+  m_Type: 2
+  m_Shape: 0
+  m_Color: {r: 1, g: 0.65786165, b: 0.43867922, a: 1}
+  m_Intensity: 0.1
+  m_Range: 22.9
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 1
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 2
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!1 &1296056823
 GameObject:
   m_ObjectHideFlags: 0
@@ -8616,6 +8772,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 71137009}
   Cam: {fileID: 71137007}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1474813486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8690,6 +8850,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 656883187}
   Cam: {fileID: 656883185}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1506925600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8758,6 +8922,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 73374992}
   Cam: {fileID: 73374990}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1533751621
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9750,6 +9918,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1264228361}
   Cam: {fileID: 1264228359}
+  inputSaved1: {x: 0, y: -1}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1661979852
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10257,6 +10429,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1685785325}
   Cam: {fileID: 1685785323}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1771877495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11201,6 +11377,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1594781278}
   Cam: {fileID: 1594781276}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 1, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1860840219
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11572,20 +11752,28 @@ PrefabInstance:
       value: 18
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c724e595896225488b4e3432effaa07, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.445073
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c724e595896225488b4e3432effaa07, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.821518
+      value: 3.4450734
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2c724e595896225488b4e3432effaa07, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.445073
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c724e595896225488b4e3432effaa07, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.806993
+      value: 21.805
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c724e595896225488b4e3432effaa07, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.376183
+      value: -5.27
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c724e595896225488b4e3432effaa07, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.126923
+      value: -9.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2c724e595896225488b4e3432effaa07, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11781,6 +11969,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1897324625}
   Cam: {fileID: 1897324623}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1949166928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11990,6 +12182,10 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 239778044}
   Cam: {fileID: 239778042}
+  inputSaved1: {x: 0, y: 0}
+  inputSaved2: {x: 0, y: 0}
+  inputChanged1: {x: 0, y: 0}
+  inputChanged2: {x: 0, y: 0}
 --- !u!65 &1980101587
 BoxCollider:
   m_ObjectHideFlags: 0

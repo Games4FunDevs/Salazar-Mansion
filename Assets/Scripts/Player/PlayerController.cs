@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 inputs;
     public Transform cam; // direcao da camera
     public float curSpeed, walkSpeed = 3f, runSpeed = 6f, pushSpeed = 2f; // velocidades
-    // private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
+    private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
     private Vector3 mover; // direcao e velocidade pra
     public Animator anim;
 
@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
                 this.player = 2;
                 break;
         }
+
+        cameuleranglesy = cam.eulerAngles.y;
     }
 
     void Update()
@@ -75,7 +77,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
     }
-
+    public float cameuleranglesy;
     void Movement() // movimentação baseada no input e direção da camera
     {
         if (this.player == 1)
@@ -84,26 +86,27 @@ public class PlayerController : MonoBehaviour
         if (this.player == 2)
             this.inputs = controles.P2.Andar.ReadValue<Vector2>();
 
-        // if (this.inputs.magnitude >= 0.01f) // se ta movendo pra qualquer direcao == apertou botão
-        // {
-        //     float targetAngle = Mathf.Atan2(this.inputs.x, this.inputs.y) * Mathf.Rad2Deg + cam.eulerAngles.y;  // direcao que player vai rotacionar + onde a camera tiver olhando
-        //     this.angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TURNSMOOTHTIME); // calcula o angulo e tempo pra virar smooth
-        //     this.transform.rotation = Quaternion.Euler(0f, this.angle, 0f); // rotaciona player
-        //     Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
-        //     this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
-        //     this.controller.Move(mover); // actually move player
-        //     
-        // }
-
-        if (this.inputs.magnitude >= 0.01f)
+    
+        if (this.inputs.magnitude >= 0.01f) // se ta movendo pra qualquer direcao == apertou botão
         {
-            Vector3 movDir;
-            transform.Rotate(0, inputs.x * 180 * Time.deltaTime, 0);
-            movDir = transform.forward * (inputs.y) * curSpeed;
-            // moves the character in horizontal direction
-            controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
-            this.gameObject.GetComponent<AudioSource>().enabled = true;   
+            float targetAngle = Mathf.Atan2(this.inputs.x, this.inputs.y) * Mathf.Rad2Deg + cameuleranglesy;  // direcao que player vai rotacionar + onde a camera tiver olhando
+            this.angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TURNSMOOTHTIME); // calcula o angulo e tempo pra virar smooth
+            this.transform.rotation = Quaternion.Euler(0f, this.angle, 0f); // rotaciona player
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
+            this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
+            this.controller.Move(mover); // actually move player
+            this.gameObject.GetComponent<AudioSource>().enabled = true; 
         }
+
+        // if (this.inputs.magnitude >= 0.01f)
+        // {
+        //     Vector3 movDir;
+        //     transform.Rotate(0, inputs.x * 180 * Time.deltaTime, 0);
+        //     movDir = transform.forward * (inputs.y) * curSpeed;
+        //     // moves the character in horizontal direction
+        //     controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
+        //     this.gameObject.GetComponent<AudioSource>().enabled = true;   
+        // }
         
     }
 
