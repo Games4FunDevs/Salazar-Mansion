@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     public bool hasKey = false;
     
     public GameObject canvasMenu;
-    private AudioSource audio_;
+
+    private AudioSource audio_, audio_1;
 
     void Awake()
     {
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         controles.Enable();
 
         audio_ = GetComponent<AudioSource>();
+        audio_1 = gameObject.transform.GetChild(0).gameObject.GetComponent<AudioSource>();
 
         switch (this.gameObject.name)
         {
@@ -84,42 +86,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void ShowMenu()
-    {
-        if (this.canvasMenu.activeSelf)
-        {
-            if (this.player == 1)
-            {
-                PlayerPrefs.SetString("P1Menu", "false");
-                CanvasMenuSet(false, true);
-            }
-            if (this.player == 2)
-            {
-                PlayerPrefs.SetString("P2Menu", "false");
-                CanvasMenuSet(false, true);
-            }
-        }
-        else
-        {
-            if (this.gameObject.name == "P1" && PlayerPrefs.GetString("P2Menu") == "false")
-            {
-                PlayerPrefs.SetString("P1Menu", "true");
-                CanvasMenuSet(true, false);
-            }
-            else if (this.gameObject.name == "P2" && PlayerPrefs.GetString("P1Menu") == "false")
-            {
-                PlayerPrefs.SetString("P2Menu", "true");
-                CanvasMenuSet(true, false);
-            }
-        }
-    }
-
-    void CanvasMenuSet(bool value, bool podeandar)
-    {
-        this.canvasMenu.SetActive(value);
-        PlayerPrefs.SetString("podeAndar", podeandar.ToString());
-    }
-
     void OnTriggerStay(Collider col)
     {
         if (col.gameObject.name.Contains("Key") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
@@ -128,7 +94,7 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
         }
 
-        if (col.gameObject.name == "EndGame")
+        if (col.gameObject.name == "EndGame") // final do jogo
         {
             SceneManager.LoadScene("Menu");
         }
@@ -151,7 +117,6 @@ public class PlayerController : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
             this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
             this.controller.Move(mover); // actually move player
-            this.gameObject.GetComponent<AudioSource>().enabled = true; 
         }
 
         // if (this.inputs.magnitude >= 0.01f)
@@ -190,37 +155,74 @@ public class PlayerController : MonoBehaviour
                 {
                     curSpeed = walkSpeed;
                 }
-                break;
+            break;
             case 2:
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
-                {
                     curSpeed = runSpeed;
-                }
+                    
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 0)
-                {
                     curSpeed = walkSpeed;
-                }
-                break;
+            break;
         }
     }
 
     void Animations()
     {
-        switch (curSpeed)
+        if (curSpeed == walkSpeed)
         {
-            case 3:
-                anim.SetInteger("state", 1);
-                break;
-            case 6:
-                anim.SetInteger("state", 2);
-                break;
+            anim.SetInteger("state", 1);
+            this.audio_.enabled = true;
+            this.audio_1.enabled = false;
+        }
+        else if (curSpeed == runSpeed) 
+        {
+            anim.SetInteger("state", 2);
+            this.audio_.enabled = false;
+            this.audio_1.enabled = true;
         }
 
         if (inputs.magnitude <= 0)
         {
             anim.SetInteger("state", 0);
-            this.gameObject.GetComponent<AudioSource>().enabled = false;
+            audio_.enabled = false;
+            audio_1.enabled = false;
         }
+    }
+
+    void ShowMenu()
+    {
+        if (this.canvasMenu.activeSelf)
+        {
+            if (this.player == 1)
+            {
+                PlayerPrefs.SetString("P1Menu", "false");
+                CanvasMenuSet(false, true);
+            }
+            if (this.player == 2)
+            {
+                PlayerPrefs.SetString("P2Menu", "false");
+                CanvasMenuSet(false, true);
+            }
+        }
+        else
+        {
+            if (this.gameObject.name == "P1" && PlayerPrefs.GetString("P2Menu") == "false")
+            {
+                PlayerPrefs.SetString("P1Menu", "true");
+                CanvasMenuSet(true, false);
+            }
+            else if (this.gameObject.name == "P2" && PlayerPrefs.GetString("P1Menu") == "false")
+            {
+                PlayerPrefs.SetString("P2Menu", "true");
+                CanvasMenuSet(true, false);
+            }
+        }
+    }
+
+    void CanvasMenuSet(bool value, bool podeandar)
+    {
+        this.canvasMenu.SetActive(value);
+        PlayerPrefs.SetString("podeAndar", podeandar.ToString());
     }
 
     // void ShowCursor()
