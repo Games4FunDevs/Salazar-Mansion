@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     private Vector3 mover; // direcao e velocidade pra
     public Animator anim;
     public float cameuleranglesy;
-    private bool podeAndar = true;
 
     // gravidade
     [SerializeField] private bool isGrounded;
@@ -39,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
         PlayerPrefs.SetString("P1Menu", "false");
         PlayerPrefs.SetString("P2Menu", "false");
+        PlayerPrefs.SetString("podeAndar", "true");
 
         // configura variaveis
         this.controller = GetComponent<CharacterController>();
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         Gravity();
         Animations();
 
-        if (podeAndar)
+        if (PlayerPrefs.GetString("podeAndar") == "true")
         {
             Movement(); // pode andar
             Run(); // pode correr
@@ -117,7 +117,7 @@ public class PlayerController : MonoBehaviour
     void CanvasMenuSet(bool value, bool podeandar)
     {
         this.canvasMenu.SetActive(value);
-        podeAndar = podeandar;
+        PlayerPrefs.SetString("podeAndar", podeandar.ToString());
     }
 
     void OnTriggerStay(Collider col)
