@@ -53,6 +53,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""d7403011-bc8e-461d-ba3f-03549a9dd838"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -165,6 +174,28 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""action"": ""Correr"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f12fc17e-9b77-480b-9343-726c10810716"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af2c19aa-38f9-4a58-8906-a03f61e835b8"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -194,6 +225,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""name"": ""Interagir"",
                     ""type"": ""Button"",
                     ""id"": ""5042419e-fd9a-4b38-8b7a-cf0ef7062de1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Menu"",
+                    ""type"": ""Button"",
+                    ""id"": ""68a33dc9-9bef-4896-b57e-e10840b0d1c3"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -310,6 +350,28 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""action"": ""Correr"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ab6049f-18b3-4c77-af0a-0af64a79777f"",
+                    ""path"": ""<Keyboard>/u"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b1ae1fcc-4e58-4bec-99e9-712ca0783483"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -344,11 +406,13 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         m_P1_Andar = m_P1.FindAction("Andar", throwIfNotFound: true);
         m_P1_Interagir = m_P1.FindAction("Interagir", throwIfNotFound: true);
         m_P1_Correr = m_P1.FindAction("Correr", throwIfNotFound: true);
+        m_P1_Menu = m_P1.FindAction("Menu", throwIfNotFound: true);
         // P2
         m_P2 = asset.FindActionMap("P2", throwIfNotFound: true);
         m_P2_Correr = m_P2.FindAction("Correr", throwIfNotFound: true);
         m_P2_Andar = m_P2.FindAction("Andar", throwIfNotFound: true);
         m_P2_Interagir = m_P2.FindAction("Interagir", throwIfNotFound: true);
+        m_P2_Menu = m_P2.FindAction("Menu", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -411,6 +475,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
     private readonly InputAction m_P1_Andar;
     private readonly InputAction m_P1_Interagir;
     private readonly InputAction m_P1_Correr;
+    private readonly InputAction m_P1_Menu;
     public struct P1Actions
     {
         private @Controles m_Wrapper;
@@ -418,6 +483,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         public InputAction @Andar => m_Wrapper.m_P1_Andar;
         public InputAction @Interagir => m_Wrapper.m_P1_Interagir;
         public InputAction @Correr => m_Wrapper.m_P1_Correr;
+        public InputAction @Menu => m_Wrapper.m_P1_Menu;
         public InputActionMap Get() { return m_Wrapper.m_P1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -436,6 +502,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Correr.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnCorrer;
                 @Correr.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnCorrer;
                 @Correr.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnCorrer;
+                @Menu.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnMenu;
+                @Menu.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnMenu;
+                @Menu.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnMenu;
             }
             m_Wrapper.m_P1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -449,6 +518,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Correr.started += instance.OnCorrer;
                 @Correr.performed += instance.OnCorrer;
                 @Correr.canceled += instance.OnCorrer;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
             }
         }
     }
@@ -460,6 +532,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
     private readonly InputAction m_P2_Correr;
     private readonly InputAction m_P2_Andar;
     private readonly InputAction m_P2_Interagir;
+    private readonly InputAction m_P2_Menu;
     public struct P2Actions
     {
         private @Controles m_Wrapper;
@@ -467,6 +540,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         public InputAction @Correr => m_Wrapper.m_P2_Correr;
         public InputAction @Andar => m_Wrapper.m_P2_Andar;
         public InputAction @Interagir => m_Wrapper.m_P2_Interagir;
+        public InputAction @Menu => m_Wrapper.m_P2_Menu;
         public InputActionMap Get() { return m_Wrapper.m_P2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -485,6 +559,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Interagir.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnInteragir;
                 @Interagir.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnInteragir;
                 @Interagir.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnInteragir;
+                @Menu.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
+                @Menu.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
+                @Menu.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
             }
             m_Wrapper.m_P2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -498,6 +575,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Interagir.started += instance.OnInteragir;
                 @Interagir.performed += instance.OnInteragir;
                 @Interagir.canceled += instance.OnInteragir;
+                @Menu.started += instance.OnMenu;
+                @Menu.performed += instance.OnMenu;
+                @Menu.canceled += instance.OnMenu;
             }
         }
     }
@@ -525,11 +605,13 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         void OnAndar(InputAction.CallbackContext context);
         void OnInteragir(InputAction.CallbackContext context);
         void OnCorrer(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
     }
     public interface IP2Actions
     {
         void OnCorrer(InputAction.CallbackContext context);
         void OnAndar(InputAction.CallbackContext context);
         void OnInteragir(InputAction.CallbackContext context);
+        void OnMenu(InputAction.CallbackContext context);
     }
 }

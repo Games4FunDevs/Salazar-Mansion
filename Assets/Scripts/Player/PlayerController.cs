@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
     private Vector3 mover; // direcao e velocidade pra
     public Animator anim;
+    public float cameuleranglesy;
 
     // gravidade
     [SerializeField] private bool isGrounded;
@@ -27,7 +28,8 @@ public class PlayerController : MonoBehaviour
 
     // teste
     public bool hasKey = false;
-
+    
+    public GameObject canvasMenu;
     AudioSource audio_;
 
     void Awake()
@@ -62,6 +64,35 @@ public class PlayerController : MonoBehaviour
         Run();
         HideCursor();
         Animations();
+
+        if (player == 1)
+        {
+            if (controles.P1.Menu.triggered)
+            {
+                ShowMenu();
+            }
+        }
+        else if (player == 2)
+        {
+            if (controles.P2.Menu.triggered)
+            {
+                ShowMenu();
+            }
+        }
+    }
+
+    void ShowMenu()
+    {
+        if (this.canvasMenu.activeSelf)
+        {
+            this.canvasMenu.SetActive(false);
+            HideCursor();
+        }
+        else
+        {
+            this.canvasMenu.SetActive(true);
+            ShowCursor();
+        }
     }
 
     void OnTriggerStay(Collider col)
@@ -77,7 +108,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Menu");
         }
     }
-    public float cameuleranglesy;
+    
     void Movement() // movimentação baseada no input e direção da camera
     {
         if (this.player == 1)
@@ -167,11 +198,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // void ShowCursor()
-    // {
-    //     Cursor.lockState = CursorLockMode.Confined;
-    //     Cursor.visible = true;
-    // }
+    void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+    }
 
     void HideCursor()
     {
