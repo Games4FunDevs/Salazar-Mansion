@@ -128,7 +128,6 @@ public class PlayerController : MonoBehaviour
         //     controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
         //     this.gameObject.GetComponent<AudioSource>().enabled = true;   
         // }
-        
     }
 
     void Gravity() // adiciona gravidade
