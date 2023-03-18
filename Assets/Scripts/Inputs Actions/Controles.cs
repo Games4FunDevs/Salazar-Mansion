@@ -244,7 +244,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f6861f60-0752-45cb-b774-be51c6793f96"",
-                    ""path"": ""<Keyboard>/k"",
+                    ""path"": ""<Keyboard>/o"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -277,7 +277,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""61f26cf4-cf32-480a-b646-0f97ffcdfbbe"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -288,7 +288,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""5ea01af2-c2c3-4b40-8705-7c8c5cbf2e1f"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""path"": ""<Keyboard>/k"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -299,7 +299,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""694c6e9f-22fa-4793-a4ea-3c8da8ed4398"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Keyboard>/j"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -310,7 +310,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""039db481-b46a-4622-b29e-10418bee3577"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/l"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -332,7 +332,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7ec2ef47-a2c6-4721-b032-00755658577b"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/rightShift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
