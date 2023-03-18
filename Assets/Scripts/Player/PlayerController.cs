@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 mover; // direcao e velocidade pra
     public Animator anim;
     public float cameuleranglesy;
+    private bool podeAndar = true;
 
     // gravidade
     [SerializeField] private bool isGrounded;
@@ -30,10 +31,15 @@ public class PlayerController : MonoBehaviour
     public bool hasKey = false;
     
     public GameObject canvasMenu;
-    AudioSource audio_;
+    private AudioSource audio_;
 
     void Awake()
     {
+        HideCursor();
+
+        PlayerPrefs.SetString("P1Menu", "false");
+        PlayerPrefs.SetString("P2Menu", "false");
+
         // configura variaveis
         this.controller = GetComponent<CharacterController>();
         // cam = GameObject.FindWithTag("P1 cam").GetComponent<Transform>();
@@ -59,25 +65,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Movement();
         Gravity();
-        Run();
-        HideCursor();
         Animations();
+
+        if (podeAndar)
+        {
+            Movement(); // pode andar
+            Run(); // pode correr
+        }
 
         if (player == 1)
         {
-            if (controles.P1.Menu.triggered)
-            {
-                ShowMenu();
-            }
+            if (controles.P1.Menu.triggered) ShowMenu();
         }
         else if (player == 2)
         {
-            if (controles.P2.Menu.triggered)
-            {
-                ShowMenu();
-            }
+            if (controles.P2.Menu.triggered) ShowMenu();
         }
     }
 
@@ -85,14 +88,36 @@ public class PlayerController : MonoBehaviour
     {
         if (this.canvasMenu.activeSelf)
         {
-            this.canvasMenu.SetActive(false);
-            HideCursor();
+            if (this.player == 1)
+            {
+                PlayerPrefs.SetString("P1Menu", "false");
+                CanvasMenuSet(false, true);
+            }
+            if (this.player == 2)
+            {
+                PlayerPrefs.SetString("P2Menu", "false");
+                CanvasMenuSet(false, true);
+            }
         }
         else
         {
-            this.canvasMenu.SetActive(true);
-            ShowCursor();
+            if (this.gameObject.name == "P1" && PlayerPrefs.GetString("P2Menu") == "false")
+            {
+                PlayerPrefs.SetString("P1Menu", "true");
+                CanvasMenuSet(true, false);
+            }
+            else if (this.gameObject.name == "P2" && PlayerPrefs.GetString("P1Menu") == "false")
+            {
+                PlayerPrefs.SetString("P2Menu", "true");
+                CanvasMenuSet(true, false);
+            }
         }
+    }
+
+    void CanvasMenuSet(bool value, bool podeandar)
+    {
+        this.canvasMenu.SetActive(value);
+        podeAndar = podeandar;
     }
 
     void OnTriggerStay(Collider col)
@@ -157,20 +182,20 @@ public class PlayerController : MonoBehaviour
         switch (player)
         {
             case 1:
-                // if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
-                // {
-                //     curSpeed = runSpeed;
-                // }
+                if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
+                {
+                    curSpeed = runSpeed;
+                }
                 if (isGrounded && controles.P1.Correr.ReadValue<float>() == 0)
                 {
                     curSpeed = walkSpeed;
                 }
                 break;
             case 2:
-                // if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
-                // {
-                //     curSpeed = runSpeed;
-                // }
+                if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
+                {
+                    curSpeed = runSpeed;
+                }
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 0)
                 {
                     curSpeed = walkSpeed;
@@ -198,11 +223,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void ShowCursor()
-    {
-        Cursor.lockState = CursorLockMode.Confined;
-        Cursor.visible = true;
-    }
+    // void ShowCursor()
+    // {
+    //     Cursor.lockState = CursorLockMode.Confined;
+    //     Cursor.visible = true;
+    // }
 
     void HideCursor()
     {
