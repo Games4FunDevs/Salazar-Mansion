@@ -10,5 +10,6 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.DeleteKey("P1Y");
         PlayerPrefs.DeleteKey("P2X");
         PlayerPrefs.DeleteKey("P2Y");
+        PlayerPrefs.DeleteKey("ComeçouJogar");
     }
 }

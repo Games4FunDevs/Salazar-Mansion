@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         Gravity();
         Animations();
 
-        if (PlayerPrefs.GetString("podeAndar") == "true")
+        if (PlayerPrefs.GetString("podeAndar") == "true" && PlayerPrefs.GetString("ComeçouJogar") == "true")
         {
             Movement(); // pode andar
             Run(); // pode correr
