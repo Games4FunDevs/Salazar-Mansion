@@ -8,6 +8,8 @@ public class CutsceneInicial : MonoBehaviour
 {
     private Controles controles;
 
+    public GameObject cinematica;
+
     public string[] textos;
     public TextMeshProUGUI text_;
     public int count = 0;
@@ -20,7 +22,10 @@ public class CutsceneInicial : MonoBehaviour
         text_ = gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
 
         if (PlayerPrefs.HasKey("ComeçouJogar") == false)
+        {
             gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            PlayerPrefs.SetString("ComeçouJogar", "false");
+        }
     }
 
     void Update()
@@ -33,7 +38,9 @@ public class CutsceneInicial : MonoBehaviour
         if (count == textos.Length)
         {
             PlayerPrefs.SetString("ComeçouJogar", "true");
+            PlayerPrefs.SetString("podeAndar", "true");
             PlayerPrefs.SetString("ShowBtnInfo1", "true");
+            if (cinematica != null) { cinematica.SetActive(true); }
             Destroy(this.gameObject);
         }
     }

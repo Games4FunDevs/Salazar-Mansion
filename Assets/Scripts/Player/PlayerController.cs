@@ -39,7 +39,6 @@ public class PlayerController : MonoBehaviour
 
         PlayerPrefs.SetString("P1Menu", "false");
         PlayerPrefs.SetString("P2Menu", "false");
-        PlayerPrefs.SetString("podeAndar", "true");
 
         // configura variaveis
         this.controller = GetComponent<CharacterController>();

@@ -8,10 +8,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     void Awake()
     {
-        PlayerPrefs.DeleteKey("P1X");
-        PlayerPrefs.DeleteKey("P1Y");
-        PlayerPrefs.DeleteKey("P2X");
-        PlayerPrefs.DeleteKey("P2Y");
+        
     }
     
     public void DeleteComecou() => PlayerPrefs.DeleteKey("ComeçouJogar");
@@ -34,8 +31,10 @@ public class PlayerPrefsManager : MonoBehaviour
     IEnumerator ShowCanvas(string canvas, string btninfo, string value)
     {
         GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(true);
-        yield return new WaitForSeconds(10f);
+        Time.timeScale = 0;
+        yield return new WaitForSeconds(10f * Time.deltaTime);
         GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(false);
+        Time.timeScale = 1;
         PlayerPrefs.SetString(btninfo, value);
     }
 }
