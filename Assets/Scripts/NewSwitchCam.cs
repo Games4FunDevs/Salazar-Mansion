@@ -11,7 +11,7 @@ public class NewSwitchCam : MonoBehaviour
     public GameObject Cam;
     
     private Controles controles;
-    public Vector2 inputSaved1, inputSaved2, inputChanged1, inputChanged2;
+    // public Vector2 inputSaved1, inputSaved2, inputChanged1, inputChanged2;
     private Collider other_, other_1;
 
     void Awake()
@@ -22,8 +22,8 @@ public class NewSwitchCam : MonoBehaviour
 
     void Update()
     {
-        inputChanged1 = controles.P1.Andar.ReadValue<Vector2>();
-        inputChanged2 = controles.P2.Andar.ReadValue<Vector2>();
+        // inputChanged1 = controles.P1.Andar.ReadValue<Vector2>();
+        // inputChanged2 = controles.P2.Andar.ReadValue<Vector2>();
     }
 
     void OnTriggerStay (Collider other)
@@ -38,8 +38,8 @@ public class NewSwitchCam : MonoBehaviour
             activeCam.LookAt = P1.transform;
             Cam.layer = 6;
 
-            inputChanged1 = new Vector2(PlayerPrefs.GetFloat("P1X"), PlayerPrefs.GetFloat("P1Y"));
-            if (controles.P1.Andar.ReadValue<Vector2>().magnitude == 0 && inputChanged1 != inputSaved1)
+            // inputChanged1 = new Vector2(PlayerPrefs.GetFloat("P1X"), PlayerPrefs.GetFloat("P1Y"));
+            if (controles.P1.Andar.ReadValue<Vector2>().magnitude == 0)
                 other.GetComponent<PlayerController>().cameuleranglesy = Cam.transform.eulerAngles.y;
         }
 
@@ -53,8 +53,8 @@ public class NewSwitchCam : MonoBehaviour
             activeCam.LookAt = P2.transform;
             Cam.layer = 7;
 
-            inputChanged2 = new Vector2(PlayerPrefs.GetFloat("P2X"), PlayerPrefs.GetFloat("P2Y"));
-            if (controles.P2.Andar.ReadValue<Vector2>().magnitude == 0 && inputChanged2 != inputSaved2)
+            // inputChanged2 = new Vector2(PlayerPrefs.GetFloat("P2X"), PlayerPrefs.GetFloat("P2Y"));
+            if (controles.P2.Andar.ReadValue<Vector2>().magnitude == 0)
                 other.GetComponent<PlayerController>().cameuleranglesy = Cam.transform.eulerAngles.y;
         }
 
@@ -85,9 +85,9 @@ public class NewSwitchCam : MonoBehaviour
             activeCam.LookAt = null;
             Cam.layer = 0;
 
-            inputSaved1 = controles.P1.Andar.ReadValue<Vector2>();
-            PlayerPrefs.SetFloat("P1X", inputSaved1.x);
-            PlayerPrefs.SetFloat("P1Y", inputSaved1.y);
+            // inputSaved1 = controles.P1.Andar.ReadValue<Vector2>();
+            // PlayerPrefs.SetFloat("P1X", inputSaved1.x);
+            // PlayerPrefs.SetFloat("P1Y", inputSaved1.y);
         }
 
         if (other.CompareTag("P2"))
@@ -98,9 +98,9 @@ public class NewSwitchCam : MonoBehaviour
             activeCam.LookAt = null;
             Cam.layer = 0;
 
-            inputSaved2 = controles.P2.Andar.ReadValue<Vector2>();
-            PlayerPrefs.SetFloat("P2X", inputSaved2.x);
-            PlayerPrefs.SetFloat("P2Y", inputSaved2.y);
+            // inputSaved2 = controles.P2.Andar.ReadValue<Vector2>();
+            // PlayerPrefs.SetFloat("P2X", inputSaved2.x);
+            // PlayerPrefs.SetFloat("P2Y", inputSaved2.y);
         }
     }
 }
