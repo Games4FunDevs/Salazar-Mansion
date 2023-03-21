@@ -374,6 +374,78 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""Any"",
+            ""id"": ""4b7efb8b-b577-480c-9363-bb49bedd6d23"",
+            ""actions"": [
+                {
+                    ""name"": ""AnyKey"",
+                    ""type"": ""Button"",
+                    ""id"": ""b60140e0-d8b6-4726-bb19-501671c3c85b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""02091d90-4220-41f0-a79b-cf077d2f7040"",
+                    ""path"": ""*/{Submit}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""99d878d2-a109-4bc0-acfc-ea00399206bc"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""29c921d2-33a4-4a36-8ee2-e555da38f190"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bcaff62b-b8df-461e-8d43-2be80c5b6962"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a42ad8dc-416e-4235-a107-de826cab871d"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": [
@@ -413,6 +485,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         m_P2_Andar = m_P2.FindAction("Andar", throwIfNotFound: true);
         m_P2_Interagir = m_P2.FindAction("Interagir", throwIfNotFound: true);
         m_P2_Menu = m_P2.FindAction("Menu", throwIfNotFound: true);
+        // Any
+        m_Any = asset.FindActionMap("Any", throwIfNotFound: true);
+        m_Any_AnyKey = m_Any.FindAction("AnyKey", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -582,6 +657,39 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         }
     }
     public P2Actions @P2 => new P2Actions(this);
+
+    // Any
+    private readonly InputActionMap m_Any;
+    private IAnyActions m_AnyActionsCallbackInterface;
+    private readonly InputAction m_Any_AnyKey;
+    public struct AnyActions
+    {
+        private @Controles m_Wrapper;
+        public AnyActions(@Controles wrapper) { m_Wrapper = wrapper; }
+        public InputAction @AnyKey => m_Wrapper.m_Any_AnyKey;
+        public InputActionMap Get() { return m_Wrapper.m_Any; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(AnyActions set) { return set.Get(); }
+        public void SetCallbacks(IAnyActions instance)
+        {
+            if (m_Wrapper.m_AnyActionsCallbackInterface != null)
+            {
+                @AnyKey.started -= m_Wrapper.m_AnyActionsCallbackInterface.OnAnyKey;
+                @AnyKey.performed -= m_Wrapper.m_AnyActionsCallbackInterface.OnAnyKey;
+                @AnyKey.canceled -= m_Wrapper.m_AnyActionsCallbackInterface.OnAnyKey;
+            }
+            m_Wrapper.m_AnyActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @AnyKey.started += instance.OnAnyKey;
+                @AnyKey.performed += instance.OnAnyKey;
+                @AnyKey.canceled += instance.OnAnyKey;
+            }
+        }
+    }
+    public AnyActions @Any => new AnyActions(this);
     private int m_TecladoSchemeIndex = -1;
     public InputControlScheme TecladoScheme
     {
@@ -613,5 +721,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         void OnAndar(InputAction.CallbackContext context);
         void OnInteragir(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
+    }
+    public interface IAnyActions
+    {
+        void OnAnyKey(InputAction.CallbackContext context);
     }
 }

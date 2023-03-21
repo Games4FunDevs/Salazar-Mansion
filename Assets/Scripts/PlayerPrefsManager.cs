@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerPrefsManager : MonoBehaviour
 {
+    IEnumerator coroutine;
+
     void Awake()
     {
         PlayerPrefs.DeleteKey("P1X");
@@ -11,5 +13,28 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.DeleteKey("P2X");
         PlayerPrefs.DeleteKey("P2Y");
         PlayerPrefs.DeleteKey("ComeçouJogar");
+    }
+
+    void Update()
+    {
+        if (PlayerPrefs.GetString("ShowBtnInfo1") == "true")
+        {
+            coroutine = ShowCanvas("CanvasP1", "ShowBtnInfo1", "false");
+            StartCoroutine(coroutine);
+        }
+        
+        if (PlayerPrefs.GetString("ShowBtnInfo2") == "true")
+        {
+            coroutine = ShowCanvas("CanvasP2", "ShowBtnInfo2", "false");
+            StartCoroutine(coroutine);
+        }
+    }
+
+    IEnumerator ShowCanvas(string canvas, string btninfo, string value)
+    {
+        GameObject.Find(canvas).gameObject.transform.GetChild(5).gameObject.SetActive(true);
+        yield return new WaitForSeconds(10f);
+        GameObject.Find(canvas).gameObject.transform.GetChild(5).gameObject.SetActive(false);
+        PlayerPrefs.SetString(btninfo, value);
     }
 }

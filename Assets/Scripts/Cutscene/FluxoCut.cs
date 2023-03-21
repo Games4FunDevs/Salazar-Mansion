@@ -23,6 +23,7 @@ public class FluxoCut : MonoBehaviour
         if (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1)
         {
             p2cam.SetActive(true);
+            PlayerPrefs.SetString("ShowBtnInfo2", "true");
             p1cam.GetComponent<Camera>().rect = new Rect(0, 0, 0.5f, 1);
             Destroy(this.gameObject);
         }

@@ -27,12 +27,13 @@ public class CutsceneInicial : MonoBehaviour
     {
         text_.text = textos[count];
         
-        if (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered)
+        if (controles.Any.AnyKey.triggered)
             count++;
         
         if (count == textos.Length)
         {
             PlayerPrefs.SetString("ComeçouJogar", "true");
+            PlayerPrefs.SetString("ShowBtnInfo1", "true");
             Destroy(this.gameObject);
         }
     }
