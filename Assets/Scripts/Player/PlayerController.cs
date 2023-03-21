@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
         Gravity();
         Animations();
 
-        if (PlayerPrefs.GetString("podeAndar") == "true" && PlayerPrefs.GetString("ComeçouJogar") == "true")
+        if (PlayerPrefs.GetString("podeAndar") == "true")
         {
             Movement(); // pode andar
             Run(); // pode correr
@@ -195,33 +195,33 @@ public class PlayerController : MonoBehaviour
             if (this.player == 1)
             {
                 PlayerPrefs.SetString("P1Menu", "false");
-                CanvasMenuSet(false, true);
+                CanvasMenuSet(false, "true");
             }
             if (this.player == 2)
             {
                 PlayerPrefs.SetString("P2Menu", "false");
-                CanvasMenuSet(false, true);
+                CanvasMenuSet(false, "true");
             }
         }
         else
         {
-            if (this.gameObject.name == "P1" && PlayerPrefs.GetString("P2Menu") == "false")
+            if (this.player == 1 && PlayerPrefs.GetString("P2Menu") == "false")
             {
                 PlayerPrefs.SetString("P1Menu", "true");
-                CanvasMenuSet(true, false);
+                CanvasMenuSet(true, "false");
             }
-            else if (this.gameObject.name == "P2" && PlayerPrefs.GetString("P1Menu") == "false")
+            if (this.player == 2 && PlayerPrefs.GetString("P1Menu") == "false")
             {
                 PlayerPrefs.SetString("P2Menu", "true");
-                CanvasMenuSet(true, false);
+                CanvasMenuSet(true, "false");
             }
         }
     }
 
-    void CanvasMenuSet(bool value, bool podeandar)
+    void CanvasMenuSet(bool value, string podeandar)
     {
         this.canvasMenu.SetActive(value);
-        PlayerPrefs.SetString("podeAndar", podeandar.ToString());
+        PlayerPrefs.SetString("podeAndar", podeandar);
     }
 
     // void ShowCursor()

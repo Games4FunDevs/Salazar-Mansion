@@ -12,8 +12,9 @@ public class PlayerPrefsManager : MonoBehaviour
         PlayerPrefs.DeleteKey("P1Y");
         PlayerPrefs.DeleteKey("P2X");
         PlayerPrefs.DeleteKey("P2Y");
-        PlayerPrefs.DeleteKey("ComeçouJogar");
     }
+    
+    public void DeleteComecou() => PlayerPrefs.DeleteKey("ComeçouJogar");
 
     void Update()
     {
@@ -32,9 +33,9 @@ public class PlayerPrefsManager : MonoBehaviour
 
     IEnumerator ShowCanvas(string canvas, string btninfo, string value)
     {
-        GameObject.Find(canvas).gameObject.transform.GetChild(5).gameObject.SetActive(true);
+        GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(true);
         yield return new WaitForSeconds(10f);
-        GameObject.Find(canvas).gameObject.transform.GetChild(5).gameObject.SetActive(false);
+        GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(false);
         PlayerPrefs.SetString(btninfo, value);
     }
 }
