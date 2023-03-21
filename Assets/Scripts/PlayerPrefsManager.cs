@@ -17,24 +17,22 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         if (PlayerPrefs.GetString("ShowBtnInfo1") == "true")
         {
-            coroutine = ShowCanvas("CanvasP1", "ShowBtnInfo1", "false");
+            coroutine = ShowCanvas("CanvasP1", "ShowBtnInfo1", "false", 10f);
             StartCoroutine(coroutine);
         }
         
         if (PlayerPrefs.GetString("ShowBtnInfo2") == "true")
         {
-            coroutine = ShowCanvas("CanvasP2", "ShowBtnInfo2", "false");
+            coroutine = ShowCanvas("CanvasP2", "ShowBtnInfo2", "false", 10f);
             StartCoroutine(coroutine);
         }
     }
 
-    IEnumerator ShowCanvas(string canvas, string btninfo, string value)
+    IEnumerator ShowCanvas(string canvas, string btninfo, string value, float time)
     {
         GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(true);
-        Time.timeScale = 0;
-        yield return new WaitForSeconds(10f * Time.deltaTime);
+        yield return new WaitForSeconds(time * Time.timeScale);
         GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(false);
-        Time.timeScale = 1;
         PlayerPrefs.SetString(btninfo, value);
     }
 }
