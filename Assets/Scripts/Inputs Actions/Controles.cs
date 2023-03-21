@@ -392,17 +392,6 @@ public partial class @Controles : IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""02091d90-4220-41f0-a79b-cf077d2f7040"",
-                    ""path"": ""*/{Submit}"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Teclado"",
-                    ""action"": ""AnyKey"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""99d878d2-a109-4bc0-acfc-ea00399206bc"",
                     ""path"": ""<Gamepad>/buttonEast"",
                     ""interactions"": """",
@@ -441,6 +430,17 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controle"",
+                    ""action"": ""AnyKey"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8860352e-9830-4d4f-8c73-87ffc0994eb6"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
                     ""action"": ""AnyKey"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
