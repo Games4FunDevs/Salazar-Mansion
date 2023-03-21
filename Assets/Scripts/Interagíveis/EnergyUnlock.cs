@@ -21,6 +21,7 @@ public class EnergyUnlock : MonoBehaviour
         {
             this.transform.GetChild(1).gameObject.SetActive(true);
             this.transform.GetChild(0).gameObject.SetActive(false);
+            this.transform.GetChild(2).gameObject.GetComponent<AudioSource>().Play();
             this.GetComponent<Animator>().Play("alavanca", 0, 0);
             this.gameObject.GetComponent<EnergyUnlock>().enabled = false;
         }
