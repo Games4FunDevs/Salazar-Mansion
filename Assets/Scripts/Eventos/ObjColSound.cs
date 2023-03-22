@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ObjColSound : MonoBehaviour
 {
-    public bool istrigger_, destroy;
+    public bool istrigger_, destroy, coliderEnable;
     public float time = 2f;
+    public GameObject destroyNow;
 
     void OnCollisionEnter (Collision col)
     {
@@ -18,8 +19,20 @@ public class ObjColSound : MonoBehaviour
         if ((col.CompareTag("P1") || col.CompareTag("P2")) && istrigger_ == true)
         {
             this.gameObject.GetComponent<AudioSource>().Play();
+
+            if (coliderEnable == false)
+            {
+                this.gameObject.GetComponent<BoxCollider>().enabled = false;
+            }
+            if (destroyNow != null)
+            {
+                Destroy(destroyNow);
+            }
             if (destroy == true)
+            {
                 StartCoroutine("Destroy", time);
+            }
+                
         }
     }
 
