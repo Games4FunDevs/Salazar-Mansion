@@ -24,7 +24,7 @@ public class ChangeScene : MonoBehaviour
 
     void OnEnable() 
     {
-        if (this.gameObject.transform.parent.gameObject.transform.parent.name.Contains("Menu") && this.gameObject.CompareTag("first"))
+        if (this.gameObject.CompareTag("first"))
         {
             m_EventSystem.SetSelectedGameObject(this.gameObject);
         }

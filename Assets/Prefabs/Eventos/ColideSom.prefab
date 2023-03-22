@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2565020560533266638}
   - component: {fileID: 2565020560533266637}
   - component: {fileID: 2565020560533266636}
+  - component: {fileID: 9219651257812387631}
   - component: {fileID: 2565020560533266635}
   m_Layer: 0
   m_Name: ColideSom
@@ -78,7 +79,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   istrigger_: 0
   destroy: 0
+  coliderEnable: 0
   time: 1
+  destroyNow: {fileID: 0}
+--- !u!114 &9219651257812387631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2565020560533266633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062a98ee1fb165d41b1d15bf1721bec2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &2565020560533266635
 AudioSource:
   m_ObjectHideFlags: 0
