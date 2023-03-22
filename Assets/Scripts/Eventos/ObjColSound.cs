@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ObjColSound : MonoBehaviour
 {
-    public bool istrigger_, destroy, coliderEnable;
+    public bool istrigger_, destroy, coliderEnable, callEnemy;
     public float time = 2f;
-    public GameObject destroyNow;
+    public GameObject destroyNow, enemy;
 
     void OnCollisionEnter (Collision col)
     {
@@ -32,7 +32,10 @@ public class ObjColSound : MonoBehaviour
             {
                 StartCoroutine("Destroy", time);
             }
-                
+            if (callEnemy == true)
+            {
+                enemy.SetActive(true);
+            }
         }
     }
 

@@ -54,7 +54,7 @@ public class EmpurrarObj : MonoBehaviour
         {
             if (GameObject.Find("DescItemMovelL") != null)
             {
-                GameObject.Find("DescItemMovelL").gameObject.GetComponent<BoxCollider>().enabled = false;
+                //GameObject.Find("DescItemMovelL").gameObject.GetComponent<BoxCollider>().enabled = false;
             }
             pushing = true;
         }
@@ -77,7 +77,7 @@ public class EmpurrarObj : MonoBehaviour
         if (col.gameObject.name == "stopMovel")//
         {
             canMove = false;
-            this.gameObject.GetComponent<BoxCollider>().isTrigger = false;
+            this.gameObject.GetComponent<BoxCollider>().isTrigger = false; 
 
             if (GameObject.Find("DescItemMovelL") != null) GameObject.Find("DescItemMovelL").GetComponent<ShowCanvasText>().showing = false;
             

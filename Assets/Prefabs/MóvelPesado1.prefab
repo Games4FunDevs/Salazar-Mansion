@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5803791758025425476}
   - component: {fileID: 5803791758025425483}
   - component: {fileID: 3361212231871288742}
+  - component: {fileID: 8711461176056640795}
   m_Layer: 0
   m_Name: "M\xF3velPesado1"
   m_TagString: movel
@@ -194,6 +195,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8711461176056640795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5803791758025425472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7309970d9eac3c44b0a1a233f4c0665, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  istrigger_: 1
+  destroy: 0
+  coliderEnable: 1
+  callEnemy: 0
+  time: 2
+  destroyNow: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!1001 &5454792462713799263
 PrefabInstance:
   m_ObjectHideFlags: 0
