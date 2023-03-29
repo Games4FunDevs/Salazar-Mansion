@@ -125,7 +125,6 @@ public class PlayerController : MonoBehaviour
         //     movDir = transform.forward * (inputs.y) * curSpeed;
         //     // moves the character in horizontal direction
         //     controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
-        //     this.gameObject.GetComponent<AudioSource>().enabled = true;   
         // }
     }
 
