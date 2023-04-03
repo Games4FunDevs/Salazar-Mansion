@@ -55,6 +55,7 @@ public class CutsceneInicial : MonoBehaviour
             timerStart = 1;
             Destroy(painel);
             sufocado.SetActive(true);
+            count++;
         }
         else if (count < textos.Length)
         {
