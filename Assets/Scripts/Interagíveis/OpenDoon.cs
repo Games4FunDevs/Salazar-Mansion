@@ -12,7 +12,7 @@ public class OpenDoon : MonoBehaviour
 
     public bool openTrigger, closeTrigger;
     public string openDoor = "OpenDoor1", closeDoor = "CloseDoor1";
-    public GameObject other;
+    public GameObject other, p2free;
 
     public AudioClip[] sons;
     AudioSource audio_;
@@ -40,7 +40,7 @@ public class OpenDoon : MonoBehaviour
         
         if (this.unlocked == true)
         {
-            if (canOpen == true && ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || 
+            if (this.canOpen == true && ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || 
             (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1))
             && this.openTrigger)
             {
@@ -77,7 +77,12 @@ public class OpenDoon : MonoBehaviour
 
     IEnumerator Unlock()
     {
+        if (this.gameObject.tag == "p2free")
+        {
+            p2free.SetActive(true);
+        }
         yield return new WaitForSeconds(.3f);
         this.canOpen = true;
+        other.GetComponent<OpenDoon>().canOpen = true;
     }
 }

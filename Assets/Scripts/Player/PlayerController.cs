@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public int player = 0;
 
     // teste
-    public bool hasKey = false;
+    public bool hasKey = false, hasPeca = false;
     
     public GameObject canvasMenu;
 
@@ -90,6 +90,12 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name.Contains("Key") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasKey = true;
+            Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.name.Contains("Peça") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasPeca = true;
             Destroy(col.gameObject);
         }
 
