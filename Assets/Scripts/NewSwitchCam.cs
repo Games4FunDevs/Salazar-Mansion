@@ -49,8 +49,9 @@ public class NewSwitchCam : MonoBehaviour
                 other.GetComponent<PlayerController>().cameuleranglesy = Cam.transform.eulerAngles.y;
         }
 
-        if (P1naCena == true && P2naCena == true)
+        if(P1naCena == true && P2naCena == true)
         {
+            target_2 = true;
             if (target_2 == true)
             {
                 activeCam.Priority = 1;
