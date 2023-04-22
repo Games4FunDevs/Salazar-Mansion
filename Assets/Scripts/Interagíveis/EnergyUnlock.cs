@@ -20,7 +20,7 @@ public class EnergyUnlock : MonoBehaviour
         if (peca == false && (col.CompareTag("P1") && col.GetComponent<PlayerController>().hasPeca == true && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && col.GetComponent<PlayerController>().hasPeca == true && controles.P2.Interagir.ReadValue<float>() == 1))
         {
             StartCoroutine("PecaTrue", .3f);
-            this.transform.GetChild(3).gameObject.SetActive(false);
+            //this.transform.GetChild(3).gameObject.SetActive(false);
             this.transform.GetChild(2).gameObject.SetActive(true);
         }
 
