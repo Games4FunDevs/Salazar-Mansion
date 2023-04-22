@@ -67,6 +67,7 @@ MonoBehaviour:
   openDoor: OpenDoor1
   closeDoor: CloseDoor2
   other: {fileID: 8612945988668777800}
+  p2free: {fileID: 0}
   sons:
   - {fileID: 8300000, guid: d313ca3e63ec59c448768409d0679511, type: 3}
   - {fileID: 8300000, guid: d14ad18f6acbcd14eb1561acb3ce5984, type: 3}
@@ -228,8 +229,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 88e0f310f3bb91443b83ceeec9710d4b, type: 3}
-  - {fileID: -6478536213147159724, guid: 88e0f310f3bb91443b83ceeec9710d4b, type: 3}
+  - {fileID: 2100000, guid: 75822d020e811d341a459718e08e691c, type: 2}
+  - {fileID: 2100000, guid: 44a982c7c7afa7147bc5fa0e17371e96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -413,7 +414,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -3846018093981099296, guid: 88e0f310f3bb91443b83ceeec9710d4b, type: 3}
+  - {fileID: 2100000, guid: dbff12a213ef6e741a21dd47fa3385ab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -502,6 +503,7 @@ MonoBehaviour:
   openDoor: OpenDoor2
   closeDoor: CloseDoor1
   other: {fileID: 4073050131670006172}
+  p2free: {fileID: 0}
   sons:
   - {fileID: 8300000, guid: d313ca3e63ec59c448768409d0679511, type: 3}
   - {fileID: 8300000, guid: d14ad18f6acbcd14eb1561acb3ce5984, type: 3}
