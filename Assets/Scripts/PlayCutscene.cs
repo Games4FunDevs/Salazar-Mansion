@@ -60,7 +60,7 @@ public class PlayCutscene : MonoBehaviour
     void CallCustcene()
     {
         this.cutscene.SetActive(true);
-        p2cam.SetActive(false);
+        //p2cam.SetActive(false);
         this.count = 1;
     }
 

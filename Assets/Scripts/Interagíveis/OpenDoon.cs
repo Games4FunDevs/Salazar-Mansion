@@ -12,7 +12,7 @@ public class OpenDoon : MonoBehaviour
 
     public bool openTrigger, closeTrigger;
     public string openDoor = "OpenDoor1", closeDoor = "CloseDoor1";
-    public GameObject other, p2free;
+    public GameObject other, p2free, p2cam;
 
     public AudioClip[] sons;
     AudioSource audio_;
