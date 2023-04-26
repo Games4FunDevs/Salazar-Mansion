@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4073050131670006172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0.38, y: -0.29, z: 1.5}
   m_LocalScale: {x: 0.8618, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -68,6 +68,7 @@ MonoBehaviour:
   closeDoor: CloseDoor2
   other: {fileID: 8612945988668777800}
   p2free: {fileID: 0}
+  p2cam: {fileID: 0}
   sons:
   - {fileID: 8300000, guid: d313ca3e63ec59c448768409d0679511, type: 3}
   - {fileID: 8300000, guid: d14ad18f6acbcd14eb1561acb3ce5984, type: 3}
@@ -289,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6995038291320674529}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.2899994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -323,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 8304984106181528698}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8508968, y: 0.60225, z: 0.60225}
+  m_LocalScale: {x: 0.8508968, y: 0.5418328, z: 0.47183877}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4668687355521894856}
@@ -379,7 +380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8362112858317128527}
   m_LocalRotation: {x: -0.7071069, y: -0, z: -0, w: 0.70710677}
-  m_LocalPosition: {x: 0.09464263, y: 0.28058386, z: 1.5755408}
+  m_LocalPosition: {x: 0.09464263, y: -0.009415537, z: 1.5755408}
   m_LocalScale: {x: 35.382183, y: 164.82895, z: 292.04007}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -463,7 +464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8612945988668777800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.92, y: 0, z: 1.5}
+  m_LocalPosition: {x: -1.92, y: -0.2899994, z: 1.5}
   m_LocalScale: {x: 0.83717, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -504,6 +505,7 @@ MonoBehaviour:
   closeDoor: CloseDoor1
   other: {fileID: 4073050131670006172}
   p2free: {fileID: 0}
+  p2cam: {fileID: 0}
   sons:
   - {fileID: 8300000, guid: d313ca3e63ec59c448768409d0679511, type: 3}
   - {fileID: 8300000, guid: d14ad18f6acbcd14eb1561acb3ce5984, type: 3}
