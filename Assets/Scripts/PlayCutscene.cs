@@ -19,7 +19,6 @@ public class PlayCutscene : MonoBehaviour
         {
             if (this.gameObject.name == "p2free")
             {
-                print("aaaaaaaaa");
                 DestroyCutscene();
             } 
             if (this.gameObject.name == "meninoc1")
@@ -37,8 +36,8 @@ public class PlayCutscene : MonoBehaviour
 
         if (this.count == 0)
         {
-            if ((this.gameObject.name == "p2free" && p1 == true) || ((p1 == true && p2 == true) && this.gameObject.name == "meninoc1")
-            || ((this.gameObject.name == "fimfase1" && (p1 == true || p2 == true))))
+            if ((this.gameObject.name == "p2free" && p1 == true) || ((p1 == true || p2 == true) && this.gameObject.name == "meninoc1")
+            || ((this.gameObject.name == "fimfase1" && (p1 == true || p2 == true)))) 
             {
                 CallCustcene();
             }

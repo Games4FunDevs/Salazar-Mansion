@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
                 hasEye = false,
                 hasKey2 = false;
     
-    public GameObject canvasMenu;
+    public GameObject canvasMenu, inimigo;
 
     private AudioSource audio_, audio_1;
 
@@ -90,6 +90,11 @@ public class PlayerController : MonoBehaviour
         if (hasKey2 == true)
         {
             GameObject.Find("impedirEscadas").SetActive(false);
+        }
+        
+        if (hasEye == true)
+        {
+           inimigo.SetActive(true);
         }
     }
 
