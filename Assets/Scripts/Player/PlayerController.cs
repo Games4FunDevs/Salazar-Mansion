@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour
         
         if (col.gameObject.name.Contains("Olho") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
-            this.hasPeca = true;
+            this.hasEye = true;
             Destroy(col.gameObject);
         }
 
