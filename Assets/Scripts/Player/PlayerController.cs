@@ -26,8 +26,11 @@ public class PlayerController : MonoBehaviour
 
     public int player = 0;
 
-    // teste
-    public bool hasKey = false, hasPeca = false;
+    // itens / inventario
+    public bool hasKey = false, 
+                hasPeca = false, 
+                hasEye = false,
+                hasKey2 = false;
     
     public GameObject canvasMenu;
 
@@ -83,17 +86,34 @@ public class PlayerController : MonoBehaviour
         {
             if (controles.P2.Menu.triggered) ShowMenu();
         }
+
+        if (hasKey2 == true)
+        {
+            GameObject.Find("impedirEscadas").SetActive(false);
+        }
     }
 
     void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.name.Contains("Key") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        if (col.gameObject.name.Contains("Key1") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasKey = true;
             Destroy(col.gameObject);
         }
+
+        if (col.gameObject.name.Contains("Key2") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasKey2 = true;
+            Destroy(col.gameObject);
+        }
         
         if (col.gameObject.name.Contains("Peça") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasPeca = true;
+            Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.name.Contains("Olho") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasPeca = true;
             Destroy(col.gameObject);
