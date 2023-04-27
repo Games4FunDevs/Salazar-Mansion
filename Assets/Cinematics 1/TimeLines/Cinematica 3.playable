@@ -132,6 +132,7 @@ MonoBehaviour:
     - {fileID: -761917059353296765}
     - {fileID: -949935081114129237}
     - {fileID: 2384021696716960172}
+    - {fileID: 6972514580867067228}
 --- !u!114 &-949935081114129237
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -174,12 +175,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bfda56da833e2384a9677cd3c976a436, type: 3}
-  m_Name: Cinematica 2
+  m_Name: Cinematica 3
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
   - {fileID: -1321751812344680690}
-  m_FixedDuration: 89.125
+  m_FixedDuration: 90
   m_EditorSettings:
     m_Framerate: 24
     m_ScenePreview: 1
@@ -265,6 +266,22 @@ MonoBehaviour:
   m_Retroactive: 0
   m_EmitOnce: 0
   m_Asset: {fileID: 11400000, guid: ec545f1077f244a4cbf104aa2f041855, type: 2}
+--- !u!114 &6972514580867067228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 90
+  m_Retroactive: 0
+  m_EmitOnce: 0
+  m_Asset: {fileID: 11400000, guid: 742ecb3702568a3489654a6c02dcacea, type: 2}
 --- !u!114 &9221725693032074104
 MonoBehaviour:
   m_ObjectHideFlags: 1
