@@ -346,8 +346,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -355,6 +355,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 442474724}
   Cam: {fileID: 442474722}
+  Luzes: {fileID: 0}
 --- !u!65 &13544751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -577,8 +578,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -586,6 +587,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 706834039}
   Cam: {fileID: 706834037}
+  Luzes: {fileID: 0}
 --- !u!65 &28768223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -734,6 +736,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29009572}
   m_CullTransparentMesh: 1
+--- !u!1 &31843744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 31843745}
+  m_Layer: 0
+  m_Name: Luzes - Corredor do segundo andar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &31843745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31843744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1015880738}
+  - {fileID: 1843042742}
+  - {fileID: 1528048620}
+  m_Father: {fileID: 1275475780}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &35853584
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,7 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_LocalScale.x
@@ -1140,8 +1176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -1149,6 +1185,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 2003636716}
   Cam: {fileID: 2003636714}
+  Luzes: {fileID: 0}
 --- !u!65 &46841573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1193,7 +1230,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -90}
 --- !u!23 &47194822
 MeshRenderer:
@@ -1309,7 +1346,7 @@ Transform:
   - {fileID: 2117031931}
   - {fileID: 1839840528}
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &49329326
 GameObject:
@@ -1580,7 +1617,7 @@ GameObject:
   - component: {fileID: 59561926}
   - component: {fileID: 59561927}
   m_Layer: 0
-  m_Name: Point Light (75)
+  m_Name: Luz - Sala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1594,12 +1631,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59561925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: 0.075, z: -36.55}
+  m_LocalPosition: {x: -0.12, y: 0.07499981, z: -36.549995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 54
+  m_Father: {fileID: 1981857312}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &59561927
 Light:
@@ -2105,8 +2142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -2114,6 +2151,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 280599168}
   Cam: {fileID: 280599166}
+  Luzes: {fileID: 0}
 --- !u!65 &74947296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2464,7 +2502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_LocalScale.x
@@ -2996,7 +3034,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1275004923}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &92112452
 MonoBehaviour:
@@ -3258,7 +3296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 31
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -3467,6 +3505,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 932394335}
   Cam: {fileID: 932394333}
+  Luzes: {fileID: 0}
 --- !u!65 &96515495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3755,7 +3794,7 @@ GameObject:
   - component: {fileID: 104559345}
   - component: {fileID: 104559346}
   m_Layer: 0
-  m_Name: Point Light (74)
+  m_Name: Luz - Sala de escadas 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3769,12 +3808,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104559344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.030952046, y: 2.4055626, z: 0.019885434}
-  m_LocalScale: {x: 1.820764, y: 1.820764, z: 1.820764}
+  m_LocalPosition: {x: 3.0269923, y: 0.3920002, z: -21.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1275004923}
-  m_RootOrder: 4
+  m_Father: {fileID: 286564609}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &104559346
 Light:
@@ -4892,6 +4931,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4545818608595586610, guid: 604800daf217bc04cb41410cb462e364, type: 3}
   m_PrefabInstance: {fileID: 136468487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &139372327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 139372328}
+  m_Layer: 0
+  m_Name: Luzes - Cozinha
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &139372328
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139372327}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1150648997}
+  - {fileID: 1099131316}
+  - {fileID: 1935666080}
+  - {fileID: 378020981}
+  - {fileID: 734241936}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &140107521
 GameObject:
   m_ObjectHideFlags: 0
@@ -4903,7 +4978,7 @@ GameObject:
   - component: {fileID: 140107522}
   - component: {fileID: 140107523}
   m_Layer: 0
-  m_Name: Point Light (42)
+  m_Name: Luz - Quarto secreto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4916,13 +4991,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140107521}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.68, y: 7.02, z: -13.88}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.68, y: 7.0200005, z: -13.879999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 24
+  m_Father: {fileID: 967771317}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &140107523
 Light:
@@ -5094,7 +5169,7 @@ GameObject:
   - component: {fileID: 140795242}
   - component: {fileID: 140795243}
   m_Layer: 0
-  m_Name: Point Light (70)
+  m_Name: Luz - entrada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5108,12 +5183,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140795241}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8227, y: 0.949, z: -13.189}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: -7.1204295, y: -3.7009997, z: -42.06166}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 17
+  m_Father: {fileID: 1032521919}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &140795243
 Light:
@@ -7713,15 +7788,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7734477009152510235, guid: ff0337fa56b787749b66153b81f5715f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -13.20978
+      value: -14.109781
       objectReference: {fileID: 0}
     - target: {fileID: 7734477009152510235, guid: ff0337fa56b787749b66153b81f5715f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.5688164
+      value: 10.948516
       objectReference: {fileID: 0}
     - target: {fileID: 7734477009152510235, guid: ff0337fa56b787749b66153b81f5715f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.509657
+      value: -3.429657
       objectReference: {fileID: 0}
     - target: {fileID: 7734477009152510235, guid: ff0337fa56b787749b66153b81f5715f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9034,7 +9109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -9538,7 +9613,7 @@ GameObject:
   - component: {fileID: 171762553}
   - component: {fileID: 171762554}
   m_Layer: 0
-  m_Name: Point Light (6)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9551,13 +9626,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171762552}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.54, y: 7.2299995, z: 3.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.54, y: 7.2299995, z: 3.3000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 8
+  m_Father: {fileID: 399063817}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &171762554
 Light:
@@ -9886,7 +9961,7 @@ GameObject:
   - component: {fileID: 181094850}
   - component: {fileID: 181094851}
   m_Layer: 0
-  m_Name: Point Light (26)
+  m_Name: Luz - Quarto da camareira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9899,13 +9974,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181094849}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.99, y: 4.77, z: -6.42}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.99, y: 4.7700005, z: -6.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 12
+  m_Father: {fileID: 399063817}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &181094851
 Light:
@@ -10093,7 +10168,7 @@ GameObject:
   - component: {fileID: 187645647}
   - component: {fileID: 187645648}
   m_Layer: 0
-  m_Name: Point Light (8)
+  m_Name: Luz - Sala de energia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10106,13 +10181,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187645646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.31, y: -0.85, z: -15.39}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.31, y: -0.8499999, z: -15.390001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 2
+  m_Father: {fileID: 1602689674}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &187645648
 Light:
@@ -10266,8 +10341,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -10275,6 +10350,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1306358937}
   Cam: {fileID: 1306358935}
+  Luzes: {fileID: 286564608}
 --- !u!65 &192253743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10404,8 +10480,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -10413,6 +10489,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1057282094}
   Cam: {fileID: 1057282092}
+  Luzes: {fileID: 0}
 --- !u!65 &198243533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10619,7 +10696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
       propertyPath: m_LocalScale.x
@@ -10740,7 +10817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
       propertyPath: m_LocalScale.x
@@ -10848,6 +10925,67 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3819058481068501144, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
+--- !u!1001 &222658874
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7988005854481269761, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_Name
+      value: minigame-cores-quadros
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269761, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7988005854481269762, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
 --- !u!1001 &225749554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11011,8 +11149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -11020,6 +11158,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 831818228}
   Cam: {fileID: 831818226}
+  Luzes: {fileID: 1981857311}
 --- !u!65 &226203771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11097,7 +11236,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 16
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &232447208
 MeshRenderer:
@@ -11289,8 +11428,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -11298,6 +11437,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1081135292}
   Cam: {fileID: 1081135290}
+  Luzes: {fileID: 1424605744}
 --- !u!65 &237897354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14675,7 +14815,7 @@ GameObject:
   - component: {fileID: 255273470}
   - component: {fileID: 255273471}
   m_Layer: 0
-  m_Name: Point Light (58)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14688,13 +14828,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255273469}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9, y: 13.889999, z: 2.05}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.9, y: 13.889999, z: 2.0500002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 39
+  m_Father: {fileID: 1909675378}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &255273471
 Light:
@@ -14978,7 +15118,7 @@ GameObject:
   - component: {fileID: 266269687}
   - component: {fileID: 266269688}
   m_Layer: 0
-  m_Name: Point Light (60)
+  m_Name: Luz - Quarto Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14991,13 +15131,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266269686}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.04, y: 13.62, z: -13.18}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.04, y: 13.619999, z: -13.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 41
+  m_Father: {fileID: 1909675378}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &266269688
 Light:
@@ -15124,7 +15264,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: -109.372, y: 130.097, z: -236.07}
 --- !u!23 &268460724
 MeshRenderer:
@@ -15333,8 +15473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -15342,6 +15482,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 748412630}
   Cam: {fileID: 748412628}
+  Luzes: {fileID: 0}
 --- !u!65 &276678469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15918,6 +16059,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
+--- !u!1 &286564608
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 286564609}
+  m_Layer: 0
+  m_Name: Luzes - Sala de escadas 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &286564609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286564608}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 104559345}
+  - {fileID: 1223247180}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &288351521
 GameObject:
   m_ObjectHideFlags: 0
@@ -16032,7 +16206,7 @@ GameObject:
   - component: {fileID: 291971159}
   - component: {fileID: 291971160}
   m_Layer: 0
-  m_Name: Point Light (66)
+  m_Name: Luz-Sala de Jantar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16046,12 +16220,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291971158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2670888, y: 0.7389996, z: -0.0749765}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: -13.2, y: -3.911, z: -7.08}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 8
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &291971160
 Light:
@@ -16377,7 +16551,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &296752324
 MonoBehaviour:
@@ -16394,7 +16568,8 @@ MonoBehaviour:
   P1: {fileID: 2031994981}
   P2: {fileID: 145088772}
   Items: []
-  ItemSlotsP1: []
+  ItemSlotsP1:
+  - {fileID: 2099304094}
   ItemSlotsP2: []
 --- !u!1 &297607437
 GameObject:
@@ -16442,8 +16617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -16451,6 +16626,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1639391283}
   Cam: {fileID: 1639391281}
+  Luzes: {fileID: 0}
 --- !u!65 &297607440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16532,7 +16708,7 @@ GameObject:
   - component: {fileID: 302367952}
   - component: {fileID: 302367953}
   m_Layer: 0
-  m_Name: Point Light (39)
+  m_Name: Luz - Quarto do Billy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16545,13 +16721,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302367951}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.47, y: 4.87, z: -33.12}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.47, y: 4.87, z: -33.119995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 21
+  m_Father: {fileID: 1691970974}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &302367953
 Light:
@@ -16648,7 +16824,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17116,6 +17292,30 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1032521918}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1816267237}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1380016416}
@@ -17281,6 +17481,30 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1032521918}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1816267237}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -18038,6 +18262,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5099776471984739378, guid: 49dcb5e04392c5a4fb0e949aeb574757, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.89
+      objectReference: {fileID: 0}
     - target: {fileID: 5391208132344976938, guid: 49dcb5e04392c5a4fb0e949aeb574757, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -18201,7 +18429,7 @@ GameObject:
   - component: {fileID: 339642462}
   - component: {fileID: 339642463}
   m_Layer: 0
-  m_Name: Point Light (72)
+  m_Name: Luz - Corredor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18215,12 +18443,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339642461}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.437, y: 0.075, z: -23.293}
+  m_LocalPosition: {x: -7.437, y: 0.07499981, z: -23.293001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 47
+  m_Father: {fileID: 678375141}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &339642463
 Light:
@@ -18527,7 +18755,7 @@ GameObject:
   - component: {fileID: 349111685}
   - component: {fileID: 349111686}
   m_Layer: 0
-  m_Name: Point Light (63)
+  m_Name: Luz - Banheiro Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18540,13 +18768,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349111684}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.24, y: 13.62, z: -5.29}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.24, y: 13.619999, z: -5.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 44
+  m_Father: {fileID: 1204219908}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &349111686
 Light:
@@ -18656,8 +18884,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -18665,6 +18893,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 519964277}
   Cam: {fileID: 519964275}
+  Luzes: {fileID: 0}
 --- !u!65 &355890751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19326,7 +19555,7 @@ GameObject:
   - component: {fileID: 378020981}
   - component: {fileID: 378020982}
   m_Layer: 0
-  m_Name: Point Light (68)
+  m_Name: Luz - Cozinha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19339,13 +19568,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378020980}
-  m_LocalRotation: {x: -0, y: 0.68048644, z: -0, w: 0.7327608}
+  m_LocalRotation: {x: -0, y: 0.6804864, z: -0, w: 0.7327607}
   m_LocalPosition: {x: 0.49, y: -1.1350002, z: -7.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 51
+  m_Father: {fileID: 139372328}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 85.763, z: 0}
 --- !u!108 &378020982
 Light:
@@ -19503,7 +19732,7 @@ GameObject:
   - component: {fileID: 383941433}
   - component: {fileID: 383941434}
   m_Layer: 0
-  m_Name: Point Light (71)
+  m_Name: Luz - entrada
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19517,12 +19746,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383941432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9902645, y: 1.6340872, z: -11.930607}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: -17.234356, y: -3.0159125, z: -38.704895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 20
+  m_Father: {fileID: 1032521919}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &383941434
 Light:
@@ -19792,6 +20021,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393775239}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &399063816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 399063817}
+  m_Layer: 0
+  m_Name: Luzes - Quarto da camareira
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &399063817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399063816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 828372749}
+  - {fileID: 181094850}
+  - {fileID: 639016247}
+  - {fileID: 1137138862}
+  - {fileID: 171762553}
+  m_Father: {fileID: 942427849}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &402006863
 GameObject:
   m_ObjectHideFlags: 0
@@ -19839,8 +20104,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -19848,6 +20113,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 783532482}
   Cam: {fileID: 783532480}
+  Luzes: {fileID: 0}
 --- !u!65 &402006866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19892,7 +20158,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 15
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &405848425
 MeshRenderer:
@@ -19960,7 +20226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &405903959
 Transform:
   m_ObjectHideFlags: 0
@@ -19974,7 +20240,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2069929437}
-  m_RootOrder: 46
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &405903960
 Light:
@@ -21755,6 +22021,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 161876804}
   Cam: {fileID: 161876802}
+  Luzes: {fileID: 0}
 --- !u!65 &410787055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21823,7 +22090,7 @@ GameObject:
   - component: {fileID: 424120790}
   - component: {fileID: 424120791}
   m_Layer: 0
-  m_Name: Point Light (36)
+  m_Name: Luz - Quarto do Billy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21836,13 +22103,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424120789}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.53, y: 7.02, z: -30.83}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.53, y: 7.0200005, z: -30.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 18
+  m_Father: {fileID: 1691970974}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &424120791
 Light:
@@ -22231,7 +22498,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -90}
 --- !u!23 &437677834
 MeshRenderer:
@@ -24166,7 +24433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -24298,7 +24565,7 @@ GameObject:
   - component: {fileID: 489869833}
   - component: {fileID: 489869834}
   m_Layer: 0
-  m_Name: Point Light (15)
+  m_Name: Luz-Sala de Jantar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24312,12 +24579,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489869832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.645, y: 0.6829996, z: 0.06747903}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: -15.308241, y: -3.967, z: -6.7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 5
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &489869834
 Light:
@@ -24392,7 +24659,7 @@ GameObject:
   - component: {fileID: 492093524}
   - component: {fileID: 492093525}
   m_Layer: 0
-  m_Name: Point Light (65)
+  m_Name: Luz-Sala de Jantar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24406,12 +24673,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492093523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.171, y: 0.7389996, z: 0.069}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: -10.756048, y: -3.911, z: -6.695942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 7
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &492093525
 Light:
@@ -27139,7 +27406,7 @@ GameObject:
   - component: {fileID: 504427606}
   - component: {fileID: 504427607}
   m_Layer: 0
-  m_Name: Point Light (49)
+  m_Name: Luz - Sala do Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27152,13 +27419,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504427605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -5.05, y: 12.23, z: -39.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 31
+  m_Father: {fileID: 1855159676}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &504427607
 Light:
@@ -27614,6 +27881,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &517877276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517877277}
+  m_Layer: 0
+  m_Name: Luzes Externas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &517877277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517877276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1031672371}
+  - {fileID: 1435904647}
+  m_Father: {fileID: 2069929437}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519964275
 GameObject:
   m_ObjectHideFlags: 0
@@ -28573,7 +28873,7 @@ GameObject:
   - component: {fileID: 542679448}
   - component: {fileID: 542679449}
   m_Layer: 0
-  m_Name: Point Light (45)
+  m_Name: Luz - Quarto secreto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28586,13 +28886,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542679447}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.92, y: 3.94, z: -8.1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.92, y: 3.9400005, z: -8.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 27
+  m_Father: {fileID: 967771317}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &542679449
 Light:
@@ -29034,8 +29334,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -29043,6 +29343,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1189857635}
   Cam: {fileID: 1189857633}
+  Luzes: {fileID: 0}
 --- !u!65 &567556593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29109,7 +29410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 29
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -29493,7 +29794,7 @@ Transform:
   - {fileID: 1037021577}
   - {fileID: 1119326904}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &592478695
 GameObject:
@@ -29541,8 +29842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -29550,6 +29851,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 35853586}
   Cam: {fileID: 35853584}
+  Luzes: {fileID: 0}
 --- !u!65 &592478698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30274,8 +30576,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -30283,6 +30585,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1658455918}
   Cam: {fileID: 1658455916}
+  Luzes: {fileID: 139372327}
 --- !u!65 &610926224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30522,8 +30825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -30531,6 +30834,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1957665924}
   Cam: {fileID: 1957665922}
+  Luzes: {fileID: 1816267237}
 --- !u!65 &623310993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30638,7 +30942,7 @@ GameObject:
   - component: {fileID: 626531727}
   - component: {fileID: 626531728}
   m_Layer: 0
-  m_Name: Point Light (35)
+  m_Name: Luz - Corredor (1 andar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30651,13 +30955,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626531726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.583, y: 7.02, z: -33.41}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -13.583, y: 7.0200005, z: -33.409996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 17
+  m_Father: {fileID: 2094694720}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &626531728
 Light:
@@ -31126,7 +31430,7 @@ GameObject:
   - component: {fileID: 639016247}
   - component: {fileID: 639016248}
   m_Layer: 0
-  m_Name: Point Light (27)
+  m_Name: Luz - Quarto da camareira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31139,13 +31443,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639016246}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13.79, y: 6.847, z: -15.895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 13
+  m_Father: {fileID: 399063817}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &639016248
 Light:
@@ -31678,6 +31982,47 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 644114125}
   m_CullTransparentMesh: 1
+--- !u!1 &645398821
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645398822}
+  m_Layer: 0
+  m_Name: Luzes Terreo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &645398822
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645398821}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2070753400}
+  - {fileID: 139372328}
+  - {fileID: 1950319973}
+  - {fileID: 286564609}
+  - {fileID: 1981857312}
+  - {fileID: 1816267238}
+  - {fileID: 1032521919}
+  - {fileID: 1602689674}
+  - {fileID: 1424605745}
+  - {fileID: 678375141}
+  m_Father: {fileID: 2069929437}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &647436505
 GameObject:
   m_ObjectHideFlags: 0
@@ -32008,7 +32353,7 @@ GameObject:
   - component: {fileID: 658429495}
   - component: {fileID: 658429496}
   m_Layer: 0
-  m_Name: Point Light (50)
+  m_Name: Luz - Sala do Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32021,13 +32366,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658429494}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.35, y: 12.23, z: -31.02}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.35, y: 12.23, z: -31.019999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 32
+  m_Father: {fileID: 1855159676}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &658429496
 Light:
@@ -32124,7 +32469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_LocalScale.x
@@ -34132,6 +34477,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677502633}
   m_Mesh: {fileID: 8866421929470350759, guid: 11202be6cb2fb0f40a9cca0edc7ddfd4, type: 3}
+--- !u!1 &678375140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 678375141}
+  m_Layer: 0
+  m_Name: Luzes - Corredor(Energia/Biblioteca)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &678375141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678375140}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 339642462}
+  - {fileID: 1136832470}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &681513259
 GameObject:
   m_ObjectHideFlags: 0
@@ -34261,8 +34639,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -34270,6 +34648,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1965046356}
   Cam: {fileID: 1965046354}
+  Luzes: {fileID: 0}
 --- !u!65 &692337074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35165,7 +35544,7 @@ GameObject:
   - component: {fileID: 726990197}
   - component: {fileID: 726990198}
   m_Layer: 0
-  m_Name: Point Light (68)
+  m_Name: Luz - Sala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35179,12 +35558,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726990196}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.0487356, y: 0.73508716, z: -7.7726107}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: -0.28078365, y: -3.9149125, z: -27.613436}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 11
+  m_Father: {fileID: 1981857312}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &726990198
 Light:
@@ -35434,8 +35813,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -35443,6 +35822,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1603013957}
   Cam: {fileID: 1603013955}
+  Luzes: {fileID: 0}
 --- !u!65 &730484301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35550,7 +35930,7 @@ GameObject:
   - component: {fileID: 734241936}
   - component: {fileID: 734241937}
   m_Layer: 0
-  m_Name: Point Light (25)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35563,13 +35943,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734241935}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.51, y: -0.24, z: 1.61}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.51, y: -0.23999977, z: 1.6100001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 6
+  m_Father: {fileID: 139372328}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &734241937
 Light:
@@ -35644,7 +36024,7 @@ GameObject:
   - component: {fileID: 734831633}
   - component: {fileID: 734831634}
   m_Layer: 0
-  m_Name: Point Light (43)
+  m_Name: Luz - Quarto secreto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35657,13 +36037,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734831632}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.1, y: 7.02, z: -13.88}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.1, y: 7.0200005, z: -13.879999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 25
+  m_Father: {fileID: 967771317}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &734831634
 Light:
@@ -36247,8 +36627,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -36256,6 +36636,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 897302074}
   Cam: {fileID: 897302072}
+  Luzes: {fileID: 0}
 --- !u!65 &767663535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36280,7 +36661,7 @@ GameObject:
   - component: {fileID: 769660728}
   - component: {fileID: 769660729}
   m_Layer: 0
-  m_Name: Point Light (67)
+  m_Name: Luz-Sala de Jantar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36294,12 +36675,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 769660727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2670888, y: 0.7389996, z: 0.20131198}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: -13.2, y: -3.911, z: -6.3430004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 9
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &769660729
 Light:
@@ -36570,7 +36951,7 @@ GameObject:
   - component: {fileID: 772009890}
   - component: {fileID: 772009891}
   m_Layer: 0
-  m_Name: Point Light (44)
+  m_Name: Luz - Quarto secreto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36583,13 +36964,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772009889}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.1, y: 7.02, z: -7.245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.1, y: 7.0200005, z: -7.245001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 26
+  m_Father: {fileID: 967771317}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &772009891
 Light:
@@ -37161,7 +37542,7 @@ Transform:
   - {fileID: 640247854}
   - {fileID: 1101430419}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &792208102
 GameObject:
@@ -37827,7 +38208,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &809906842
 Light:
@@ -38298,7 +38679,7 @@ GameObject:
   - component: {fileID: 822742323}
   - component: {fileID: 822742324}
   m_Layer: 0
-  m_Name: Point Light (56)
+  m_Name: Luz - Quarto Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38311,13 +38692,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822742322}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.04, y: 13.62, z: -5.12}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.04, y: 13.619999, z: -5.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 37
+  m_Father: {fileID: 1909675378}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &822742324
 Light:
@@ -38392,7 +38773,7 @@ GameObject:
   - component: {fileID: 828372749}
   - component: {fileID: 828372750}
   m_Layer: 0
-  m_Name: Point Light (23)
+  m_Name: Luz - Quarto da camareira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38405,13 +38786,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828372748}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.375, y: 5.44, z: -12.316}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.375, y: 5.4400005, z: -12.316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 11
+  m_Father: {fileID: 399063817}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &828372750
 Light:
@@ -40455,22 +40836,14 @@ Transform:
   - {fileID: 255925605}
   - {fileID: 236072141}
   - {fileID: 897528937}
-  - {fileID: 489869833}
   - {fileID: 809906841}
-  - {fileID: 492093524}
-  - {fileID: 291971159}
-  - {fileID: 769660728}
   - {fileID: 2081040064}
-  - {fileID: 726990197}
   - {fileID: 904997205}
   - {fileID: 1855448461}
-  - {fileID: 1144153975}
   - {fileID: 405848424}
   - {fileID: 232447207}
-  - {fileID: 140795242}
   - {fileID: 1946491757}
   - {fileID: 1017461578}
-  - {fileID: 383941433}
   - {fileID: 1119339841}
   m_Father: {fileID: 1570318461}
   m_RootOrder: 3
@@ -40528,7 +40901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -41027,8 +41400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -41036,6 +41409,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1512890053}
   Cam: {fileID: 1512890051}
+  Luzes: {fileID: 0}
 --- !u!65 &873432686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41714,6 +42088,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1296858806}
   Cam: {fileID: 1296858804}
+  Luzes: {fileID: 0}
 --- !u!65 &898526223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41924,7 +42299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 12
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &904997206
 MeshRenderer:
@@ -42169,7 +42544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42471,7 +42846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 32
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -42699,7 +43074,7 @@ GameObject:
   - component: {fileID: 918746805}
   - component: {fileID: 918746806}
   m_Layer: 0
-  m_Name: Point Light (1)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42712,13 +43087,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918746804}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -9.41, y: -1.75, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 0
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &918746806
 Light:
@@ -46473,8 +46848,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -46482,6 +46857,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 508162602}
   Cam: {fileID: 508162600}
+  Luzes: {fileID: 1816267237}
 --- !u!65 &940983486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46495,6 +46871,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 23.881475, y: 1.5824807, z: 0.24299823}
   m_Center: {x: -29.360218, y: 0.29123887, z: -0.7534585}
+--- !u!1 &942427848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 942427849}
+  m_Layer: 0
+  m_Name: Luzes Primeiro Andar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &942427849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942427848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1691970974}
+  - {fileID: 1277353568}
+  - {fileID: 967771317}
+  - {fileID: 399063817}
+  - {fileID: 2094694720}
+  m_Father: {fileID: 2069929437}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &944188514
 GameObject:
   m_ObjectHideFlags: 0
@@ -46964,7 +47376,7 @@ GameObject:
   - component: {fileID: 953956807}
   - component: {fileID: 953956808}
   m_Layer: 0
-  m_Name: Point Light (18)
+  m_Name: Luz - Freezer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46977,13 +47389,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 953956806}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.44, y: 0.274, z: -5.25}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.44, y: 0.27400017, z: -5.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 5
+  m_Father: {fileID: 1950319973}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &953956808
 Light:
@@ -47058,7 +47470,7 @@ GameObject:
   - component: {fileID: 963860657}
   - component: {fileID: 963860658}
   m_Layer: 0
-  m_Name: Point Light (46)
+  m_Name: Luz - Sala do Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47071,13 +47483,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963860656}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.92, y: 12.23, z: -31.02}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -11.92, y: 12.23, z: -31.019999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 28
+  m_Father: {fileID: 1855159676}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &963860658
 Light:
@@ -47295,6 +47707,41 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1683434807}
+--- !u!1 &967771316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 967771317}
+  m_Layer: 0
+  m_Name: Luzes - quarto secreto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &967771317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967771316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 140107522}
+  - {fileID: 734831633}
+  - {fileID: 772009890}
+  - {fileID: 542679448}
+  m_Father: {fileID: 942427849}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974769182
 GameObject:
   m_ObjectHideFlags: 0
@@ -47507,8 +47954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -47516,6 +47963,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1721189886}
   Cam: {fileID: 1721189884}
+  Luzes: {fileID: 0}
 --- !u!65 &983648573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47711,7 +48159,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0008a5d04c19734e934955ee4db1d0f, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d0008a5d04c19734e934955ee4db1d0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49236,7 +49684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -49826,7 +50274,7 @@ GameObject:
   - component: {fileID: 1015880738}
   - component: {fileID: 1015880739}
   m_Layer: 0
-  m_Name: Point Light (53)
+  m_Name: Luz - Corrredor (2 andar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49839,13 +50287,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1015880737}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.55, y: 13.62, z: -22.450003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.55, y: 13.619999, z: -22.450003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 34
+  m_Father: {fileID: 31843745}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1015880739
 Light:
@@ -50037,7 +50485,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 19
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1017461579
 MeshRenderer:
@@ -50264,7 +50712,7 @@ Transform:
   - {fileID: 1949461941}
   - {fileID: 817509024}
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!1 &1031672370
 GameObject:
@@ -50277,7 +50725,7 @@ GameObject:
   - component: {fileID: 1031672371}
   - component: {fileID: 1031672372}
   m_Layer: 0
-  m_Name: Point Light (16)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50290,13 +50738,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031672370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.29, y: 1.9, z: -52.43}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.29, y: 1.9000001, z: -52.43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 3
+  m_Father: {fileID: 517877277}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1031672372
 Light:
@@ -50413,7 +50861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -50534,6 +50982,39 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
   m_PrefabInstance: {fileID: 1031705612}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1032521918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032521919}
+  m_Layer: 0
+  m_Name: Luzes - Entrada
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1032521919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032521918}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 140795242}
+  - {fileID: 383941433}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033317488
 GameObject:
   m_ObjectHideFlags: 0
@@ -50829,8 +51310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -50838,6 +51319,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 427074814}
   Cam: {fileID: 427074812}
+  Luzes: {fileID: 1032521918}
 --- !u!65 &1036599197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51785,8 +52267,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -51794,6 +52276,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1730148270}
   Cam: {fileID: 1730148268}
+  Luzes: {fileID: 0}
 --- !u!65 &1064433113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52433,8 +52916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -52442,6 +52925,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 2100573704}
   Cam: {fileID: 2100573702}
+  Luzes: {fileID: 0}
 --- !u!65 &1085066223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52634,7 +53118,7 @@ GameObject:
   - component: {fileID: 1099131316}
   - component: {fileID: 1099131317}
   m_Layer: 0
-  m_Name: Point Light (66)
+  m_Name: Luz - Cozinha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52647,13 +53131,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099131315}
-  m_LocalRotation: {x: -0, y: 0.68048644, z: -0, w: 0.7327608}
+  m_LocalRotation: {x: -0, y: 0.6804864, z: -0, w: 0.7327607}
   m_LocalPosition: {x: 0.05462283, y: -1.1350002, z: -15.077959}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 49
+  m_Father: {fileID: 139372328}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 85.763, z: 0}
 --- !u!108 &1099131317
 Light:
@@ -53063,7 +53547,7 @@ GameObject:
   - component: {fileID: 1109763603}
   - component: {fileID: 1109763604}
   m_Layer: 0
-  m_Name: Point Light (64)
+  m_Name: Luz - Sala de armas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53076,13 +53560,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109763602}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.95, y: 13.62, z: -7.6}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.95, y: 13.619999, z: -7.6000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 45
+  m_Father: {fileID: 1687079613}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1109763604
 Light:
@@ -53285,7 +53769,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 21
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1119339842
 MeshRenderer:
@@ -55274,7 +55758,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -90}
 --- !u!23 &1135774151
 MeshRenderer:
@@ -55528,7 +56012,7 @@ GameObject:
   - component: {fileID: 1136832470}
   - component: {fileID: 1136832471}
   m_Layer: 0
-  m_Name: Point Light (73)
+  m_Name: Luz - Corredor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55542,12 +56026,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1136832469}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.437, y: 0.075, z: -16.448}
+  m_LocalPosition: {x: -7.579, y: 0.07499981, z: -16.448}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 48
+  m_Father: {fileID: 678375141}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1136832471
 Light:
@@ -55622,7 +56106,7 @@ GameObject:
   - component: {fileID: 1137138862}
   - component: {fileID: 1137138863}
   m_Layer: 0
-  m_Name: Point Light (28)
+  m_Name: Luz - Quarto da camareira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55635,13 +56119,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1137138861}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -12.35, y: 3.92, z: -20.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 14
+  m_Father: {fileID: 399063817}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1137138863
 Light:
@@ -55941,7 +56425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
       propertyPath: m_LocalScale.x
@@ -56060,7 +56544,7 @@ GameObject:
   - component: {fileID: 1144153975}
   - component: {fileID: 1144153976}
   m_Layer: 0
-  m_Name: Point Light (69)
+  m_Name: Luz - Sala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56074,12 +56558,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144153974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.419693, y: 0.7363622, z: -7.7726107}
-  m_LocalScale: {x: 0.17925425, y: 1, z: 0.37488285}
+  m_LocalPosition: {x: 1.7886639, y: -3.9136374, z: -27.613436}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 846986454}
-  m_RootOrder: 14
+  m_Father: {fileID: 1981857312}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1144153976
 Light:
@@ -56167,7 +56651,7 @@ GameObject:
   - component: {fileID: 1150648997}
   - component: {fileID: 1150648998}
   m_Layer: 0
-  m_Name: Point Light (31)
+  m_Name: Luz - Cozinha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56180,13 +56664,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150648996}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.575, y: -1.135, z: -11.885}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.575, y: -1.1350002, z: -11.885}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 7
+  m_Father: {fileID: 139372328}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1150648998
 Light:
@@ -56698,7 +57182,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 33
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -56865,8 +57349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -56874,6 +57358,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 600494856}
   Cam: {fileID: 600494854}
+  Luzes: {fileID: 0}
 --- !u!65 &1169071121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57246,8 +57731,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -57255,6 +57740,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 441960907}
   Cam: {fileID: 441960905}
+  Luzes: {fileID: 0}
 --- !u!65 &1175406726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57664,7 +58150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 30
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 4943010682327891532, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_LocalScale.x
@@ -57899,7 +58385,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: -90.243, y: -38.200012, z: 327.2}
 --- !u!23 &1202400728
 MeshRenderer:
@@ -57995,6 +58481,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1204219907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1204219908}
+  m_Layer: 0
+  m_Name: Luzes - Banheiro Salazar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1204219908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204219907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 349111685}
+  m_Father: {fileID: 1275475780}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205910764
 GameObject:
   m_ObjectHideFlags: 3
@@ -58168,8 +58686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -58177,6 +58695,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1373474589}
   Cam: {fileID: 1373474587}
+  Luzes: {fileID: 0}
 --- !u!65 &1208084663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58333,8 +58852,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -58342,6 +58861,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1055258073}
   Cam: {fileID: 1055258071}
+  Luzes: {fileID: 1602689673}
 --- !u!65 &1211366973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58482,100 +59002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1216673726
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1216673727}
-  - component: {fileID: 1216673728}
-  m_Layer: 0
-  m_Name: Point Light (08)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
---- !u!4 &1216673727
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216673726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.02, y: 7.7299995, z: 3.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1216673728
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1216673726}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 0.40143287, g: 0.59106207, b: 0.9150943, a: 1}
-  m_Intensity: 7.2
-  m_Range: 10.04
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 2
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &1218579629
 GameObject:
   m_ObjectHideFlags: 0
@@ -58800,7 +59226,7 @@ GameObject:
   - component: {fileID: 1223247180}
   - component: {fileID: 1223247181}
   m_Layer: 0
-  m_Name: Point Light (69)
+  m_Name: Luz - Sala de escadas 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58813,13 +59239,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223247179}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -5.203377, y: -1.1350002, z: -20.70896}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 52
+  m_Father: {fileID: 286564609}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!108 &1223247181
 Light:
@@ -59379,7 +59805,7 @@ GameObject:
   - component: {fileID: 1236473522}
   - component: {fileID: 1236473523}
   m_Layer: 0
-  m_Name: Point Light (57)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59392,13 +59818,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236473521}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.41, y: 13.889999, z: 2.05}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.41, y: 13.889999, z: 2.0500002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 38
+  m_Father: {fileID: 1909675378}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1236473523
 Light:
@@ -59835,7 +60261,7 @@ GameObject:
   - component: {fileID: 1252560803}
   - component: {fileID: 1252560804}
   m_Layer: 0
-  m_Name: Point Light (48)
+  m_Name: Luz - Sala do Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59848,13 +60274,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252560802}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.05, y: 12.23, z: -31.02}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.05, y: 12.23, z: -31.019999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 30
+  m_Father: {fileID: 1855159676}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1252560804
 Light:
@@ -60609,7 +61035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2072353956427273282, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2072353956427273285, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_IsActive
@@ -60617,7 +61043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2775606351314268578, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2775606351314268581, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_IsActive
@@ -60629,7 +61055,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3589616397291509642, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3589616397291509645, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_IsActive
@@ -60705,7 +61131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7029777744117934358, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7241338690563012976, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_IsActive
@@ -60713,11 +61139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7241338690563012983, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7819127333491850512, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7819127333491850519, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_IsActive
@@ -60729,7 +61155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8039022641201037403, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8039022641201037404, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_IsActive
@@ -60741,7 +61167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9110940038479784271, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da60a763cd42271468ea8e52beb889e4, type: 3}
@@ -60945,6 +61371,43 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1275475779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1275475780}
+  m_Layer: 0
+  m_Name: Luzes Segundo Andar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1275475780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275475779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1855159676}
+  - {fileID: 31843745}
+  - {fileID: 1909675378}
+  - {fileID: 1687079613}
+  - {fileID: 1519821303}
+  - {fileID: 1204219908}
+  m_Father: {fileID: 2069929437}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276923169
 GameObject:
   m_ObjectHideFlags: 0
@@ -60999,6 +61462,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1277353567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277353568}
+  m_Layer: 0
+  m_Name: Luzes - Sala de escadas 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1277353568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277353567}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1843954565}
+  m_Father: {fileID: 942427849}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1277613261
 GameObject:
   m_ObjectHideFlags: 0
@@ -61093,7 +61588,7 @@ GameObject:
   - component: {fileID: 1279253046}
   - component: {fileID: 1279253047}
   m_Layer: 0
-  m_Name: Point Light (74)
+  m_Name: Luz - Sala de escadas 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -61107,12 +61602,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279253045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.17, y: 0.075, z: -32.21}
+  m_LocalPosition: {x: -13.17, y: 0.07499981, z: -32.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 53
+  m_Father: {fileID: 1816267238}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1279253047
 Light:
@@ -61222,8 +61717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -61231,6 +61726,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1053497642}
   Cam: {fileID: 1053497640}
+  Luzes: {fileID: 0}
 --- !u!65 &1280576862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61403,7 +61899,7 @@ Transform:
   - {fileID: 278513428}
   - {fileID: 451716575}
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1290115017
 GameObject:
@@ -61451,8 +61947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -61460,6 +61956,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 952192674}
   Cam: {fileID: 952192672}
+  Luzes: {fileID: 2070753399}
 --- !u!65 &1290115020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67309,8 +67806,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -67318,6 +67815,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 986067106}
   Cam: {fileID: 986067104}
+  Luzes: {fileID: 0}
 --- !u!65 &1378145217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67516,7 +68014,7 @@ GameObject:
   - component: {fileID: 1382294629}
   - component: {fileID: 1382294630}
   m_Layer: 0
-  m_Name: Point Light (2)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67529,13 +68027,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382294628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.02, y: -1.82, z: 0.52}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -14.02, y: -1.8200002, z: 0.52000046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 1
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1382294630
 Light:
@@ -69559,7 +70057,7 @@ GameObject:
   - component: {fileID: 1424142426}
   - component: {fileID: 1424142427}
   m_Layer: 0
-  m_Name: Point Light (38)
+  m_Name: Luz - Quarto do Billy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69572,13 +70070,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424142425}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.47, y: 4.87, z: -40.95}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.47, y: 4.87, z: -40.949997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 20
+  m_Father: {fileID: 1691970974}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1424142427
 Light:
@@ -69642,6 +70140,38 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1424605744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424605745}
+  m_Layer: 0
+  m_Name: Luzes - Dispensa
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1424605745
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1424605744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1505816550}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427162195
 GameObject:
   m_ObjectHideFlags: 0
@@ -69688,8 +70218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -69697,6 +70227,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1565722873}
   Cam: {fileID: 1565722871}
+  Luzes: {fileID: 678375140}
 --- !u!65 &1427162198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69944,7 +70475,7 @@ GameObject:
   - component: {fileID: 1435904647}
   - component: {fileID: 1435904648}
   m_Layer: 0
-  m_Name: Point Light (17)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69957,13 +70488,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1435904646}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.35, y: 1.9, z: -52.23}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.35, y: 1.9000001, z: -52.229996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 4
+  m_Father: {fileID: 517877277}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1435904648
 Light:
@@ -70485,7 +71016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3710284661175931371, guid: 698b2928f1d646c47a8cd87fdc9d3b19, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70600,8 +71131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -70609,6 +71140,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 317886582}
   Cam: {fileID: 317886580}
+  Luzes: {fileID: 678375140}
 --- !u!65 &1461925488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71792,7 +72324,7 @@ GameObject:
   - component: {fileID: 1505816550}
   - component: {fileID: 1505816551}
   m_Layer: 0
-  m_Name: Point Light (20)
+  m_Name: Luz - Despensa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71805,13 +72337,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505816549}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.663, y: 0.274, z: -15.779}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.663, y: 0.27400017, z: -15.779001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 55
+  m_Father: {fileID: 1424605745}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1505816551
 Light:
@@ -71921,8 +72453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -71930,6 +72462,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1107207119}
   Cam: {fileID: 1107207117}
+  Luzes: {fileID: 0}
 --- !u!65 &1506204245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72367,7 +72900,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1515333097}
   m_Mesh: {fileID: 8866421929470350759, guid: 11202be6cb2fb0f40a9cca0edc7ddfd4, type: 3}
---- !u!1 &1516842165
+--- !u!1 &1519821302
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72375,92 +72908,30 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1516842166}
-  - component: {fileID: 1516842167}
+  - component: {fileID: 1519821303}
   m_Layer: 0
-  m_Name: Point Light (7)
+  m_Name: 'Luzes - Entre quarto e sala de armas '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!4 &1516842166
+--- !u!4 &1519821303
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516842165}
+  m_GameObject: {fileID: 1519821302}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.9, y: 7.23, z: 2.05}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 9
+  m_Children:
+  - {fileID: 1951599393}
+  m_Father: {fileID: 1275475780}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1516842167
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1516842165}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 0.40143287, g: 0.59106207, b: 0.9150943, a: 1}
-  m_Intensity: 7.2
-  m_Range: 10.04
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 2
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &1526357358
 GameObject:
   m_ObjectHideFlags: 0
@@ -72543,7 +73014,7 @@ GameObject:
   - component: {fileID: 1528048620}
   - component: {fileID: 1528048621}
   m_Layer: 0
-  m_Name: Point Light (55)
+  m_Name: Luz - Corrredor (2 andar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72556,13 +73027,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528048619}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.83, y: 13.62, z: -22.450003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -12.83, y: 13.619999, z: -22.450003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 36
+  m_Father: {fileID: 31843745}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1528048621
 Light:
@@ -73088,7 +73559,7 @@ GameObject:
   - component: {fileID: 1546065792}
   - component: {fileID: 1546065793}
   m_Layer: 0
-  m_Name: Point Light (40)
+  m_Name: Luz - Corredor (1 andar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73101,13 +73572,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546065791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.54, y: 7.02, z: -26.937}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.54, y: 7.0200005, z: -26.936998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 22
+  m_Father: {fileID: 2094694720}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1546065793
 Light:
@@ -73508,7 +73979,7 @@ GameObject:
   - component: {fileID: 1569715488}
   - component: {fileID: 1569715489}
   m_Layer: 0
-  m_Name: Point Light (51)
+  m_Name: Luz - Sala do Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73521,13 +73992,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569715487}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.35, y: 12.23, z: -39.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 33
+  m_Father: {fileID: 1855159676}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1569715489
 Light:
@@ -73625,7 +74096,6 @@ Transform:
   - {fileID: 641713324}
   - {fileID: 846986454}
   - {fileID: 1377688618}
-  - {fileID: 2069929437}
   - {fileID: 1027030190}
   - {fileID: 1286331097}
   - {fileID: 47610501}
@@ -73656,7 +74126,7 @@ Transform:
   - {fileID: 1162089849}
   - {fileID: 907970607}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1570318462
 AudioSource:
@@ -74699,6 +75169,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600910281}
   m_CullTransparentMesh: 1
+--- !u!1 &1602689673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1602689674}
+  m_Layer: 0
+  m_Name: Luzes - Sala de energia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1602689674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602689673}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 187645647}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1603013955
 GameObject:
   m_ObjectHideFlags: 0
@@ -74816,8 +75318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -74825,6 +75327,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1877173873}
   Cam: {fileID: 1877173871}
+  Luzes: {fileID: 1950319972}
 --- !u!65 &1609435029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74934,7 +75437,7 @@ GameObject:
   - component: {fileID: 1613024471}
   - component: {fileID: 1613024472}
   m_Layer: 0
-  m_Name: Point Light (61)
+  m_Name: Luz - Sala de armas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74947,13 +75450,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613024470}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.95, y: 13.62, z: -13.57}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.95, y: 13.619999, z: -13.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 42
+  m_Father: {fileID: 1687079613}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1613024472
 Light:
@@ -76992,100 +77495,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!1 &1674654892
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1674654893}
-  - component: {fileID: 1674654894}
-  m_Layer: 0
-  m_Name: Point Light (59)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
---- !u!4 &1674654893
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674654892}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.38, y: 14.39, z: 3.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 40
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!108 &1674654894
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1674654892}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 2
-  m_Shape: 0
-  m_Color: {r: 0.40143287, g: 0.59106207, b: 0.9150943, a: 1}
-  m_Intensity: 7.2
-  m_Range: 10.04
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 1
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 1
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 2
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_UseViewFrustumForShadowCasterCull: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &1683434806
 GameObject:
   m_ObjectHideFlags: 3
@@ -77307,7 +77716,7 @@ GameObject:
   - component: {fileID: 1685655813}
   - component: {fileID: 1685655814}
   m_Layer: 0
-  m_Name: Point Light (34)
+  m_Name: Luz - Quarto do Billy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77320,13 +77729,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685655812}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.53, y: 7.02, z: -40.67}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.53, y: 7.0200005, z: -40.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 16
+  m_Father: {fileID: 1691970974}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1685655814
 Light:
@@ -77487,6 +77896,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685952572}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1687079612
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687079613}
+  m_Layer: 0
+  m_Name: Luzes - Sala de armas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1687079613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687079612}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1613024471}
+  - {fileID: 1109763603}
+  m_Father: {fileID: 1275475780}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688972200
 GameObject:
   m_ObjectHideFlags: 3
@@ -77811,6 +78253,42 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690705150}
   m_Mesh: {fileID: 6159892934976739648, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &1691970973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1691970974}
+  m_Layer: 0
+  m_Name: Luzes - Quarto do Billy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1691970974
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691970973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1685655813}
+  - {fileID: 424120790}
+  - {fileID: 2101341667}
+  - {fileID: 1424142426}
+  - {fileID: 302367952}
+  m_Father: {fileID: 942427849}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1698914906
 GameObject:
   m_ObjectHideFlags: 0
@@ -78670,8 +79148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -78679,6 +79157,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 2046445775}
   Cam: {fileID: 2046445773}
+  Luzes: {fileID: 0}
 --- !u!65 &1720185949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78871,7 +79350,7 @@ GameObject:
   - component: {fileID: 1722523797}
   - component: {fileID: 1722523798}
   m_Layer: 0
-  m_Name: Point Light (33)
+  m_Name: Luz - Corredor (1 andar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78884,13 +79363,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722523796}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.54, y: 7.02, z: -18.77}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -8.54, y: 7.0200005, z: -18.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 15
+  m_Father: {fileID: 2094694720}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1722523798
 Light:
@@ -79029,8 +79508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -79038,6 +79517,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1296858806}
   Cam: {fileID: 1296858804}
+  Luzes: {fileID: 1981857311}
 --- !u!65 &1723864065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79354,8 +79834,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -79363,6 +79843,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1476730879}
   Cam: {fileID: 1476730877}
+  Luzes: {fileID: 0}
 --- !u!65 &1734145966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79735,7 +80216,7 @@ GameObject:
   - component: {fileID: 1747827942}
   - component: {fileID: 1747827943}
   m_Layer: 0
-  m_Name: Point Light (47)
+  m_Name: Luz - Sala do Salazar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79748,13 +80229,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1747827941}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.92, y: 12.23, z: -39.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 29
+  m_Father: {fileID: 1855159676}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1747827943
 Light:
@@ -80645,7 +81126,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808128705
 GameObject:
@@ -80730,6 +81211,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1808128705}
   m_Mesh: {fileID: 3313900681326472401, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &1816267237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1816267238}
+  m_Layer: 0
+  m_Name: Luzes - Sala de escadas 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1816267238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816267237}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1279253046}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1816603531
 GameObject:
   m_ObjectHideFlags: 0
@@ -81434,7 +81947,7 @@ GameObject:
   - component: {fileID: 1843042742}
   - component: {fileID: 1843042743}
   m_Layer: 0
-  m_Name: Point Light (54)
+  m_Name: Luz - Corrredor (2 andar)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81447,13 +81960,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843042741}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.14, y: 13.62, z: -22.450003}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.14, y: 13.619999, z: -22.450003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 35
+  m_Father: {fileID: 31843745}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1843042743
 Light:
@@ -81528,7 +82041,7 @@ GameObject:
   - component: {fileID: 1843954565}
   - component: {fileID: 1843954566}
   m_Layer: 0
-  m_Name: Point Light (41)
+  m_Name: Luz - Sala de escadas 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81541,13 +82054,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843954564}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.931, y: 7.02, z: -22.194}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.931, y: 7.0200005, z: -22.194}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 23
+  m_Father: {fileID: 1277353568}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1843954566
 Light:
@@ -81665,6 +82178,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1526357360}
   Cam: {fileID: 1526357358}
+  Luzes: {fileID: 0}
 --- !u!65 &1849077258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -81792,7 +82306,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1570318461}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: -90}
 --- !u!23 &1852601350
 MeshRenderer:
@@ -81927,6 +82441,43 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855112258}
   m_Mesh: {fileID: 2237167428214565825, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &1855159675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855159676}
+  m_Layer: 0
+  m_Name: Luzes - Sala do Salazar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1855159676
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855159675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 963860657}
+  - {fileID: 1747827942}
+  - {fileID: 1252560803}
+  - {fileID: 504427606}
+  - {fileID: 658429495}
+  - {fileID: 1569715488}
+  m_Father: {fileID: 1275475780}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1855448460
 GameObject:
   m_ObjectHideFlags: 0
@@ -81958,7 +82509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 13
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1855448462
 MeshRenderer:
@@ -83507,6 +84058,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908656328}
   m_Mesh: {fileID: 4418563506556252824, guid: c133395b1f26ae74a934989f1e6999f2, type: 3}
+--- !u!1 &1909675377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1909675378}
+  m_Layer: 0
+  m_Name: Luzes - Quarto do salazar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1909675378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909675377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 822742323}
+  - {fileID: 266269687}
+  - {fileID: 1236473522}
+  - {fileID: 255273470}
+  m_Father: {fileID: 1275475780}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911367773
 GameObject:
   m_ObjectHideFlags: 0
@@ -83965,7 +84551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749559773688612949, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4974290950247135528, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -84247,7 +84833,7 @@ GameObject:
   - component: {fileID: 1935666080}
   - component: {fileID: 1935666081}
   m_Layer: 0
-  m_Name: Point Light (67)
+  m_Name: Luz - Cozinha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84260,13 +84846,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1935666079}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.2639995, y: -1.135, z: -12.11908}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.2639995, y: -1.1350002, z: -12.11908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 50
+  m_Father: {fileID: 139372328}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1935666081
 Light:
@@ -84607,7 +85193,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 18
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1946491758
 MeshRenderer:
@@ -84907,6 +85493,38 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949461940}
   m_Mesh: {fileID: -4831134184740071658, guid: 188c339249c9f5042935dd8190aa407a, type: 3}
+--- !u!1 &1950319972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1950319973}
+  m_Layer: 0
+  m_Name: Luzes - Freezer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1950319973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950319972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 953956807}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1951599392
 GameObject:
   m_ObjectHideFlags: 0
@@ -84918,7 +85536,7 @@ GameObject:
   - component: {fileID: 1951599393}
   - component: {fileID: 1951599394}
   m_Layer: 0
-  m_Name: Point Light (62)
+  m_Name: Luz - EQA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84931,13 +85549,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951599392}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.53, y: 13.62, z: -13.93}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.53, y: 13.619999, z: -13.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 43
+  m_Father: {fileID: 1519821303}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1951599394
 Light:
@@ -85201,8 +85819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada43d200ffdb724ca2a0b071cda2273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 0}
-  P2: {fileID: 0}
+  P1: {fileID: 2031994978}
+  P2: {fileID: 145088769}
   target: {fileID: 1798771978}
   P1naCena: 0
   P2naCena: 0
@@ -85210,6 +85828,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1526357360}
   Cam: {fileID: 1526357358}
+  Luzes: {fileID: 139372327}
 --- !u!65 &1954567185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -85861,6 +86480,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981209284}
   m_CullTransparentMesh: 1
+--- !u!1 &1981857311
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1981857312}
+  m_Layer: 0
+  m_Name: Luzes - Sala
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1981857312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1981857311}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 59561926}
+  - {fileID: 726990197}
+  - {fileID: 1144153975}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1981994928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88136,7 +88789,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855210, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.90042305
+      value: -0.60978127
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855210, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -88144,23 +88797,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855210, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.242855
+      value: -4.5696564
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855210, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7297325
+      value: 0.9710306
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855210, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.4885133
+      value: 0.23895536
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855210, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.39752445
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855210, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.2661194
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4408911614257855213, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: field of view
@@ -88189,6 +88842,10 @@ PrefabInstance:
     - target: {fileID: 4408911614257855213, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_NormalizedViewPortRect.width
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4408911614257855215, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4453659537190870688, guid: 8313c1b740bf0a945a72fc62dba3afa7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90738,68 +91395,17 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069929436}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.236183, z: -9.063078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 918746805}
-  - {fileID: 1382294629}
-  - {fileID: 187645647}
-  - {fileID: 1031672371}
-  - {fileID: 1435904647}
-  - {fileID: 953956807}
-  - {fileID: 734241936}
-  - {fileID: 1150648997}
-  - {fileID: 171762553}
-  - {fileID: 1516842166}
-  - {fileID: 1216673727}
-  - {fileID: 828372749}
-  - {fileID: 181094850}
-  - {fileID: 639016247}
-  - {fileID: 1137138862}
-  - {fileID: 1722523797}
-  - {fileID: 1685655813}
-  - {fileID: 626531727}
-  - {fileID: 424120790}
-  - {fileID: 2101341667}
-  - {fileID: 1424142426}
-  - {fileID: 302367952}
-  - {fileID: 1546065792}
-  - {fileID: 1843954565}
-  - {fileID: 140107522}
-  - {fileID: 734831633}
-  - {fileID: 772009890}
-  - {fileID: 542679448}
-  - {fileID: 963860657}
-  - {fileID: 1747827942}
-  - {fileID: 1252560803}
-  - {fileID: 504427606}
-  - {fileID: 658429495}
-  - {fileID: 1569715488}
-  - {fileID: 1015880738}
-  - {fileID: 1843042742}
-  - {fileID: 1528048620}
-  - {fileID: 822742323}
-  - {fileID: 1236473522}
-  - {fileID: 255273470}
-  - {fileID: 1674654893}
-  - {fileID: 266269687}
-  - {fileID: 1613024471}
-  - {fileID: 1951599393}
-  - {fileID: 349111685}
-  - {fileID: 1109763603}
+  - {fileID: 517877277}
+  - {fileID: 645398822}
+  - {fileID: 942427849}
+  - {fileID: 1275475780}
   - {fileID: 405903959}
-  - {fileID: 339642462}
-  - {fileID: 1136832470}
-  - {fileID: 1099131316}
-  - {fileID: 1935666080}
-  - {fileID: 378020981}
-  - {fileID: 1223247180}
-  - {fileID: 1279253046}
-  - {fileID: 59561926}
-  - {fileID: 1505816550}
-  m_Father: {fileID: 1570318461}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2070037387
 GameObject:
@@ -90891,6 +91497,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 7.737469, y: 16.422724, z: 1}
   m_Center: {x: -2.9928856, y: 7.439658, z: 0.00000054710085}
+--- !u!1 &2070753399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2070753400}
+  m_Layer: 0
+  m_Name: Luzes-Sala de Jantar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2070753400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070753399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 489869833}
+  - {fileID: 492093524}
+  - {fileID: 291971159}
+  - {fileID: 769660728}
+  - {fileID: 918746805}
+  - {fileID: 1382294629}
+  m_Father: {fileID: 645398822}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071787040
 GameObject:
   m_ObjectHideFlags: 0
@@ -91171,7 +91814,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 846986454}
-  m_RootOrder: 10
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2081040065
 MeshRenderer:
@@ -91337,6 +91980,40 @@ Transform:
   - {fileID: 129679760}
   m_Father: {fileID: 364947835}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2094694719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094694720}
+  m_Layer: 0
+  m_Name: Luzes - Corredor do primeiro andar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2094694720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094694719}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1722523797}
+  - {fileID: 626531727}
+  - {fileID: 1546065792}
+  m_Father: {fileID: 942427849}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2095769360
 GameObject:
@@ -91530,6 +92207,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098573827}
   m_Mesh: {fileID: 986923023805056906, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &2099304094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4749559773688612949, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+  m_PrefabInstance: {fileID: 1929269036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2100573702
 GameObject:
   m_ObjectHideFlags: 0
@@ -91612,7 +92294,7 @@ GameObject:
   - component: {fileID: 2101341667}
   - component: {fileID: 2101341668}
   m_Layer: 0
-  m_Name: Point Light (37)
+  m_Name: Luz - Quarto do Billy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91625,13 +92307,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101341666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.77, y: 4.87, z: -35.729}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.77, y: 4.87, z: -35.728996}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2069929437}
-  m_RootOrder: 19
+  m_Father: {fileID: 1691970974}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &2101341668
 Light:
