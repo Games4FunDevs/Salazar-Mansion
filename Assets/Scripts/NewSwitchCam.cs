@@ -8,7 +8,7 @@ public class NewSwitchCam : MonoBehaviour
     public Transform P1, P2, target;
     public bool P1naCena, P2naCena, target_2, switchMov;
     public CinemachineVirtualCamera activeCam;
-    public GameObject Cam;
+    public GameObject Cam, Luzes;
     
     private Controles controles;
     private Collider other_, other_1;
@@ -24,7 +24,7 @@ public class NewSwitchCam : MonoBehaviour
         if (other.CompareTag("P1"))
         {
             other_ = other;
-
+            if(Luzes != null) {Luzes.SetActive(true);}
             P1naCena = true;
             P1 = other.transform;
             activeCam.Priority = 1;
@@ -33,12 +33,17 @@ public class NewSwitchCam : MonoBehaviour
 
             if (controles.P1.Andar.ReadValue<Vector2>().magnitude == 0)
                 other.GetComponent<PlayerController>().cameuleranglesy = Cam.transform.eulerAngles.y;
+
+           
+            
+              
+            
         }
 
         if (other.CompareTag("P2"))
         {
             other_1 = other;
-
+            if(Luzes != null) {Luzes.SetActive(true);}
             P2naCena = true;
             P2 = other.transform;
             activeCam.Priority = 1;
@@ -71,6 +76,7 @@ public class NewSwitchCam : MonoBehaviour
     {
         if (other.CompareTag("P1"))
         {
+            if(Luzes != null) {Luzes.SetActive(false);}
             P1naCena = false;
             P1 = other.transform;
             activeCam.Priority = 0;
@@ -80,6 +86,7 @@ public class NewSwitchCam : MonoBehaviour
 
         if (other.CompareTag("P2"))
         {
+            if(Luzes != null) {Luzes.SetActive(false);}
             P2naCena = false;
             P2 = other.transform;
             activeCam.Priority = 0;

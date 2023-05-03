@@ -355,6 +355,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 442474724}
   Cam: {fileID: 442474722}
+  Luzes: {fileID: 0}
 --- !u!65 &13544751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -586,6 +587,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 706834039}
   Cam: {fileID: 706834037}
+  Luzes: {fileID: 0}
 --- !u!65 &28768223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1183,6 +1185,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 2003636716}
   Cam: {fileID: 2003636714}
+  Luzes: {fileID: 0}
 --- !u!65 &46841573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2148,6 +2151,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 280599168}
   Cam: {fileID: 280599166}
+  Luzes: {fileID: 0}
 --- !u!65 &74947296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3501,6 +3505,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 932394335}
   Cam: {fileID: 932394333}
+  Luzes: {fileID: 0}
 --- !u!65 &96515495
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4958,6 +4963,7 @@ Transform:
   - {fileID: 1099131316}
   - {fileID: 1935666080}
   - {fileID: 378020981}
+  - {fileID: 734241936}
   m_Father: {fileID: 645398822}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9607,7 +9613,7 @@ GameObject:
   - component: {fileID: 171762553}
   - component: {fileID: 171762554}
   m_Layer: 0
-  m_Name: Point Light (6)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9625,8 +9631,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517877277}
-  m_RootOrder: 5
+  m_Father: {fileID: 399063817}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &171762554
 Light:
@@ -10344,6 +10350,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1306358937}
   Cam: {fileID: 1306358935}
+  Luzes: {fileID: 286564608}
 --- !u!65 &192253743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10482,6 +10489,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1057282094}
   Cam: {fileID: 1057282092}
+  Luzes: {fileID: 0}
 --- !u!65 &198243533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11150,6 +11158,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 831818228}
   Cam: {fileID: 831818226}
+  Luzes: {fileID: 1981857311}
 --- !u!65 &226203771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11428,6 +11437,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1081135292}
   Cam: {fileID: 1081135290}
+  Luzes: {fileID: 1424605744}
 --- !u!65 &237897354
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14805,7 +14815,7 @@ GameObject:
   - component: {fileID: 255273470}
   - component: {fileID: 255273471}
   m_Layer: 0
-  m_Name: Point Light (58)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14823,8 +14833,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517877277}
-  m_RootOrder: 7
+  m_Father: {fileID: 1909675378}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &255273471
 Light:
@@ -15472,6 +15482,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 748412630}
   Cam: {fileID: 748412628}
+  Luzes: {fileID: 0}
 --- !u!65 &276678469
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16615,6 +16626,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1639391283}
   Cam: {fileID: 1639391281}
+  Luzes: {fileID: 0}
 --- !u!65 &297607440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17280,6 +17292,30 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1032521918}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1816267237}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1380016416}
@@ -17445,6 +17481,30 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1032521918}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1816267237}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
@@ -18202,6 +18262,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5099776471984739378, guid: 49dcb5e04392c5a4fb0e949aeb574757, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.89
+      objectReference: {fileID: 0}
     - target: {fileID: 5391208132344976938, guid: 49dcb5e04392c5a4fb0e949aeb574757, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -18829,6 +18893,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 519964277}
   Cam: {fileID: 519964275}
+  Luzes: {fileID: 0}
 --- !u!65 &355890751
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19988,6 +20053,7 @@ Transform:
   - {fileID: 181094850}
   - {fileID: 639016247}
   - {fileID: 1137138862}
+  - {fileID: 171762553}
   m_Father: {fileID: 942427849}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20047,6 +20113,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 783532482}
   Cam: {fileID: 783532480}
+  Luzes: {fileID: 0}
 --- !u!65 &402006866
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21954,6 +22021,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 161876804}
   Cam: {fileID: 161876802}
+  Luzes: {fileID: 0}
 --- !u!65 &410787055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27828,7 +27896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &517877277
 Transform:
   m_ObjectHideFlags: 0
@@ -27841,14 +27909,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 918746805}
-  - {fileID: 1382294629}
   - {fileID: 1031672371}
   - {fileID: 1435904647}
-  - {fileID: 734241936}
-  - {fileID: 171762553}
-  - {fileID: 1236473522}
-  - {fileID: 255273470}
   m_Father: {fileID: 2069929437}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29281,6 +29343,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1189857635}
   Cam: {fileID: 1189857633}
+  Luzes: {fileID: 0}
 --- !u!65 &567556593
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29788,6 +29851,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 35853586}
   Cam: {fileID: 35853584}
+  Luzes: {fileID: 0}
 --- !u!65 &592478698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30521,6 +30585,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1658455918}
   Cam: {fileID: 1658455916}
+  Luzes: {fileID: 139372327}
 --- !u!65 &610926224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30769,6 +30834,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1957665924}
   Cam: {fileID: 1957665922}
+  Luzes: {fileID: 1816267237}
 --- !u!65 &623310993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34582,6 +34648,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1965046356}
   Cam: {fileID: 1965046354}
+  Luzes: {fileID: 0}
 --- !u!65 &692337074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35755,6 +35822,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1603013957}
   Cam: {fileID: 1603013955}
+  Luzes: {fileID: 0}
 --- !u!65 &730484301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35862,7 +35930,7 @@ GameObject:
   - component: {fileID: 734241936}
   - component: {fileID: 734241937}
   m_Layer: 0
-  m_Name: Point Light (25)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35880,7 +35948,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517877277}
+  m_Father: {fileID: 139372328}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &734241937
@@ -36568,6 +36636,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 897302074}
   Cam: {fileID: 897302072}
+  Luzes: {fileID: 0}
 --- !u!65 &767663535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41340,6 +41409,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1512890053}
   Cam: {fileID: 1512890051}
+  Luzes: {fileID: 0}
 --- !u!65 &873432686
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42018,6 +42088,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1296858806}
   Cam: {fileID: 1296858804}
+  Luzes: {fileID: 0}
 --- !u!65 &898526223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43003,7 +43074,7 @@ GameObject:
   - component: {fileID: 918746805}
   - component: {fileID: 918746806}
   m_Layer: 0
-  m_Name: Point Light (1)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43021,8 +43092,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517877277}
-  m_RootOrder: 0
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &918746806
 Light:
@@ -46786,6 +46857,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 508162602}
   Cam: {fileID: 508162600}
+  Luzes: {fileID: 1816267237}
 --- !u!65 &940983486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47891,6 +47963,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1721189886}
   Cam: {fileID: 1721189884}
+  Luzes: {fileID: 0}
 --- !u!65 &983648573
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50652,7 +50725,7 @@ GameObject:
   - component: {fileID: 1031672371}
   - component: {fileID: 1031672372}
   m_Layer: 0
-  m_Name: Point Light (16)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50671,7 +50744,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 517877277}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1031672372
 Light:
@@ -51246,6 +51319,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 427074814}
   Cam: {fileID: 427074812}
+  Luzes: {fileID: 1032521918}
 --- !u!65 &1036599197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52202,6 +52276,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1730148270}
   Cam: {fileID: 1730148268}
+  Luzes: {fileID: 0}
 --- !u!65 &1064433113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52850,6 +52925,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 2100573704}
   Cam: {fileID: 2100573702}
+  Luzes: {fileID: 0}
 --- !u!65 &1085066223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57282,6 +57358,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 600494856}
   Cam: {fileID: 600494854}
+  Luzes: {fileID: 0}
 --- !u!65 &1169071121
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57663,6 +57740,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 441960907}
   Cam: {fileID: 441960905}
+  Luzes: {fileID: 0}
 --- !u!65 &1175406726
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58617,6 +58695,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1373474589}
   Cam: {fileID: 1373474587}
+  Luzes: {fileID: 0}
 --- !u!65 &1208084663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58782,6 +58861,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1055258073}
   Cam: {fileID: 1055258071}
+  Luzes: {fileID: 1602689673}
 --- !u!65 &1211366973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59725,7 +59805,7 @@ GameObject:
   - component: {fileID: 1236473522}
   - component: {fileID: 1236473523}
   m_Layer: 0
-  m_Name: Point Light (57)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59743,8 +59823,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517877277}
-  m_RootOrder: 6
+  m_Father: {fileID: 1909675378}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1236473523
 Light:
@@ -61646,6 +61726,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1053497642}
   Cam: {fileID: 1053497640}
+  Luzes: {fileID: 0}
 --- !u!65 &1280576862
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61875,6 +61956,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 952192674}
   Cam: {fileID: 952192672}
+  Luzes: {fileID: 2070753399}
 --- !u!65 &1290115020
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67733,6 +67815,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 986067106}
   Cam: {fileID: 986067104}
+  Luzes: {fileID: 0}
 --- !u!65 &1378145217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67931,7 +68014,7 @@ GameObject:
   - component: {fileID: 1382294629}
   - component: {fileID: 1382294630}
   m_Layer: 0
-  m_Name: Point Light (2)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67949,8 +68032,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 517877277}
-  m_RootOrder: 1
+  m_Father: {fileID: 2070753400}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1382294630
 Light:
@@ -70067,7 +70150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1424605745}
   m_Layer: 0
-  m_Name: Luzes - Despensa
+  m_Name: Luzes - Dispensa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70144,6 +70227,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1565722873}
   Cam: {fileID: 1565722871}
+  Luzes: {fileID: 678375140}
 --- !u!65 &1427162198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -70391,7 +70475,7 @@ GameObject:
   - component: {fileID: 1435904647}
   - component: {fileID: 1435904648}
   m_Layer: 0
-  m_Name: Point Light (17)
+  m_Name: Luz - Externa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70410,7 +70494,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 517877277}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!108 &1435904648
 Light:
@@ -71056,6 +71140,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 317886582}
   Cam: {fileID: 317886580}
+  Luzes: {fileID: 678375140}
 --- !u!65 &1461925488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72377,6 +72462,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1107207119}
   Cam: {fileID: 1107207117}
+  Luzes: {fileID: 0}
 --- !u!65 &1506204245
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75241,6 +75327,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1877173873}
   Cam: {fileID: 1877173871}
+  Luzes: {fileID: 1950319972}
 --- !u!65 &1609435029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79070,6 +79157,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 2046445775}
   Cam: {fileID: 2046445773}
+  Luzes: {fileID: 0}
 --- !u!65 &1720185949
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79429,6 +79517,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1296858806}
   Cam: {fileID: 1296858804}
+  Luzes: {fileID: 1981857311}
 --- !u!65 &1723864065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79754,6 +79843,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1476730879}
   Cam: {fileID: 1476730877}
+  Luzes: {fileID: 0}
 --- !u!65 &1734145966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -82088,6 +82178,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1526357360}
   Cam: {fileID: 1526357358}
+  Luzes: {fileID: 0}
 --- !u!65 &1849077258
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83997,6 +84088,8 @@ Transform:
   m_Children:
   - {fileID: 822742323}
   - {fileID: 266269687}
+  - {fileID: 1236473522}
+  - {fileID: 255273470}
   m_Father: {fileID: 1275475780}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -85735,6 +85828,7 @@ MonoBehaviour:
   switchMov: 0
   activeCam: {fileID: 1526357360}
   Cam: {fileID: 1526357358}
+  Luzes: {fileID: 139372327}
 --- !u!65 &1954567185
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -91435,6 +91529,8 @@ Transform:
   - {fileID: 492093524}
   - {fileID: 291971159}
   - {fileID: 769660728}
+  - {fileID: 918746805}
+  - {fileID: 1382294629}
   m_Father: {fileID: 645398822}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
