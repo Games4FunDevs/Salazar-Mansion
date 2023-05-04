@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public bool hasKey = false, 
                 hasPeca = false, 
                 hasEye = false,
+                hasEye2 = false,
                 hasKey2 = false;
     
     public GameObject canvasMenu, inimigo;
@@ -121,6 +122,12 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name.Contains("Olho") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasEye = true;
+            Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.name.Contains("Olho de vidro 2") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasEye2 = true;
             Destroy(col.gameObject);
         }
 

@@ -9,7 +9,7 @@ public class Inventario : MonoBehaviour
     public GameObject slotPrefab; // spawn do slot
     public Sprite[] sprites;
     private string[] nomes;
-    public bool[] varAux = {false, false, false, false, false};
+    public bool[] varAux = {false, false, false, false, false, false};
 
     void Awake()
     {
@@ -38,12 +38,16 @@ public class Inventario : MonoBehaviour
         {
             Instanciar(3);
         }
+        if (player.hasEye2 && !varAux[4])
+        {
+            Instanciar(4);
+        }
     }
 
     void Instanciar(int x)
     {
         GameObject obj = Instantiate(slotPrefab);
-        obj.transform.parent = this.transform;
+        obj.transform.SetParent(this.transform);
         obj.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = sprites[x];
         varAux[x] = !varAux[x];
     }
