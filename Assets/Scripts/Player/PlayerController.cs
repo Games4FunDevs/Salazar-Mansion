@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
         if (PlayerPrefs.GetString("Inimigo1Spawn") == "true")
         {
            inimigo.SetActive(true);
+           PlayerPrefs.SetString("Inimigo1Spawn", "spawnado");
         }
     }
 
