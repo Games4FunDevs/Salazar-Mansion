@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             GameObject.Find("impedirEscadas").SetActive(false);
         }
         
-        if (hasEye == true)
+        if (PlayerPrefs.GetString("Inimigo1Spawn") == "true")
         {
            inimigo.SetActive(true);
         }
