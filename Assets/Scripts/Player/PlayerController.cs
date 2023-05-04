@@ -120,13 +120,13 @@ public class PlayerController : MonoBehaviour
             Destroy(col.gameObject);
         }
         
-        if (col.gameObject.name.Contains("Olho") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        if (col.gameObject.name == "Olho de vidro" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasEye = true;
             Destroy(col.gameObject);
         }
         
-        if (col.gameObject.name.Contains("Olho de vidro 2") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        if (col.gameObject.name == "Olho de vidro 2" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasEye2 = true;
             Destroy(col.gameObject);
