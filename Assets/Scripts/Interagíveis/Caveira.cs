@@ -7,7 +7,7 @@ public class Caveira : MonoBehaviour
     private Controles controles;
     private Vector2 inputs;
 
-    public bool eye = false;
+    public bool eyes = false, eye1 = false, eye2 = false;
     public GameObject cinematic;
 
     void Awake()
@@ -18,19 +18,35 @@ public class Caveira : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if (eye == false && (col.CompareTag("P1") && col.GetComponent<PlayerController>().hasEye == true && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && col.GetComponent<PlayerController>().hasEye == true && controles.P2.Interagir.ReadValue<float>() == 1))
+        if ((col.CompareTag("P1") && col.GetComponent<PlayerController>().hasEye == true && controles.P1.Interagir.ReadValue<float>() == 1) 
+            || (col.CompareTag("P2") && col.GetComponent<PlayerController>().hasEye == true && controles.P2.Interagir.ReadValue<float>() == 1))
         {
-            StartCoroutine("EyeTrue", .3f);
+            this.transform.GetChild(6).gameObject.SetActive(true);
+            eye1 = true;
+        }
+
+        if ((col.CompareTag("P1") && col.GetComponent<PlayerController>().hasEye2 == true && controles.P1.Interagir.ReadValue<float>() == 1) 
+            || (col.CompareTag("P2") && col.GetComponent<PlayerController>().hasEye2 == true && controles.P2.Interagir.ReadValue<float>() == 1))
+        {
+            this.transform.GetChild(7).gameObject.SetActive(true);
+            eye2 = true;
+        }
+
+        if (eyes == false &&
+            (col.CompareTag("P1") && eye1 == true && eye2 == true  && controles.P1.Interagir.ReadValue<float>() == 1) 
+            || (col.CompareTag("P2") && eye1 == true && eye2 == true && controles.P2.Interagir.ReadValue<float>() == 1))
+        {
+            cinematic.SetActive(true);
+            eyes = true;
+            PlayerPrefs.SetString("Inimigo1Spawn", "true");
+            // StartCoroutine("EyeTrue", .3f);
             //this.transform.GetChild(3).gameObject.SetActive(false);
-            
         }
     }
 
     IEnumerator EyeTrue()
     {
         yield return new WaitForSeconds(.3f);
-        this.transform.GetChild(6).gameObject.SetActive(true);
-        eye = true;
         cinematic.SetActive(true);
     }
 }
