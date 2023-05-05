@@ -35,6 +35,7 @@ public class OpenDoon : MonoBehaviour
                 this.unlocked = true;
                 other.GetComponent<OpenDoon>().unlocked = true;
                 StartCoroutine("Unlock", 0.3f);
+                Destroy(GameObject.Find("key1-item"));
             }
         }
         

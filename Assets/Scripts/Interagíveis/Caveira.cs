@@ -23,6 +23,7 @@ public class Caveira : MonoBehaviour
         {
             this.transform.GetChild(6).gameObject.SetActive(true);
             eye1 = true;
+            Destroy(GameObject.Find("eye1-item"));
         }
 
         if ((col.CompareTag("P1") && col.GetComponent<PlayerController>().hasEye2 == true && controles.P1.Interagir.ReadValue<float>() == 1) 
@@ -30,6 +31,7 @@ public class Caveira : MonoBehaviour
         {
             this.transform.GetChild(7).gameObject.SetActive(true);
             eye2 = true;
+            Destroy(GameObject.Find("eye2-item"));
         }
 
         if (eyes == false &&
