@@ -121,6 +121,11 @@ public class PlayerController : MonoBehaviour
             this.hasEye2 = true;
             Destroy(col.gameObject);
         }
+        
+        if (col.gameObject.name == "fimfase1")
+        {
+            Destroy(GameObject.Find("Inimigo"));
+        }
 
         if (col.gameObject.name == "EndGame") // final do jogo
         {
