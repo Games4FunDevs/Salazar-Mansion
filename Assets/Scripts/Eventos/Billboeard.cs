@@ -48,10 +48,14 @@ public class Billboeard : MonoBehaviour
         if (col.CompareTag("P1"))
         {
             this.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "E";
+            if (this.transform.childCount > 1)
+                this.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "E";
         }
         if (col.CompareTag("P2"))
         {
             this.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "O";
+            if (this.transform.childCount > 1)
+                this.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "O";
         }
     }
 
