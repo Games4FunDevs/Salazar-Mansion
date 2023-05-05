@@ -62,6 +62,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Fechar"",
+                    ""type"": ""Button"",
+                    ""id"": ""7037b379-fdcc-45fe-af57-c2c289ec1a42"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -194,6 +203,28 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Controle"",
                     ""action"": ""Menu"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0abdf467-cdf1-45de-847f-89cd5ebfc62e"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""Fechar"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""27cb9a80-8c55-4412-a050-2d43c2237db7"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""Fechar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -479,6 +510,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         m_P1_Interagir = m_P1.FindAction("Interagir", throwIfNotFound: true);
         m_P1_Correr = m_P1.FindAction("Correr", throwIfNotFound: true);
         m_P1_Menu = m_P1.FindAction("Menu", throwIfNotFound: true);
+        m_P1_Fechar = m_P1.FindAction("Fechar", throwIfNotFound: true);
         // P2
         m_P2 = asset.FindActionMap("P2", throwIfNotFound: true);
         m_P2_Correr = m_P2.FindAction("Correr", throwIfNotFound: true);
@@ -551,6 +583,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
     private readonly InputAction m_P1_Interagir;
     private readonly InputAction m_P1_Correr;
     private readonly InputAction m_P1_Menu;
+    private readonly InputAction m_P1_Fechar;
     public struct P1Actions
     {
         private @Controles m_Wrapper;
@@ -559,6 +592,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         public InputAction @Interagir => m_Wrapper.m_P1_Interagir;
         public InputAction @Correr => m_Wrapper.m_P1_Correr;
         public InputAction @Menu => m_Wrapper.m_P1_Menu;
+        public InputAction @Fechar => m_Wrapper.m_P1_Fechar;
         public InputActionMap Get() { return m_Wrapper.m_P1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -580,6 +614,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Menu.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnMenu;
                 @Menu.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnMenu;
                 @Menu.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnMenu;
+                @Fechar.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnFechar;
+                @Fechar.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnFechar;
+                @Fechar.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnFechar;
             }
             m_Wrapper.m_P1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -596,6 +633,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Menu.started += instance.OnMenu;
                 @Menu.performed += instance.OnMenu;
                 @Menu.canceled += instance.OnMenu;
+                @Fechar.started += instance.OnFechar;
+                @Fechar.performed += instance.OnFechar;
+                @Fechar.canceled += instance.OnFechar;
             }
         }
     }
@@ -714,6 +754,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         void OnInteragir(InputAction.CallbackContext context);
         void OnCorrer(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
+        void OnFechar(InputAction.CallbackContext context);
     }
     public interface IP2Actions
     {
