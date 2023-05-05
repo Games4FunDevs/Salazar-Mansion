@@ -42,7 +42,7 @@ public class PlayCutscene : MonoBehaviour
         {
             if ((this.gameObject.name == "p2free" && p1 == true) 
             || ((p1 == true && p2 == true) && this.gameObject.name == "meninoc1")
-            || ((p1 == true && p2 == true) && this.gameObject.name == "conversa2")
+            || ((p2 == true) && this.gameObject.name == "conversa2")
             || ((this.gameObject.name == "fimfase1" && (p1 == true || p2 == true)))) 
             {
                 CallCustcene();
