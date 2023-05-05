@@ -78,10 +78,6 @@ public class OpenDoon : MonoBehaviour
 
     IEnumerator Unlock()
     {
-        if (this.gameObject.tag == "p2free")
-        {
-            p2free.SetActive(true);
-        }
         yield return new WaitForSeconds(.3f);
         this.canOpen = true;
         other.GetComponent<OpenDoon>().canOpen = true;
