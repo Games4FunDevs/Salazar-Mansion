@@ -32,6 +32,8 @@ public class OpenDoon : MonoBehaviour
         {
             if (col.gameObject.GetComponent<PlayerController>().hasKey == true)
             {
+                GetComponent<AudioSource>().clip = sons[2];
+                GetComponent<AudioSource>().Play();
                 this.unlocked = true;
                 other.GetComponent<OpenDoon>().unlocked = true;
                 StartCoroutine("Unlock", 0.3f);
