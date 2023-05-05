@@ -39,9 +39,10 @@ public class quadros_manager : MonoBehaviour
             Destroy(billboard[0]);
             Destroy(billboard[1]);
             olho.SetActive(true);
-            this.gameObject.GetComponent<quadros_manager>().enabled = false;
+            this.transform.GetChild(5).gameObject.SetActive(true);
             GameObject.Find("P1").GetComponent<PlayerController>().enabled = true; 
             GameObject.Find("P2").GetComponent<PlayerController>().enabled = true; 
+            this.gameObject.GetComponent<quadros_manager>().enabled = false;
         }
 
         ChangeBoard();
