@@ -40,7 +40,6 @@ public class Caveira : MonoBehaviour
         {
             cinematic.SetActive(true);
             eyes = true;
-            PlayerPrefs.SetString("Inimigo1Spawn", "true");
             // StartCoroutine("EyeTrue", .3f);
             //this.transform.GetChild(3).gameObject.SetActive(false);
         }

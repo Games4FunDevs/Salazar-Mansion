@@ -25,15 +25,14 @@ public class OpenMinigame : MonoBehaviour
                 || (col.CompareTag("P2") && controles.P2.Interagir.triggered && p2 == true))
             {
                 canvasMinigame.SetActive(true);
+                col.GetComponent<PlayerController>().enabled = false; 
             }
         // }
-    }
-    
-    void OnTriggerExit(Collider col)
-    {
-        if ((col.CompareTag("P1") && this.canvasMinigame.activeSelf == true) || (col.CompareTag("P2") && this.canvasMinigame.activeSelf == true))
+
+        if ((col.CompareTag("P1") || col.CompareTag("P2")) && controles.P1.Fechar.triggered && canvasMinigame.activeSelf == true)
         {
             canvasMinigame.SetActive(false);
+            col.GetComponent<PlayerController>().enabled = true;
         }
     }
 }
