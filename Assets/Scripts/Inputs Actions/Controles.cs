@@ -178,7 +178,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f12fc17e-9b77-480b-9343-726c10810716"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
