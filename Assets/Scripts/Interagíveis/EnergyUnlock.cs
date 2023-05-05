@@ -28,6 +28,7 @@ public class EnergyUnlock : MonoBehaviour
             //this.GetComponent<Animator>().Play("alavanca", 0, 0);
             this.gameObject.GetComponent<EnergyUnlock>().enabled = false;
             peca = true;
+            Destroy(GameObject.Find("peca-item"));
         }
 
         // if (peca == true && (col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)) 
