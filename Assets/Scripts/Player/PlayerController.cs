@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -41,9 +42,6 @@ public class PlayerController : MonoBehaviour
     {
         HideCursor();
 
-        PlayerPrefs.SetString("P1Menu", "false");
-        PlayerPrefs.SetString("P2Menu", "false");
-
         // configura variaveis
         this.controller = GetComponent<CharacterController>();
         // cam = GameObject.FindWithTag("P1 cam").GetComponent<Transform>();
@@ -72,20 +70,12 @@ public class PlayerController : MonoBehaviour
     {
         Gravity();
         Animations();
+        ShowMenu();
 
         if (PlayerPrefs.GetString("podeAndar") == "true")
         {
             Movement(); // pode andar
             Run(); // pode correr
-        }
-
-        if (player == 1)
-        {
-            if (controles.P1.Menu.triggered) ShowMenu();
-        }
-        else if (player == 2)
-        {
-            if (controles.P2.Menu.triggered) ShowMenu();
         }
 
         if (hasKey2 == true)
@@ -225,34 +215,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public bool inv = false, open = false;
     void ShowMenu()
     {
-        if (this.canvasMenu.activeSelf)
-        {
-            if (this.player == 1)
+        if (controles.P1.Menu.triggered) { inv = !inv; }
+
+        if (inv)
+        { 
+            CanvasMenuSet(true, "false");
+            if (open == false) 
             {
-                PlayerPrefs.SetString("P1Menu", "false");
-                CanvasMenuSet(false, "true");
-            }
-            if (this.player == 2)
-            {
-                PlayerPrefs.SetString("P2Menu", "false");
-                CanvasMenuSet(false, "true");
+                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(0).transform.GetChild(0).gameObject);
+                open = true;
             }
         }
-        else
-        {
-            if (this.player == 1 && PlayerPrefs.GetString("P2Menu") == "false")
-            {
-                PlayerPrefs.SetString("P1Menu", "true");
-                CanvasMenuSet(true, "false");
-            }
-            if (this.player == 2 && PlayerPrefs.GetString("P1Menu") == "false")
-            {
-                PlayerPrefs.SetString("P2Menu", "true");
-                CanvasMenuSet(true, "false");
-            }
+
+        if (inv == false)
+        { 
+            CanvasMenuSet(false, "true"); 
+            open = false;
         }
+    }
+
+    public void CloseMenu()
+    {
+        inv = false;
     }
 
     void CanvasMenuSet(bool value, string podeandar)
