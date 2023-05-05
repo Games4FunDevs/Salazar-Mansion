@@ -9,7 +9,7 @@ public class CutsceneInicial : MonoBehaviour
 {
     private Controles controles;
 
-    public GameObject cinematica;
+    public GameObject cinematica, cinematica2;
 
     public string[] textos;
     public TextMeshProUGUI text_;
@@ -41,7 +41,7 @@ public class CutsceneInicial : MonoBehaviour
         
         if (count > textos.Length)
         {
-            if (!cinematica.activeSelf && timerStart == 1)
+            if (!cinematica2.activeSelf && !cinematica.activeSelf && timerStart == 1)
             {
                 timerStart = 2;
             }
