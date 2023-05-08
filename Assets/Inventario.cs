@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Inventario : MonoBehaviour
 {
     private PlayerController player; // correspondente
     public GameObject slotPrefab; // spawn do slot
     public Sprite[] sprites;
+    public GameObject canvas;
     private string[] nomes;
+    private string[] desc = { "Chave do freezer", "Fusível", "Olho de vidro", "Chave da sala de armas", "Olho de vidro" };
     public bool[] varAux = {false, false, false, false, false, false};
 
     void Awake()
@@ -49,7 +52,17 @@ public class Inventario : MonoBehaviour
         GameObject obj = Instantiate(slotPrefab);
         obj.transform.SetParent(this.transform);
         obj.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = sprites[x];
+        canvas.GetComponent<Image>().sprite = sprites[x];
+        canvas.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = desc[x];
         obj.name = name_;
         varAux[x] = !varAux[x];
+        StartCoroutine("ShowAndHide", 2f);
+    }
+
+    IEnumerator ShowAndHide()
+    {
+        canvas.SetActive(true);
+        yield return new WaitForSeconds(2);
+        canvas.SetActive(false);
     }
 }
