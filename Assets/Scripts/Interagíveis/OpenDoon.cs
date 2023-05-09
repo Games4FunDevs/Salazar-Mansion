@@ -30,13 +30,14 @@ public class OpenDoon : MonoBehaviour
         if (!this.unlocked && ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || 
             (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)))
         {
-            if (col.gameObject.GetComponent<PlayerController>().hasKey == true)
+            if (col.gameObject.GetComponent<PlayerController>().hasKey == true || col.gameObject.GetComponent<PlayerController>().hasLockp == true)
             {
                 GetComponent<AudioSource>().clip = sons[2];
                 GetComponent<AudioSource>().Play();
                 this.unlocked = true;
                 other.GetComponent<OpenDoon>().unlocked = true;
                 StartCoroutine("Unlock", 0.3f);
+                col.gameObject.GetComponent<PlayerController>().hasKey = false;
                 Destroy(GameObject.Find("key1-item"));
             }
         }
