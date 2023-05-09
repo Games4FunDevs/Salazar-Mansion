@@ -7,7 +7,7 @@ public class OpenMinigame : MonoBehaviour
     // controles (new input system)
     private Controles controles;
 
-    public GameObject canvasMinigame;
+    public GameObject canvasMinigame, btn;
     public bool p1, p2;
 
     void Awake()
@@ -21,11 +21,13 @@ public class OpenMinigame : MonoBehaviour
     {
         // if (PlayerPrefs.GetString("podeQuadros") == "true")
         // {
-            if ((col.CompareTag("P1") && controles.P1.Interagir.triggered && p1 == true) 
+            if ((col.CompareTag("P1") && controles.P1.Interagir.triggered && p1 == true)
                 || (col.CompareTag("P2") && controles.P2.Interagir.triggered && p2 == true))
             {
                 canvasMinigame.SetActive(true);
-                col.GetComponent<PlayerController>().enabled = false; 
+                // btn.GetComponent<quadros_cores>().ChangeColor(0);
+                col.transform.GetChild(1).gameObject.GetComponent<Animator>().SetInteger("state", 0);
+                col.GetComponent<PlayerController>().enabled = false;
             }
         // }
 

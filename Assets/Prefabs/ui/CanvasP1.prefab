@@ -522,7 +522,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "As chaves est\xE3o nos fundos da sala 666"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -844,7 +844,7 @@ GameObject:
   - component: {fileID: 511625561804673363}
   - component: {fileID: 511625561804673360}
   m_Layer: 5
-  m_Name: Texto1 (4)
+  m_Name: "Inspe\xE7\xE3o1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -866,10 +866,10 @@ RectTransform:
   m_Father: {fileID: 511625561437169080}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -320, y: 12}
-  m_SizeDelta: {x: -1180, y: 100}
+  m_SizeDelta: {x: -1180, y: -620}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &511625561804673363
 CanvasRenderer:
@@ -899,9 +899,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
+  m_Sprite: {fileID: 21300000, guid: 187432379a1063244a26ed852bcaeb1d, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2116,10 +2116,10 @@ RectTransform:
   m_Father: {fileID: 511625561437169080}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -337, y: 4.206787}
-  m_SizeDelta: {x: 1140.8893, y: 180.07465}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -337, y: -355.7932}
+  m_SizeDelta: {x: 2420.8892, y: 900.07465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9023947427751400756
 CanvasRenderer:
@@ -5042,6 +5042,18 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 2961122397970241162}
+    - target: {fileID: 8552678203624769469, guid: 4cfee0f28a4a9624891b6283a35d9a06, type: 3}
+      propertyPath: varAux.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552678203624769469, guid: 4cfee0f28a4a9624891b6283a35d9a06, type: 3}
+      propertyPath: sprites.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552678203624769469, guid: 4cfee0f28a4a9624891b6283a35d9a06, type: 3}
+      propertyPath: sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: d351bf2df0e221549bec80db9d83e584, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cfee0f28a4a9624891b6283a35d9a06, type: 3}
 --- !u!224 &2521229683728166041 stripped

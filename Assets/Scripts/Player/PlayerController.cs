@@ -32,7 +32,8 @@ public class PlayerController : MonoBehaviour
                 hasPeca = false, 
                 hasEye = false,
                 hasEye2 = false,
-                hasKey2 = false;
+                hasKey2 = false,
+                hasLockp = false;
     
     public GameObject canvasMenu, inimigo;
 
@@ -119,6 +120,12 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name == "Olho de vidro 2" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasEye2 = true;
+            Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.name == "Lockpick" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasLockp = true;
             Destroy(col.gameObject);
         }
         
