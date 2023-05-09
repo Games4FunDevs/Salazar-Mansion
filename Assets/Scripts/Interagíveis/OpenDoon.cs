@@ -30,7 +30,10 @@ public class OpenDoon : MonoBehaviour
         if (!this.unlocked && ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || 
             (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)))
         {
-            if (col.gameObject.GetComponent<PlayerController>().hasKey == true || col.gameObject.GetComponent<PlayerController>().hasLockp == true)
+            if (col.gameObject.GetComponent<PlayerController>().hasKey == true 
+                || (col.gameObject.GetComponent<PlayerController>().hasKey2 == true && this.transform.parent.name.Contains("DoorArmas")) 
+                || col.gameObject.GetComponent<PlayerController>().hasLockp == true
+                || (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && this.transform.parent.name.Contains("DoorBoss")))
             {
                 GetComponent<AudioSource>().clip = sons[2];
                 GetComponent<AudioSource>().Play();
@@ -42,6 +45,10 @@ public class OpenDoon : MonoBehaviour
                 if (col.gameObject.GetComponent<PlayerController>().hasLockp == true)
                     { col.gameObject.GetComponent<PlayerController>().hasLockp = false; }
                 Destroy(GameObject.Find("key1-item"));
+                if (this.transform.parent.name.Contains("DoorBoss"))
+                {
+                    Destroy(GameObject.Find("DescItem boss"));
+                }
             }
         }
         

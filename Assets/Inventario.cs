@@ -49,6 +49,10 @@ public class Inventario : MonoBehaviour
         {
             Instanciar(5, "lockpick-item");
         }
+        if (player.hasArma && !varAux[6])
+        {
+            Instanciar(6, "arma-item");
+        }
     }
 
     void Instanciar(int x, string name_)
