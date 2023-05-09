@@ -29,12 +29,12 @@ public class quadros_manager : MonoBehaviour
     {
         if (this.gameObject.name.Contains("1"))
         {
-            StartCoroutine(Manager(0, 3, 1, new Vector3(0, 1, 0), 0)); // roxo
+            StartCoroutine(Manager(0, 3, 1, new Vector3(.5f, 0, 1), 0)); // roxo
         }
         else if (this.gameObject.name.Contains("2"))
         {
-            StartCoroutine(Manager(0, 3, 1, new Vector3(0, 1, 0), 2)); // roxo
-            StartCoroutine(Manager(2, 1, 2, new Vector3(.5f, 0, 1), 0)); // verde
+            StartCoroutine(Manager(0, 3, 1, new Vector3(0, 1, 0), 2)); // verde
+            StartCoroutine(Manager(2, 1, 2, new Vector3(.5f, 0, 1), 0)); // roxo
             StartCoroutine(Manager(1, 1, 0, new Vector3(1, 0.64f, 0), 1)); // laranja
         }
 
