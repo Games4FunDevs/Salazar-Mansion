@@ -1701,7 +1701,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 89505a7a0e1c76f48b4fa0f84ab82d2d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f195770da7364644cbab4b954168c00a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1709,7 +1709,7 @@ SpriteRenderer:
   m_Size: {x: 35.079998, y: 24.802656}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &6019936133073029578
@@ -3165,11 +3165,15 @@ MonoBehaviour:
   - {fileID: 701955797198855737}
   - {fileID: 5792774251376230981}
   olho: {fileID: 0}
+  chave: {fileID: 0}
   cores_:
   - {r: 0.8803829, g: 1, b: 0, a: 1}
   - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0.9132972, a: 1}
   - {r: 0, g: 1, b: 0.84967804, a: 1}
   feito: 000000
+  count1: 0
+  count2: 0
 --- !u!1 &7988005854526360883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,7 +3684,7 @@ GameObject:
   - component: {fileID: 7988005855941202594}
   - component: {fileID: 7988005855941202593}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
