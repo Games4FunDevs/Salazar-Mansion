@@ -32,8 +32,9 @@ public class OpenDoon : MonoBehaviour
         {
             if (col.gameObject.GetComponent<PlayerController>().hasKey == true 
                 || (col.gameObject.GetComponent<PlayerController>().hasKey2 == true && this.transform.parent.name.Contains("DoorArmas")) 
-                || col.gameObject.GetComponent<PlayerController>().hasLockp == true
-                || (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && this.transform.parent.name.Contains("DoorBoss")))
+                || (col.gameObject.GetComponent<PlayerController>().hasLockp == true && this.transform.parent.name.Contains("DoorCamareira"))
+                || (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && this.transform.parent.name.Contains("DoorBoss"))
+                )
             {
                 GetComponent<AudioSource>().clip = sons[2];
                 GetComponent<AudioSource>().Play();
