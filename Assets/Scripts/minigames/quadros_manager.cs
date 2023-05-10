@@ -9,7 +9,7 @@ public class quadros_manager : MonoBehaviour
     public GameObject[] p2quadros;
     public GameObject[] canvas;
     public GameObject[] billboard;
-    public GameObject olho, chave;
+    public GameObject olho, som;
     public Color[] cores_;
     public bool[] feito;
     public int count1 = 0, count2 = 0;
@@ -61,7 +61,7 @@ public class quadros_manager : MonoBehaviour
         Destroy(billboard[0]);
         Destroy(billboard[1]);
         olho.SetActive(true);
-        this.transform.GetChild(3).gameObject.SetActive(true);
+        som.SetActive(true);
         this.gameObject.GetComponent<quadros_manager>().enabled = false;
     }
 

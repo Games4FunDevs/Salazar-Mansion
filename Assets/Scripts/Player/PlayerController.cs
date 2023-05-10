@@ -33,7 +33,8 @@ public class PlayerController : MonoBehaviour
                 hasEye = false,
                 hasEye2 = false,
                 hasKey2 = false,
-                hasLockp = false;
+                hasLockp = false,
+                hasArma = false;
     
     public GameObject canvasMenu, inimigo;
 
@@ -126,6 +127,13 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name == "Lockpick" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasLockp = true;
+            Destroy(col.gameObject);
+        }
+        
+        if (!hasArma && col.gameObject.name == "Arma" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasArma = true;
+            PlayerPrefs.SetString("ArmaPlayer"+this.gameObject.name, "true");
             Destroy(col.gameObject);
         }
         
