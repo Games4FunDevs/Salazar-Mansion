@@ -71,6 +71,33 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""A"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a8ef5bc-035e-4856-83e6-ef82013ce639"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""S"",
+                    ""type"": ""Button"",
+                    ""id"": ""40002038-24d3-4c3a-9ca6-4f88d3269798"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""D"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ba17693-759e-4788-8c71-b97d13130a08"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -227,6 +254,72 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""action"": ""Fechar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33c9623a-bfea-4ead-82c0-2932be83592e"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8406e164-5ad4-42e6-814f-6a22dd7d3a7b"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ab284e01-b3fc-4440-b5f1-ca9df99e261e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""S"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""64394a91-c1e0-4fd5-909c-97a2b363469e"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""S"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3c6b7e6-1472-4a82-8159-fdef342692fb"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""D"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""080618cf-193b-44dd-8f47-c260aa937dec"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""D"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -265,6 +358,33 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""name"": ""Menu"",
                     ""type"": ""Button"",
                     ""id"": ""68a33dc9-9bef-4896-b57e-e10840b0d1c3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""J"",
+                    ""type"": ""Button"",
+                    ""id"": ""9e600e44-9e80-40c1-8b81-854ff3eeefca"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""K"",
+                    ""type"": ""Button"",
+                    ""id"": ""a36e1479-d2ca-4675-8418-3417925ba742"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""L"",
+                    ""type"": ""Button"",
+                    ""id"": ""5201170c-1c26-44cd-9652-8b755235e9df"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -403,6 +523,72 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""action"": ""Menu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aaf13f89-1cfb-489d-af45-73a2dbc306e4"",
+                    ""path"": ""<Keyboard>/j"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""J"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed5294bf-cccb-40a4-809f-e26cc26cccf9"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""J"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a1d884ec-6d72-4d77-9917-d07ad86cbb57"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""K"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f04249b8-44fd-47fb-9994-75c15b48110e"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""K"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4e32f44d-9ea0-4656-8039-27b43927ec83"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Teclado"",
+                    ""action"": ""L"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""88850024-958e-4085-8d5c-ef08886649d6"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controle"",
+                    ""action"": ""L"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -511,12 +697,18 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         m_P1_Correr = m_P1.FindAction("Correr", throwIfNotFound: true);
         m_P1_Menu = m_P1.FindAction("Menu", throwIfNotFound: true);
         m_P1_Fechar = m_P1.FindAction("Fechar", throwIfNotFound: true);
+        m_P1_A = m_P1.FindAction("A", throwIfNotFound: true);
+        m_P1_S = m_P1.FindAction("S", throwIfNotFound: true);
+        m_P1_D = m_P1.FindAction("D", throwIfNotFound: true);
         // P2
         m_P2 = asset.FindActionMap("P2", throwIfNotFound: true);
         m_P2_Correr = m_P2.FindAction("Correr", throwIfNotFound: true);
         m_P2_Andar = m_P2.FindAction("Andar", throwIfNotFound: true);
         m_P2_Interagir = m_P2.FindAction("Interagir", throwIfNotFound: true);
         m_P2_Menu = m_P2.FindAction("Menu", throwIfNotFound: true);
+        m_P2_J = m_P2.FindAction("J", throwIfNotFound: true);
+        m_P2_K = m_P2.FindAction("K", throwIfNotFound: true);
+        m_P2_L = m_P2.FindAction("L", throwIfNotFound: true);
         // Any
         m_Any = asset.FindActionMap("Any", throwIfNotFound: true);
         m_Any_AnyKey = m_Any.FindAction("AnyKey", throwIfNotFound: true);
@@ -584,6 +776,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
     private readonly InputAction m_P1_Correr;
     private readonly InputAction m_P1_Menu;
     private readonly InputAction m_P1_Fechar;
+    private readonly InputAction m_P1_A;
+    private readonly InputAction m_P1_S;
+    private readonly InputAction m_P1_D;
     public struct P1Actions
     {
         private @Controles m_Wrapper;
@@ -593,6 +788,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         public InputAction @Correr => m_Wrapper.m_P1_Correr;
         public InputAction @Menu => m_Wrapper.m_P1_Menu;
         public InputAction @Fechar => m_Wrapper.m_P1_Fechar;
+        public InputAction @A => m_Wrapper.m_P1_A;
+        public InputAction @S => m_Wrapper.m_P1_S;
+        public InputAction @D => m_Wrapper.m_P1_D;
         public InputActionMap Get() { return m_Wrapper.m_P1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -617,6 +815,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Fechar.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnFechar;
                 @Fechar.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnFechar;
                 @Fechar.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnFechar;
+                @A.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnA;
+                @A.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnA;
+                @A.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnA;
+                @S.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnS;
+                @S.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnS;
+                @S.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnS;
+                @D.started -= m_Wrapper.m_P1ActionsCallbackInterface.OnD;
+                @D.performed -= m_Wrapper.m_P1ActionsCallbackInterface.OnD;
+                @D.canceled -= m_Wrapper.m_P1ActionsCallbackInterface.OnD;
             }
             m_Wrapper.m_P1ActionsCallbackInterface = instance;
             if (instance != null)
@@ -636,6 +843,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Fechar.started += instance.OnFechar;
                 @Fechar.performed += instance.OnFechar;
                 @Fechar.canceled += instance.OnFechar;
+                @A.started += instance.OnA;
+                @A.performed += instance.OnA;
+                @A.canceled += instance.OnA;
+                @S.started += instance.OnS;
+                @S.performed += instance.OnS;
+                @S.canceled += instance.OnS;
+                @D.started += instance.OnD;
+                @D.performed += instance.OnD;
+                @D.canceled += instance.OnD;
             }
         }
     }
@@ -648,6 +864,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
     private readonly InputAction m_P2_Andar;
     private readonly InputAction m_P2_Interagir;
     private readonly InputAction m_P2_Menu;
+    private readonly InputAction m_P2_J;
+    private readonly InputAction m_P2_K;
+    private readonly InputAction m_P2_L;
     public struct P2Actions
     {
         private @Controles m_Wrapper;
@@ -656,6 +875,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         public InputAction @Andar => m_Wrapper.m_P2_Andar;
         public InputAction @Interagir => m_Wrapper.m_P2_Interagir;
         public InputAction @Menu => m_Wrapper.m_P2_Menu;
+        public InputAction @J => m_Wrapper.m_P2_J;
+        public InputAction @K => m_Wrapper.m_P2_K;
+        public InputAction @L => m_Wrapper.m_P2_L;
         public InputActionMap Get() { return m_Wrapper.m_P2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -677,6 +899,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Menu.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
                 @Menu.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
                 @Menu.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
+                @J.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnJ;
+                @J.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnJ;
+                @J.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnJ;
+                @K.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnK;
+                @K.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnK;
+                @K.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnK;
+                @L.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnL;
+                @L.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnL;
+                @L.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnL;
             }
             m_Wrapper.m_P2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -693,6 +924,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Menu.started += instance.OnMenu;
                 @Menu.performed += instance.OnMenu;
                 @Menu.canceled += instance.OnMenu;
+                @J.started += instance.OnJ;
+                @J.performed += instance.OnJ;
+                @J.canceled += instance.OnJ;
+                @K.started += instance.OnK;
+                @K.performed += instance.OnK;
+                @K.canceled += instance.OnK;
+                @L.started += instance.OnL;
+                @L.performed += instance.OnL;
+                @L.canceled += instance.OnL;
             }
         }
     }
@@ -755,6 +995,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         void OnCorrer(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
         void OnFechar(InputAction.CallbackContext context);
+        void OnA(InputAction.CallbackContext context);
+        void OnS(InputAction.CallbackContext context);
+        void OnD(InputAction.CallbackContext context);
     }
     public interface IP2Actions
     {
@@ -762,6 +1005,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         void OnAndar(InputAction.CallbackContext context);
         void OnInteragir(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
+        void OnJ(InputAction.CallbackContext context);
+        void OnK(InputAction.CallbackContext context);
+        void OnL(InputAction.CallbackContext context);
     }
     public interface IAnyActions
     {
