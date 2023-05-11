@@ -1,15 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerPrefsManager : MonoBehaviour
 {
     IEnumerator coroutine;
+
+    public GameObject boss, p1, p2, p1Old, p2Old, cinematics;
+
+    public bool openBoss;
     
     public void DeleteComecou() => PlayerPrefs.DeleteKey("ComeçouJogar");
 
     void Update()
     {
+        if (PlayerPrefs.GetString("EndGame") == "true" && SceneManager.GetActiveScene().name == "Menu")
+        {
+            PlayerPrefs.DeleteAll();
+            print(PlayerPrefs.GetString("EndGame"));
+        }
+
+        if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && openBoss == false)
+        {
+            openBoss = true;
+        }
+
+        if (openBoss == true)
+        {
+            boss.SetActive(true);
+            p1.SetActive(true);
+            p2.SetActive(true);
+            p1Old.SetActive(false);
+            p2Old.SetActive(false);
+            cinematics.SetActive(false);
+        }
+
         // if (PlayerPrefs.GetString("ShowBtnInfo1") == "true")
         // {
         //     coroutine = ShowCanvas("CanvasP1", "ShowBtnInfo1", "false", 10f);

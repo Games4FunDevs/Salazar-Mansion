@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class QuickTime : MonoBehaviour
@@ -8,7 +9,7 @@ public class QuickTime : MonoBehaviour
     public GameObject img;
     public string[] botao;
     public string resposta;
-    public bool open = false;
+    public bool open = false, corout;
     public bool[] acerto; 
     public int qtd = 0;
     public float timer = 2f, curTime = 0;
@@ -25,9 +26,27 @@ public class QuickTime : MonoBehaviour
 
     void Update()
     {
-        if (qtd == 3)
+        if (qtd == 3 && acerto[0] && acerto[1] && acerto[2] && this.gameObject.name.Contains("P1"))
         {
-            print("cabou");
+            PlayerPrefs.SetString("P1QT", "true");
+        }
+        if (qtd == 3 && acerto[0] && acerto[1] && acerto[2] && this.gameObject.name.Contains("P1"))
+        {
+            PlayerPrefs.SetString("P2QT", "true");
+        }
+
+        if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" 
+            && ((qtd == 1 && !acerto[0]) || (qtd == 2 && !acerto[1]) || (qtd == 3 && !acerto[2]))) // fez 1 erro
+        {
+            PlayerPrefs.SetString("P1QT", "false");
+            PlayerPrefs.SetString("P2QT", "false");
+            SceneManager.LoadScene("Fase");
+        }
+
+        if (PlayerPrefs.GetString("P2QT") == "true" && PlayerPrefs.GetString("P1QT") == "true") 
+        {
+            PlayerPrefs.SetString("EndGame", "true");
+            SceneManager.LoadScene("Menu");
         }
 
         if (curTime > 0)
@@ -36,9 +55,16 @@ public class QuickTime : MonoBehaviour
         }
         else
         {
-            StartCoroutine("Shoot", 1f);
+            if (corout == false)
+            {
+                resposta = botao[Random.Range(0, 4)];
+                StartCoroutine("Shoot", 3f);
+                corout = true;
+            }
+            
             if (open == true)
             {
+
                 if (this.gameObject.name.Contains("P1"))
                 {
                     switch(resposta)
@@ -75,16 +101,20 @@ public class QuickTime : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        open = true;
+        this.open = true;
         img.SetActive(true);
-        resposta = botao[Random.Range(0, 4)];
-        img.transform.GetChild(0).transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = resposta;
-        yield return new WaitForSeconds(1f);
+        img.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = resposta;
+        yield return new WaitForSeconds(3f);
         img.SetActive(false);
         curTime = timer;
-        open = false;
+        this.open = false;
         qtd++;
+        this.corout = false;
     }
 
-    void Acerto() { this.acerto[qtd] = true; }
+    void Acerto() 
+    { 
+        this.acerto[qtd] = true; 
+        this.img.SetActive(false);
+    }
 }
