@@ -925,6 +925,7 @@ GameObject:
   - component: {fileID: 1701305248328952869}
   - component: {fileID: 1701305248328952874}
   - component: {fileID: 6766603099756522593}
+  - component: {fileID: 1432731978572921686}
   m_Layer: 0
   m_Name: Energia
   m_TagString: Untagged
@@ -962,8 +963,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: -6.44, y: 0, z: -21.18}
+  m_Size: {x: 1.43, y: 1, z: 2.1}
+  m_Center: {x: -6.7900047, y: -0.25, z: -21.18}
 --- !u!114 &1701305248328952874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -998,6 +999,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1432731978572921686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701305248328952872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54eae1cfbcfce46ac5547718a6aecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardUI1: {fileID: 0}
+  billboardUI2: {fileID: 0}
 --- !u!1 &2172634748918693036
 GameObject:
   m_ObjectHideFlags: 0
