@@ -49,6 +49,7 @@ public class OpenDoon : MonoBehaviour
                 if (this.transform.parent.name.Contains("DoorBoss"))
                 {
                     Destroy(GameObject.Find("DescItem boss"));
+                    PlayerPrefs.SetString("CanOpenBossDoor", "true");
                 }
             }
         }

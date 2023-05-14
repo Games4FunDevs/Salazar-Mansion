@@ -6,7 +6,8 @@ using TMPro;
 
 public class QuickTime : MonoBehaviour
 {
-    public GameObject img;
+    public GameObject img, gunshot;
+    public TextMeshProUGUI text_;
     public string[] botao;
     public string resposta;
     public bool open = false, corout;
@@ -57,6 +58,7 @@ public class QuickTime : MonoBehaviour
         {
             if (corout == false)
             {
+                this.GetComponent<moveBoss>().enabled = true;
                 resposta = botao[Random.Range(0, 4)];
                 StartCoroutine("Shoot", 3f);
                 corout = true;
@@ -103,8 +105,9 @@ public class QuickTime : MonoBehaviour
     {
         this.open = true;
         img.SetActive(true);
-        img.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = resposta;
-        yield return new WaitForSeconds(3f);
+        text_.text = resposta;
+        yield return new WaitForSeconds(1f);
+        this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0);
         img.SetActive(false);
         curTime = timer;
         this.open = false;
@@ -114,7 +117,16 @@ public class QuickTime : MonoBehaviour
 
     void Acerto() 
     { 
+        this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0.7f);
+        StartCoroutine("Gunshot", .1f);
         this.acerto[qtd] = true; 
         this.img.SetActive(false);
+    }
+
+    IEnumerator Gunshot()
+    {
+        gunshot.SetActive(true);
+        yield return new WaitForSeconds(.1f);
+        gunshot.SetActive(false);
     }
 }
