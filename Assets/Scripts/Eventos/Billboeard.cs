@@ -8,64 +8,61 @@ public class Billboeard : MonoBehaviour
 {
     // controles (new input system)
     private Controles controles;
-
-    private Camera cam;
+    
+    public GameObject billboardUI1, billboardUI2;
 
     void Awake()
     {
+        billboardUI1 = GameObject.Find("BillboardUI1");
+        billboardUI2 = GameObject.Find("BillboardUI2");
+
         // habilita controles
         controles = new Controles();
         controles.Enable();
     }
 
-    void OnTriggerStay(Collider col)
+    void Start() 
     {
-        if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
-        {
-            this.transform.GetChild(0).gameObject.SetActive(false);
-            if (this.transform.childCount > 1)
-                this.transform.GetChild(1).gameObject.SetActive(false);
-        }
-
-        if (col.CompareTag("P1") || col.CompareTag("P2"))
-        {
-            this.transform.GetChild(0).gameObject.transform.LookAt(this.cam.transform.position, Vector3.up);
-            if (this.transform.childCount > 1)
-                this.transform.GetChild(1).gameObject.transform.LookAt(this.cam.transform.position, Vector3.up);
-        }
+        billboardUI1.SetActive(false);
+        billboardUI2.SetActive(false);
     }
 
+    void OnTriggerStay(Collider col)
+    {
+        if (col.CompareTag("P1") && controles.P1.Interagir.triggered)
+        {
+            billboardUI1.SetActive(false);
+        }
+        
+        if (col.CompareTag("P2") && controles.P2.Interagir.triggered)
+        {
+            billboardUI2.SetActive(false);
+        }
+    }
+    
     void OnTriggerEnter(Collider col)
     {
-        if (col.CompareTag("P1") || col.CompareTag("P2"))
-        {
-            this.cam = col.transform.GetChild(2).GetComponent<Camera>();
-            this.transform.GetChild(0).gameObject.SetActive(true);
-            if (this.transform.childCount > 1)
-                this.transform.GetChild(1).gameObject.SetActive(true);
-        }
-
         if (col.CompareTag("P1"))
         {
-            this.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "E";
-            if (this.transform.childCount > 1)
-                this.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "E";
+            billboardUI1.SetActive(true);
         }
+        
         if (col.CompareTag("P2"))
         {
-            this.transform.GetChild(0).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "O";
-            if (this.transform.childCount > 1)
-                this.transform.GetChild(1).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "O";
+            billboardUI2.SetActive(true);
         }
     }
 
     void OnTriggerExit(Collider col)
     {
-        if (col.CompareTag("P1") || col.CompareTag("P2"))
+        if (col.CompareTag("P1"))
         {
-            this.transform.GetChild(0).gameObject.SetActive(false);
-            if (this.transform.childCount > 1)
-                this.transform.GetChild(1).gameObject.SetActive(false);
+            billboardUI1.SetActive(false);
+        }
+        
+        if (col.CompareTag("P2"))
+        {
+            billboardUI2.SetActive(false);
         }
     }
 }
