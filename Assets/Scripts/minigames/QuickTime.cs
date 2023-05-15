@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class QuickTime : MonoBehaviour
 {
@@ -40,9 +41,7 @@ public class QuickTime : MonoBehaviour
         if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" 
             && ((qtd == 1 && !acerto[0]) || (qtd == 2 && !acerto[1]) || (qtd == 3 && !acerto[2]))) // fez 1 erro
         {
-            PlayerPrefs.SetString("P1QT", "false");
-            PlayerPrefs.SetString("P2QT", "false");
-            SceneManager.LoadScene("Fase");
+            Reset();
         }
 
         if (PlayerPrefs.GetString("P2QT") == "true" && PlayerPrefs.GetString("P1QT") == "true") 
@@ -74,7 +73,7 @@ public class QuickTime : MonoBehaviour
                     switch(resposta)
                     {
                         case "a":
-                            if (controles.P1.A.triggered) Acerto();
+                            if (controles.P1.A.triggered) { Acerto(); }
                             break;
                         case "s":
                             if (controles.P1.S.triggered) Acerto();
@@ -89,7 +88,7 @@ public class QuickTime : MonoBehaviour
                     switch(resposta)
                     {
                         case "j":
-                            if (controles.P2.J.triggered) Acerto(); 
+                            if (controles.P2.J.triggered) Acerto();
                             break;
                         case "k":
                             if (controles.P2.K.triggered) Acerto(); 
@@ -101,6 +100,13 @@ public class QuickTime : MonoBehaviour
                 }
             }
         }
+    }
+
+    void Reset()
+    {
+        PlayerPrefs.SetString("P1QT", "false");
+        PlayerPrefs.SetString("P2QT", "false");
+        SceneManager.LoadScene("GameOver");
     }
 
     IEnumerator Shoot()

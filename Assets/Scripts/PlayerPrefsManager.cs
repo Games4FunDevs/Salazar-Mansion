@@ -7,7 +7,7 @@ public class PlayerPrefsManager : MonoBehaviour
 {
     IEnumerator coroutine;
 
-    public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4;
+    public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel;
 
     public bool openBoss;
     
@@ -15,21 +15,28 @@ public class PlayerPrefsManager : MonoBehaviour
 
     void Update()
     {
-        if (PlayerPrefs.GetString("EndGame") == "true" && SceneManager.GetActiveScene().name == "Menu")
+        if (SceneManager.GetActiveScene().name == "Menu")
         {
-            PlayerPrefs.DeleteAll();
-            grid1.SetActive(false);
-            grid4.SetActive(true);
+            if (PlayerPrefs.GetString("EndGame") == "true")
+            {
+                PlayerPrefs.DeleteAll();
+                grid1.SetActive(false);
+                grid4.SetActive(true);
+            }
         }
 
-        if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && PlayerPrefs.GetString("CanOpenBossDoor") == "true")
+        if (SceneManager.GetActiveScene().name == "Fase")
         {
-            boss.SetActive(true);
-            p1.SetActive(true);
-            p2.SetActive(true);
-            p1Old.SetActive(false);
-            p2Old.SetActive(false);
-            cinematics.SetActive(false);
+            if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && PlayerPrefs.GetString("CanOpenBossDoor") == "true")
+            {
+                Destroy(panel);
+                boss.SetActive(true);
+                p1.SetActive(true);
+                p2.SetActive(true);
+                p1Old.SetActive(false);
+                p2Old.SetActive(false);
+                cinematics.SetActive(false);
+            }
         }
 
         // if (PlayerPrefs.GetString("ShowBtnInfo1") == "true")
