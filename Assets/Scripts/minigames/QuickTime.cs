@@ -59,7 +59,7 @@ public class QuickTime : MonoBehaviour
             if (corout == false)
             {
                 this.GetComponent<moveBoss>().enabled = true;
-                resposta = botao[Random.Range(0, 4)];
+                resposta = botao[Random.Range(0, 3)];
                 salazar.SetLayerWeight(1, 0);
                 StartCoroutine("Shoot", 1f);
                 corout = true;
