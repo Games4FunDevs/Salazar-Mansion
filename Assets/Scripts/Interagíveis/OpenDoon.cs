@@ -42,9 +42,17 @@ public class OpenDoon : MonoBehaviour
                 other.GetComponent<OpenDoon>().unlocked = true;
                 StartCoroutine("Unlock", 0.3f);
                 if (col.gameObject.GetComponent<PlayerController>().hasKey == true)
-                    { col.gameObject.GetComponent<PlayerController>().hasKey = false; }
+                { 
+                    col.gameObject.GetComponent<PlayerController>().hasKey = false; 
+                    if (this.transform.parent.name.Contains("DoorEscadas"))
+                        Destroy(GameObject.Find("DescItem Tranca (2)"));
+                }
                 if (col.gameObject.GetComponent<PlayerController>().hasLockp == true)
-                    { col.gameObject.GetComponent<PlayerController>().hasLockp = false; }
+                { 
+                    col.gameObject.GetComponent<PlayerController>().hasLockp = false; 
+                    if (this.transform.parent.name.Contains("DoorCamareira"))
+                        Destroy(GameObject.Find("DescItem Tranca (1)"));
+                }
                 Destroy(GameObject.Find("key1-item"));
                 if (this.transform.parent.name.Contains("DoorBoss"))
                 {

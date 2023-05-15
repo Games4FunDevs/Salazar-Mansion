@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PlayerPrefsManager : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class PlayerPrefsManager : MonoBehaviour
                 PlayerPrefs.DeleteAll();
                 grid1.SetActive(false);
                 grid4.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(GameObject.Find("Button (3)"));
             }
         }
 
