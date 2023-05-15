@@ -8,7 +8,7 @@ public class PlayerPrefsManager : MonoBehaviour
 {
     IEnumerator coroutine;
 
-    public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel;
+    public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes;
 
     public bool openBoss;
     
@@ -32,6 +32,7 @@ public class PlayerPrefsManager : MonoBehaviour
             if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && PlayerPrefs.GetString("CanOpenBossDoor") == "true")
             {
                 Destroy(panel);
+                luzes.SetActive(true);
                 boss.SetActive(true);
                 p1.SetActive(true);
                 p2.SetActive(true);
