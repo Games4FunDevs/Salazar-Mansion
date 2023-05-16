@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
                 hasLockp = false,
                 hasArma = false;
     
-    public GameObject canvasMenu, inimigo;
+    public GameObject canvasMenu, inimigo, falap1, falap2;
 
     private AudioSource audio_, audio_1;
 
@@ -89,6 +89,21 @@ public class PlayerController : MonoBehaviour
         {
            inimigo.SetActive(true);
            PlayerPrefs.SetString("Inimigo1Spawn", "spawnado");
+        }
+
+        if (this.gameObject.name == "P1")
+        {
+            if (falap2.activeSelf && controles.P1.Interagir.triggered)
+            {
+                falap2.SetActive(false);
+            }
+        }
+        if (this.gameObject.name == "P2")
+        {
+            if (falap2.activeSelf && controles.P1.Interagir.triggered)
+            {
+                falap2.SetActive(false);
+            }
         }
     }
 
