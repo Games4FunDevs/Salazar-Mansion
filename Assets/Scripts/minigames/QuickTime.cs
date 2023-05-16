@@ -33,7 +33,7 @@ public class QuickTime : MonoBehaviour
         {
             PlayerPrefs.SetString("P1QT", "true");
         }
-        if (qtd == 3 && acerto[0] && acerto[1] && acerto[2] && this.gameObject.name.Contains("P1"))
+        if (qtd == 3 && acerto[0] && acerto[1] && acerto[2] && this.gameObject.name.Contains("P2"))
         {
             PlayerPrefs.SetString("P2QT", "true");
         }
@@ -56,47 +56,28 @@ public class QuickTime : MonoBehaviour
         }
         else
         {
-            if (corout == false)
+            if (this.corout == false)
             {
                 this.GetComponent<moveBoss>().enabled = true;
-                resposta = botao[Random.Range(0, 3)];
+                this.resposta = botao[Random.Range(0, 3)];
                 salazar.SetLayerWeight(1, 0);
                 StartCoroutine("Shoot", 1f);
-                corout = true;
+                this.corout = true;
             }
             
-            if (open == true)
+            if (this.open == true)
             {
-
                 if (this.gameObject.name.Contains("P1"))
                 {
-                    switch(resposta)
-                    {
-                        case "a":
-                            if (controles.P1.A.triggered) { Acerto(); }
-                            break;
-                        case "s":
-                            if (controles.P1.S.triggered) Acerto();
-                            break;
-                        case "d":
-                            if (controles.P1.D.triggered) Acerto();
-                            break;
-                    }
+                    if (resposta == "a" && controles.P1.A.triggered) { Acerto(); }
+                    if (resposta == "s" && controles.P1.S.triggered) { Acerto(); }
+                    if (resposta == "d" && controles.P1.D.triggered) { Acerto(); }
                 }
                 if (this.gameObject.name.Contains("P2"))
                 {
-                    switch(resposta)
-                    {
-                        case "j":
-                            if (controles.P2.J.triggered) Acerto();
-                            break;
-                        case "k":
-                            if (controles.P2.K.triggered) Acerto(); 
-                            break;
-                        case "l":
-                            if (controles.P2.L.triggered) Acerto();
-                            break;
-                    }
+                    if (resposta == "j" && controles.P2.J.triggered) { Acerto(); }
+                    if (resposta == "k" && controles.P2.K.triggered) { Acerto(); }
+                    if (resposta == "l" && controles.P2.L.triggered) { Acerto(); }
                 }
             }
         }
