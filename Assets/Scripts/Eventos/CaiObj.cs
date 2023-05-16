@@ -12,7 +12,7 @@ public class CaiObj : MonoBehaviour
 
     void OnTriggerEnter (Collider col)
     {
-        if (col.CompareTag("P1"))
+        if (col.CompareTag("P1") || col.CompareTag("P2"))
         {
             this.gameObject.transform.parent.gameObject.GetComponent<Rigidbody>().useGravity = true;
             Destroy(this.gameObject);

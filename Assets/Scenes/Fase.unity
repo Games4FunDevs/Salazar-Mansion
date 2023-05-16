@@ -17875,7 +17875,7 @@ Transform:
   - {fileID: 447234302}
   - {fileID: 491530411}
   m_Father: {fileID: 551440430}
-  m_RootOrder: 53
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 4.291}
 --- !u!65 &523212099
 BoxCollider:
@@ -19142,6 +19142,7 @@ Transform:
   - {fileID: 305657437}
   - {fileID: 30452344}
   - {fileID: 1538066334}
+  - {fileID: 523212098}
   - {fileID: 955609130}
   - {fileID: 1151442251}
   - {fileID: 1628993160}
@@ -19152,7 +19153,6 @@ Transform:
   - {fileID: 1816322663}
   - {fileID: 1534169764}
   - {fileID: 372250663}
-  - {fileID: 523212098}
   - {fileID: 732203390}
   - {fileID: 175360517}
   - {fileID: 1336431815}
@@ -19163,6 +19163,7 @@ Transform:
   - {fileID: 1306514175}
   - {fileID: 1008217108}
   - {fileID: 983412604}
+  - {fileID: 1274279867}
   - {fileID: 1134637233}
   - {fileID: 395779695}
   - {fileID: 374752279}
@@ -19174,7 +19175,6 @@ Transform:
   - {fileID: 244526881}
   - {fileID: 660172600}
   - {fileID: 663953287}
-  - {fileID: 1274279867}
   - {fileID: 400579663}
   - {fileID: 676976080}
   - {fileID: 938254410}
@@ -39385,6 +39385,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1255084819}
     m_Modifications:
+    - target: {fileID: 905360570634039878, guid: 2e4077a37860e65429ce5fea715ed21f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2468281887488471558, guid: 2e4077a37860e65429ce5fea715ed21f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -39445,6 +39449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Imagem retangular.005 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5306785327712983484, guid: 2e4077a37860e65429ce5fea715ed21f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e4077a37860e65429ce5fea715ed21f, type: 3}
 --- !u!4 &995246176 stripped
@@ -39481,7 +39489,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -44749,6 +44757,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 409463234}
     - target: {fileID: 5678479751174899267, guid: 4899d31c0ea48634aa57a13b62bc85c7, type: 3}
+      propertyPath: luzes
+      value: 
+      objectReference: {fileID: 833651291}
+    - target: {fileID: 5678479751174899267, guid: 4899d31c0ea48634aa57a13b62bc85c7, type: 3}
       propertyPath: p1Old
       value: 
       objectReference: {fileID: 713011238}
@@ -49336,7 +49348,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 551440430}
-  m_RootOrder: 75
+  m_RootOrder: 64
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1274279868
 MeshRenderer:
@@ -59434,7 +59446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3031178019097731841, guid: 74dc370c89f57dc468f10ea840a726ce, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74dc370c89f57dc468f10ea840a726ce, type: 3}
@@ -74850,7 +74862,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1969535953
 Transform:
