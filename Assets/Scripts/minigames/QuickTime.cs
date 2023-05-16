@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class QuickTime : MonoBehaviour
 {
-    public GameObject img;
+    public GameObject img, gunshot;
+    public Animator salazar;
+    public TextMeshProUGUI text_;
     public string[] botao;
     public string resposta;
     public bool open = false, corout;
@@ -38,9 +41,7 @@ public class QuickTime : MonoBehaviour
         if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" 
             && ((qtd == 1 && !acerto[0]) || (qtd == 2 && !acerto[1]) || (qtd == 3 && !acerto[2]))) // fez 1 erro
         {
-            PlayerPrefs.SetString("P1QT", "false");
-            PlayerPrefs.SetString("P2QT", "false");
-            SceneManager.LoadScene("Fase");
+            Reset();
         }
 
         if (PlayerPrefs.GetString("P2QT") == "true" && PlayerPrefs.GetString("P1QT") == "true") 
@@ -57,8 +58,10 @@ public class QuickTime : MonoBehaviour
         {
             if (corout == false)
             {
-                resposta = botao[Random.Range(0, 4)];
-                StartCoroutine("Shoot", 3f);
+                this.GetComponent<moveBoss>().enabled = true;
+                resposta = botao[Random.Range(0, 3)];
+                salazar.SetLayerWeight(1, 0);
+                StartCoroutine("Shoot", 1f);
                 corout = true;
             }
             
@@ -70,7 +73,7 @@ public class QuickTime : MonoBehaviour
                     switch(resposta)
                     {
                         case "a":
-                            if (controles.P1.A.triggered) Acerto();
+                            if (controles.P1.A.triggered) { Acerto(); }
                             break;
                         case "s":
                             if (controles.P1.S.triggered) Acerto();
@@ -85,7 +88,7 @@ public class QuickTime : MonoBehaviour
                     switch(resposta)
                     {
                         case "j":
-                            if (controles.P2.J.triggered) Acerto(); 
+                            if (controles.P2.J.triggered) Acerto();
                             break;
                         case "k":
                             if (controles.P2.K.triggered) Acerto(); 
@@ -99,12 +102,19 @@ public class QuickTime : MonoBehaviour
         }
     }
 
+    void Reset()
+    {
+        PlayerPrefs.SetString("P1QT", "false");
+        PlayerPrefs.SetString("P2QT", "false");
+        SceneManager.LoadScene("GameOver");
+    }
+
     IEnumerator Shoot()
     {
         this.open = true;
         img.SetActive(true);
-        img.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = resposta;
-        yield return new WaitForSeconds(3f);
+        text_.text = resposta;
+        yield return new WaitForSeconds(1f);
         img.SetActive(false);
         curTime = timer;
         this.open = false;
@@ -114,7 +124,19 @@ public class QuickTime : MonoBehaviour
 
     void Acerto() 
     { 
+        this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0.7f);
+        salazar.SetLayerWeight(1, 0.5f);
+        salazar.SetTrigger("trigger");
+        StartCoroutine("Gunshot", .1f);
         this.acerto[qtd] = true; 
         this.img.SetActive(false);
+    }
+
+    IEnumerator Gunshot()
+    {
+        gunshot.SetActive(true);
+        yield return new WaitForSeconds(.1f);
+        this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0);
+        gunshot.SetActive(false);
     }
 }

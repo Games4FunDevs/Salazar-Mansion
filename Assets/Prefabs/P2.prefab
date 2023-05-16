@@ -65,7 +65,15 @@ MonoBehaviour:
   player: 0
   hasKey: 0
   hasPeca: 0
+  hasEye: 0
+  hasEye2: 0
+  hasKey2: 0
+  hasLockp: 0
+  hasArma: 0
   canvasMenu: {fileID: 0}
+  inimigo: {fileID: 0}
+  inv: 0
+  open: 0
 --- !u!143 &7734477008166500628
 CharacterController:
   m_ObjectHideFlags: 0
@@ -366,7 +374,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.04085083, g: 0.09100212, b: 0.16981131, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4661203906984459705}
   - component: {fileID: 3972855283494430143}
+  - component: {fileID: 5154143258893110642}
   m_Layer: 0
   m_Name: Key1
   m_TagString: Untagged
@@ -47,6 +48,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.122311, z: 4.8927665}
   m_Center: {x: 0.000002961359, y: 0.3162844, z: 1.946371}
+--- !u!114 &5154143258893110642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4661203906984459704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54eae1cfbcfce46ac5547718a6aecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardUI1: {fileID: 0}
+  billboardUI2: {fileID: 0}
 --- !u!1001 &4372778201970147036
 PrefabInstance:
   m_ObjectHideFlags: 0

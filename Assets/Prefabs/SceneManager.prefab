@@ -401,6 +401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebb182a65d6825946a70319b9534e094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cinematica: {fileID: 0}
+  cinematica2: {fileID: 0}
   textos:
   - Um grupo de amigos curiosos por eventos paranormais foi visitar um castelo assuatdor
     que era famoso.
@@ -410,6 +412,12 @@ MonoBehaviour:
   - Fantasmas de verdade aparecem e todos saem correndo...
   text_: {fileID: 0}
   count: 0
+  timer: 60
+  curTime: 0
+  timerStart: 0
+  portaP2: {fileID: 0}
+  painel: {fileID: 0}
+  sufocado: {fileID: 0}
 --- !u!223 &5678479750681169638
 Canvas:
   m_ObjectHideFlags: 0
@@ -516,3 +524,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afd1ae5eb0127a9499eda93b19372cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boss: {fileID: 0}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  p1Old: {fileID: 0}
+  p2Old: {fileID: 0}
+  cinematics: {fileID: 0}
+  grid1: {fileID: 0}
+  grid4: {fileID: 0}
+  panel: {fileID: 5678479749434084560}
+  openBoss: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 609143384952906203}
   - component: {fileID: 8151387911226101955}
+  - component: {fileID: 7254360486852581801}
   m_Layer: 0
   m_Name: Lockpick
   m_TagString: Untagged
@@ -48,6 +49,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.3526133, y: 2.1720383, z: 1}
   m_Center: {x: 0.17630681, y: 0.58601916, z: 1.6866882e-16}
+--- !u!114 &7254360486852581801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234130018900769633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54eae1cfbcfce46ac5547718a6aecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardUI1: {fileID: 0}
+  billboardUI2: {fileID: 0}
 --- !u!1 &320536635330196564
 GameObject:
   m_ObjectHideFlags: 0

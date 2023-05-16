@@ -245,7 +245,7 @@ public class PlayerController : MonoBehaviour
             CanvasMenuSet(true, "false");
             if (open == false) 
             {
-                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(0).transform.GetChild(0).gameObject);
+                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject);
                 open = true;
             }
         }
@@ -253,6 +253,13 @@ public class PlayerController : MonoBehaviour
         if (inv == false)
         { 
             CanvasMenuSet(false, "true"); 
+            canvasMenu.transform.GetChild(1).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(2).gameObject.SetActive(false);
+            canvasMenu.transform.GetChild(3).gameObject.SetActive(false);
+            canvasMenu.transform.GetChild(4).gameObject.SetActive(false);
             open = false;
         }
     }
