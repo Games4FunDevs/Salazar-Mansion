@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
                 hasEye = false,
                 hasEye2 = false,
                 hasKey2 = false,
+                hasKey3 = false,
                 hasLockp = false,
                 hasArma = false;
     
@@ -112,6 +113,12 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name.Contains("Key1") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasKey = true;
+            Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.name.Contains("Key3") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasKey3 = true;
             Destroy(col.gameObject);
         }
 
