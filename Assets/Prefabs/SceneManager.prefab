@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -107, y: 31}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -127.106995, y: 33.872437}
+  m_SizeDelta: {x: 240.2141, y: 44.2551}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4654635672179721083
 CanvasRenderer:
@@ -93,12 +93,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13
+  m_fontSize: 23
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
-  m_fontSizeMax: 13
+  m_fontSizeMin: 13
+  m_fontSizeMax: 23
   m_fontStyle: 0
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 1024
@@ -404,19 +404,19 @@ MonoBehaviour:
   cinematica: {fileID: 0}
   cinematica2: {fileID: 0}
   textos:
-  - Um grupo de amigos curiosos por eventos paranormais foi visitar um castelo assuatdor
-    que era famoso.
-  - "Chegando l\xE1, tudo parecia \"normal\", nada de eventos paranormais verdadeiros,
-    era tudo encenado."
+  - "Dois amigos curiosos por eventos paranormais foram visitar uma mans\xE3o assustadora."
+  - "Chegando l\xE1, tudo parecia \"normal\". Os dois combinaram de n\xE3o se separar.
+    para que nada pudesse acontecer."
   - "At\xE9 que algo estranho acontece..."
-  - Fantasmas de verdade aparecem e todos saem correndo...
+  - "Eles foram surpreendidos por uma figura estranha e deixados em pontos divergentes
+    do local... \xC9 aqui que essa historia come\xE7a."
   text_: {fileID: 0}
   count: 0
   timer: 60
   curTime: 0
   timerStart: 0
   portaP2: {fileID: 0}
-  painel: {fileID: 0}
+  painel: {fileID: 5678479749434084560}
   sufocado: {fileID: 0}
 --- !u!223 &5678479750681169638
 Canvas:
@@ -451,10 +451,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1280, y: 720}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -533,4 +533,7 @@ MonoBehaviour:
   grid1: {fileID: 0}
   grid4: {fileID: 0}
   panel: {fileID: 5678479749434084560}
+  luzes: {fileID: 0}
+  introboss: {fileID: 0}
   openBoss: 0
+  cutscenePlay: 0
