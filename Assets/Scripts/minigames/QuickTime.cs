@@ -69,15 +69,15 @@ public class QuickTime : MonoBehaviour
             {
                 if (this.gameObject.name.Contains("P1"))
                 {
-                    if (resposta == "a" && controles.P1.A.triggered) { Acerto(); }
-                    if (resposta == "s" && controles.P1.S.triggered) { Acerto(); }
-                    if (resposta == "d" && controles.P1.D.triggered) { Acerto(); }
+                    if (resposta == "A" && controles.P1.A.triggered) { Acerto(); }
+                    if (resposta == "S" && controles.P1.S.triggered) { Acerto(); }
+                    if (resposta == "D" && controles.P1.D.triggered) { Acerto(); }
                 }
                 if (this.gameObject.name.Contains("P2"))
                 {
-                    if (resposta == "j" && controles.P2.J.triggered) { Acerto(); }
-                    if (resposta == "k" && controles.P2.K.triggered) { Acerto(); }
-                    if (resposta == "l" && controles.P2.L.triggered) { Acerto(); }
+                    if (resposta == "J" && controles.P2.J.triggered) { Acerto(); }
+                    if (resposta == "K" && controles.P2.K.triggered) { Acerto(); }
+                    if (resposta == "L" && controles.P2.L.triggered) { Acerto(); }
                 }
             }
         }
