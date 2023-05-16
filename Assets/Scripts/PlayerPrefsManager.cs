@@ -8,9 +8,9 @@ public class PlayerPrefsManager : MonoBehaviour
 {
     IEnumerator coroutine;
 
-    public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes;
+    public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss;
 
-    public bool openBoss;
+    public bool openBoss, cutscenePlay = false;
     
     public void DeleteComecou() => PlayerPrefs.DeleteKey("ComeçouJogar");
 
@@ -29,16 +29,19 @@ public class PlayerPrefsManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Fase")
         {
-            if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && PlayerPrefs.GetString("CanOpenBossDoor") == "true")
+            if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && PlayerPrefs.GetString("CanOpenBossDoor") == "true"
+                && cutscenePlay == false)
             {
+                introboss.SetActive(true);
                 Destroy(panel);
                 luzes.SetActive(true);
-                boss.SetActive(true);
-                p1.SetActive(true);
-                p2.SetActive(true);
+                // boss.SetActive(true);
+                // p1.SetActive(true);
+                // p2.SetActive(true);
                 p1Old.SetActive(false);
                 p2Old.SetActive(false);
                 cinematics.SetActive(false);
+                cutscenePlay = true;
             }
         }
 
