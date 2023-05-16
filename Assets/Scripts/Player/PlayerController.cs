@@ -262,39 +262,36 @@ public class PlayerController : MonoBehaviour
     {
         if (controles.P1.Menu.triggered) { inv = !inv; }
 
-        if (inv)
+        if (inv == true)
         { 
-            CanvasMenuSet(true, "false");
+            this.canvasMenu.SetActive(true);
             if (open == false) 
             {
-                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(2).transform.GetChild(0).gameObject);
+                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject);
                 open = true;
             }
         }
 
         if (inv == false)
         { 
-            CanvasMenuSet(false, "true"); 
-            canvasMenu.transform.GetChild(2).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(2).transform.GetChild(1).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(2).transform.GetChild(2).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(2).gameObject.SetActive(false);
             canvasMenu.transform.GetChild(3).gameObject.SetActive(false);
             canvasMenu.transform.GetChild(4).gameObject.SetActive(false);
-            canvasMenu.transform.GetChild(5).gameObject.SetActive(false);
+            this.canvasMenu.SetActive(false); 
             open = false;
         }
+
+        if (canvasMenu.activeSelf) { PlayerPrefs.SetString("podeAndar", "false"); }
+        else { PlayerPrefs.SetString("podeAndar", "true"); }
     }
 
     public void CloseMenu()
     {
         inv = false;
-    }
-
-    void CanvasMenuSet(bool value, string podeandar)
-    {
-        this.canvasMenu.SetActive(value);
-        PlayerPrefs.SetString("podeAndar", podeandar);
     }
 
     // void ShowCursor()
