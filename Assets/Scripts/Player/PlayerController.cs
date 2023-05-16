@@ -93,14 +93,14 @@ public class PlayerController : MonoBehaviour
 
         if (this.gameObject.name == "P1")
         {
-            if (falap2.activeSelf && controles.P1.Interagir.triggered)
+            if (falap1.activeSelf && controles.P1.Interagir.triggered)
             {
-                falap2.SetActive(false);
+                falap1.SetActive(false);
             }
         }
         if (this.gameObject.name == "P2")
         {
-            if (falap2.activeSelf && controles.P1.Interagir.triggered)
+            if (falap2.activeSelf && controles.P2.Interagir.triggered)
             {
                 falap2.SetActive(false);
             }
