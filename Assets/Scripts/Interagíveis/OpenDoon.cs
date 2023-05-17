@@ -33,6 +33,7 @@ public class OpenDoon : MonoBehaviour
             if (col.gameObject.GetComponent<PlayerController>().hasKey == true 
                 || (col.gameObject.GetComponent<PlayerController>().hasKey2 == true && this.transform.parent.name.Contains("DoorArmas")) 
                 || (col.gameObject.GetComponent<PlayerController>().hasLockp == true && this.transform.parent.name.Contains("DoorCamareira"))
+                || (col.gameObject.GetComponent<PlayerController>().hasKey3 == true && this.transform.parent.name.Contains("DoorEscadas"))
                 || (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && this.transform.parent.name.Contains("DoorBoss"))
                 )
             {
@@ -46,9 +47,18 @@ public class OpenDoon : MonoBehaviour
                 { 
                     col.gameObject.GetComponent<PlayerController>().hasKey = false; 
                     Destroy(GameObject.Find("key1-item"));
-                    if (this.transform.parent.name.Contains("DoorEscadas"))
-                        Destroy(GameObject.Find("DescItem Tranca (2)"));
                 }
+                
+                if (this.transform.parent.name.Contains("DoorEscadas"))
+                {
+                    if (col.gameObject.GetComponent<PlayerController>().hasKey3 == true)
+                    { 
+                        col.gameObject.GetComponent<PlayerController>().hasKey3 = false; 
+                        Destroy(GameObject.Find("key3-item"));
+                        Destroy(GameObject.Find("DescItem Tranca (2)"));
+                    }
+                }
+                
 
                 if (col.gameObject.GetComponent<PlayerController>().hasLockp == true)
                 { 
