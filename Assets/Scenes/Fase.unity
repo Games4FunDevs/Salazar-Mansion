@@ -1866,7 +1866,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1058691130}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 112.322, z: 0}
 --- !u!114 &56544148
 MonoBehaviour:
@@ -1897,8 +1897,17 @@ MonoBehaviour:
   gObject:
   - {fileID: 898532458}
   - {fileID: 1813147334}
-  texto: "Boatos de que a Manas\xE3o Salazar \xE9 assombrada.<br>O local virou ponto
-    tur\xEDstico para amantes do terror."
+  texto: "<br><br>A mans\xE3o Salazar foi fundada por um homem chamado Salazar Grunt,
+    um conquistador de terras bastante temido por seus inimigos por sua enorme concentra\xE7\xE3o
+    de poder, Salazar tamb\xE9m era conhecido por sua crueldade, tendo cometido diversos
+    atos hediondos durante sua vida. Uma das coisas que ele tinha mais orgulho era
+    de sua invej\xE1vel mans\xE3o, constru\xEDda num local isolado e protegido, n\xE3o
+    havia lugar melhor para tirano como ele estar vivendo. O \xFAnico familiar de
+    Salazar era seu filho Billy, um garoto de 10 anos de idade, que perdeu sua m\xE3e
+    por um motivo desconhecido. Haviam rumores de que o seu pr\xF3prio pai havia
+    a assassinado, mas isso nunca pode ser provado (talvez n\xE3o houvesse testemunhas
+    corajosas o suficiente para contar), por\xE9m algo em  Billy o fazia acreditar
+    nisso, e sua rela\xE7\xE3o com Salazar nunca foi muito amig\xE1vel. "
   showing: 0
   auto: 0
   cAuto: 0
@@ -8794,6 +8803,148 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 315415397}
   m_Mesh: {fileID: -2277591768508962887, guid: 188c339249c9f5042935dd8190aa407a, type: 3}
+--- !u!1 &321819036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 321819037}
+  - component: {fileID: 321819042}
+  - component: {fileID: 321819041}
+  - component: {fileID: 321819040}
+  - component: {fileID: 321819039}
+  - component: {fileID: 321819038}
+  m_Layer: 0
+  m_Name: pag1 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &321819037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321819036}
+  m_LocalRotation: {x: -0, y: 0.85805255, z: -0, w: -0.513562}
+  m_LocalPosition: {x: -7.51, y: 27.82, z: -56.76}
+  m_LocalScale: {x: 0.61084, y: 0.010343631, z: 0.45515}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1058691130}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 241.80301, z: 0}
+--- !u!114 &321819038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321819036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54eae1cfbcfce46ac5547718a6aecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardUI1: {fileID: 639796345}
+  billboardUI2: {fileID: 1744036450}
+--- !u!114 &321819039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321819036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c18aeed958ee4d99e7ebbe017c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject:
+  - {fileID: 898532458}
+  - {fileID: 898532458}
+  texto: "<br><br>Salazar Grunt, que tentou lutar contra os invasores, foi encurralado
+    e decapitado por eles. O corpo decapitado de Salazar foi encontrado no hall de
+    entrada da mans\xE3o pelos vizinhos, que acionaram a pol\xEDcia.<br>A not\xEDcia
+    da chacina chocou o pa\xEDs e gerou como\xE7\xE3o entre amigos e familiares das
+    v\xEDtimas. A pol\xEDcia iniciou uma investiga\xE7\xE3o minuciosa e encontrou
+    diversas pistas que levaram \xE0 identifica\xE7\xE3o e captura dos respons\xE1veis
+    pelo ataque.<br>Ap\xF3s um julgamento longo e intenso, os cinco homens foram
+    condenados \xE0 pris\xE3o perp\xE9tua pelo assassinato de Salazar Grunt e seus
+    funcion\xE1rios. O caso ficou conhecido como um dos mais brutais e perturbadores
+    da hist\xF3ria do pa\xEDs, deixando um legado de tristeza e dor para as fam\xEDlias
+    das v\xEDtimas e para toda a sociedade."
+  showing: 0
+  auto: 0
+  cAuto: 0
+--- !u!65 &321819040
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321819036}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.657427, y: 71.94298, z: 3.9520023}
+  m_Center: {x: -0.8287133, y: 2.4965925, z: -0.26283178}
+--- !u!23 &321819041
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321819036}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0f04ec82cd42f7c4baa0cd6bfa5b9820, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &321819042
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321819036}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &323077513 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2874765826992384646, guid: d0008a5d04c19734e934955ee4db1d0f, type: 3}
@@ -20444,7 +20595,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1058691130}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: -150.344, z: 0}
 --- !u!114 &570363350
 MonoBehaviour:
@@ -20474,10 +20625,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObject:
   - {fileID: 898532458}
-  - {fileID: 1813147334}
-  texto: "Fantasma capturado!<br>Um iternauta diz ter ido explorar o local mas n\xE3o
-    conseguiu entrar. Por\xE9m, conseguiu capturar imagens de fantasmas rondando
-    por dentro da mans\xE3o."
+  - {fileID: 898532458}
+  texto: "<br><br>Fantasma capturado! Internauta relata avistamentos assustadores
+    na Mans\xE3o Salazar.<br><br>Um internauta corajoso decidiu se aventurar pr\xF3ximo
+    \xE0 infame Mans\xE3o Salazar, conhecida por suas hist\xF3rias assombradas. Embora
+    tenha sido impedido de entrar na propriedade, conseguiu capturar imagens arrepiantes
+    de supostos fantasmas rondando por dentro da mans\xE3o.<br>Atrav\xE9s de suas
+    redes sociais, o explorador compartilhou as imagens perturbadoras que conseguiu
+    capturar. As fotografias mostram figuras et\xE9reas, com uma apar\xEAncia transl\xFAcida,
+    perambulando pelos corredores sombrios e salas abandonadas da Mans\xE3o Salazar.<br>O
+    relato despertou grande interesse e curiosidade entre os entusiastas do paranormal,
+    alimentando ainda mais a lenda em torno da mans\xE3o. Enquanto alguns c\xE9ticos
+    questionam a veracidade das imagens, outros acreditam que elas possam fornecer
+    evid\xEAncias de atividade sobrenatural no local."
   showing: 0
   auto: 0
   cAuto: 0
@@ -34891,7 +35051,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1058691130}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 7.685, z: 0}
 --- !u!114 &832215500
 MonoBehaviour:
@@ -34922,8 +35082,18 @@ MonoBehaviour:
   gObject:
   - {fileID: 898532458}
   - {fileID: 1813147334}
-  texto: "Turistas desaparecidos!<br>A \xFAltima coisa que se sabem deles \xE9 que
-    foram visitar a Mans\xE3o Salazar."
+  texto: "<br><br>DESAPARECIMENTO DE TURISTAS AP\xD3S VISITA \xC0 MANS\xC3O SALAZAR<br><br>O
+    mist\xE9rio aterrorizante se intensifica. Um grupo de turistas desapareceu ap\xF3s
+    embarcar em uma excurs\xE3o \xE0 infame Mans\xE3o Salazar, conhecida por suas
+    hist\xF3rias assustadoras e supostamente assombrada. Familiares e amigos preocupados
+    entraram em contato com as autoridades, que iniciaram uma busca intensiva pela
+    regi\xE3o. Enquanto isso, relatos de atividade paranormal e encontros sobrenaturais
+    na mans\xE3o aumentam a intriga em torno do caso.<br>A Mans\xE3o Salazar, localizada
+    em um terreno isolado, tem sido um ponto de atra\xE7\xE3o para amantes do terror
+    e curiosos em busca de emo\xE7\xF5es fortes. No entanto, ap\xF3s adentrarem a
+    propriedade, os turistas desapareceram sem deixar rastros, desencadeando um mist\xE9rio
+    assustador. Moradores locais relatam a presen\xE7a de esp\xEDritos inquietos
+    e afirmam que a mans\xE3o \xE9 palco de eventos tr\xE1gicos."
   showing: 0
   auto: 0
   cAuto: 0
@@ -42078,9 +42248,12 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2058532794}
+  - {fileID: 321819037}
   - {fileID: 56544147}
   - {fileID: 832215499}
+  - {fileID: 1255031294}
   - {fileID: 570363349}
+  - {fileID: 1938151802}
   m_Father: {fileID: 1269878698}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -49737,6 +49910,153 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1251051798}
   m_Mesh: {fileID: -7604510875101738316, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &1255031293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255031294}
+  - component: {fileID: 1255031299}
+  - component: {fileID: 1255031298}
+  - component: {fileID: 1255031297}
+  - component: {fileID: 1255031296}
+  - component: {fileID: 1255031295}
+  m_Layer: 0
+  m_Name: pag1 (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1255031294
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255031293}
+  m_LocalRotation: {x: -0, y: 0.9480961, z: -0, w: -0.31798396}
+  m_LocalPosition: {x: -19.12, y: 34.3, z: -25.71}
+  m_LocalScale: {x: 0.61084, y: 0.010343631, z: 0.45515}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1058691130}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 217.082, z: 0}
+--- !u!114 &1255031295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255031293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54eae1cfbcfce46ac5547718a6aecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardUI1: {fileID: 639796345}
+  billboardUI2: {fileID: 1744036450}
+--- !u!114 &1255031296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255031293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c18aeed958ee4d99e7ebbe017c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject:
+  - {fileID: 898532458}
+  - {fileID: 1813147334}
+  texto: "<br>Enquanto algumas pessoas consideram as hist\xF3rias como fic\xE7\xE3o,
+    testemunhos de fen\xF4menos estranhos nas proximidades da mans\xE3o aumentam
+    a cren\xE7a de uma poss\xEDvel explica\xE7\xE3o sobrenatural para o desaparecimento
+    dos turistas.<br>As autoridades est\xE3o investigando o caso minuciosamente,
+    explorando todas as possibilidades, como sequestro, acidentes ou influ\xEAncia
+    paranormal. Equipamentos especializados est\xE3o sendo utilizados para buscar
+    evid\xEAncias e encontrar qualquer pista que possa levar ao paradeiro dos desaparecidos.
+    Enquanto isso, a Mans\xE3o Salazar continua atraindo aten\xE7\xE3o como um local
+    temido e fascinante. O desaparecimento dos turistas apenas refor\xE7a sua reputa\xE7\xE3o
+    sinistra, deixando muitos curiosos sobre a verdade por tr\xE1s dos eventos inexplic\xE1veis
+    que ocorrem na propriedade.<br>A busca pelos turistas desaparecidos e a resolu\xE7\xE3o
+    desse enigma sombrio permanecem como prioridades para as autoridades e fonte
+    de ang\xFAstia para as fam\xEDlias e amigos aguardando not\xEDcias. A Mans\xE3o
+    Salazar continua envolta em mist\xE9rio e medo, intrigando aqueles que se aventuram
+    a explorar seus segredos sombrios e servindo como um alerta para os que preferem
+    evitar os perigos desconhecidos que podem estar escondidos em suas paredes assombradas."
+  showing: 0
+  auto: 0
+  cAuto: 0
+--- !u!65 &1255031297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255031293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.730388, y: 84.86465, z: 3.9520018}
+  m_Center: {x: -0.29223254, y: 34.489918, z: -0.26283172}
+--- !u!23 &1255031298
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255031293}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0f04ec82cd42f7c4baa0cd6bfa5b9820, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1255031299
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255031293}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1255084818
 GameObject:
   m_ObjectHideFlags: 0
@@ -62988,6 +63308,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 478077630}
     m_Modifications:
+    - target: {fileID: 511625560686008849, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 511625560686008849, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_margin.w
+      value: -1.8148422
+      objectReference: {fileID: 0}
+    - target: {fileID: 511625560686008849, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
     - target: {fileID: 511625561437169060, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_Name
       value: CanvasP1
@@ -63124,6 +63456,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1556498536386041425, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1722784106377792559, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_Name
       value: --
@@ -63155,6 +63491,10 @@ PrefabInstance:
     - target: {fileID: 2347212199819960270, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2353758365878458559, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2590721943850643815, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -63212,6 +63552,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4961696381465098011, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961696381465098011, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4961696381465098011, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4974290950247135528, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -63262,7 +63614,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5020045419902670322, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_fontSize
-      value: 20.55
+      value: 20.25
       objectReference: {fileID: 0}
     - target: {fileID: 5377138686627902001, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchorMax.y
@@ -63412,6 +63764,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6996670890176373076, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996670890176373076, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6996670890176373076, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7175041641291224458, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -63431,6 +63795,18 @@ PrefabInstance:
     - target: {fileID: 8234990076505537458, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -28.000122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582422962665091504, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582422962665091504, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582422962665091504, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9164662220924245435, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -74417,6 +74793,142 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936343339}
   m_Mesh: {fileID: -4966659370446853934, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &1938151801
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1938151802}
+  - component: {fileID: 1938151807}
+  - component: {fileID: 1938151806}
+  - component: {fileID: 1938151805}
+  - component: {fileID: 1938151804}
+  - component: {fileID: 1938151803}
+  m_Layer: 0
+  m_Name: pag1 (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1938151802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938151801}
+  m_LocalRotation: {x: -0, y: -0.27151912, z: -0, w: 0.9624331}
+  m_LocalPosition: {x: -6.47, y: 34.27, z: -24.91}
+  m_LocalScale: {x: 0.61084, y: 0.010343631, z: 0.45515}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1058691130}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: -31.509, z: 0}
+--- !u!114 &1938151803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938151801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a54eae1cfbcfce46ac5547718a6aecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardUI1: {fileID: 639796345}
+  billboardUI2: {fileID: 1744036450}
+--- !u!114 &1938151804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938151801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c18aeed958ee4d99e7ebbe017c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject:
+  - {fileID: 898532458}
+  - {fileID: 898532458}
+  texto: "<br><br>Embora a veracidade das imagens ainda esteja em debate, a Mans\xE3o
+    Salazar continua a ser considerada um local misterioso e temido. Os relatos de
+    avistamentos e os eventos inexplic\xE1veis que ocorrem na propriedade apenas
+    alimentam a aura de mist\xE9rio que a envolve, atraindo a aten\xE7\xE3o daqueles
+    que buscam experi\xEAncias sobrenaturais intensas."
+  showing: 0
+  auto: 0
+  cAuto: 0
+--- !u!65 &1938151805
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938151801}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1788075, y: 71.05883, z: 4.7420664}
+  m_Center: {x: -0.5680224, y: 35.02942, z: 0.1322017}
+--- !u!23 &1938151806
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938151801}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 0f04ec82cd42f7c4baa0cd6bfa5b9820, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1938151807
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938151801}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1938821858 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9056185488951068331, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
@@ -79501,8 +80013,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObject:
   - {fileID: 898532458}
-  - {fileID: 1813147334}
-  texto: "1970<br>um acidente terr\xEDvel ocorreu na Mans\xE3o Salazar."
+  - {fileID: 898532458}
+  texto: "<br><br>TRAG\xC9DIA EM MANS\xC3O DE SALAZAR GRUNT CHOCA PA\xCDS<br><br>No
+    dia 16 de setembro de 1970, uma noite que ficar\xE1 marcada na hist\xF3ria do
+    pa\xEDs, ocorreu uma das chacinas mais perturbadoras da \xE9poca. Salazar Grunt,
+    um empres\xE1rio de sucesso conhecido por sua riqueza e influ\xEAncia na sociedade,
+    foi alvo de um ataque em sua pr\xF3pria casa.<br>Segundo informa\xE7\xF5es apuradas
+    pela pol\xEDcia na \xE9poca, um grupo de cinco homens encapuzados conseguiu invadir
+    a mans\xE3o de Salazar por um acesso nos fundos do terreno, de forma silenciosa.
+    O plano era atacar sem levantar suspeitas e eliminar todos na mans\xE3o.<br>A
+    primeira v\xEDtima foi Brutus, bra\xE7o direito de Salazar, que foi preso em
+    uma armadilha criada com correntes e brutalmente queimado pelos invasores. Greta,
+    a camareira, que estava arrumando os quartos, tamb\xE9m foi assassinada. Billy
+    Grunt, filho de Salazar, ao ouvir barulhos estranhos no primeiro andar, foi verificar
+    por curiosidade e acabou sendo morto a tiros pelos invasores."
   showing: 0
   auto: 0
   cAuto: 0
