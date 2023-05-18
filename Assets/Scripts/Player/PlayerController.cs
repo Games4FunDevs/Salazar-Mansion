@@ -206,11 +206,11 @@ public class PlayerController : MonoBehaviour
     {
         // checa se ta no chao
         isGrounded = Physics.CheckSphere(GameObject.FindWithTag("GCheck").transform.position, 0.2f, Ground, QueryTriggerInteraction.Ignore);
-        _velocity.y += gravidade * Time.deltaTime; // direcao da gravidade
-        controller.Move(_velocity * Time.deltaTime); // aplica gravidade
+        _velocity.y += gravidade * Time.deltaTime * Time.timeScale; // direcao da gravidade
+        controller.Move(_velocity * Time.deltaTime * Time.timeScale); // aplica gravidade
 
         if (isGrounded && _velocity.y < 0)
-            _velocity.y = -2f;
+            _velocity.y = -2f * Time.timeScale;
     }
 
     void Run() 
@@ -219,20 +219,17 @@ public class PlayerController : MonoBehaviour
         {
             case 1:
                 if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
-                {
-                    curSpeed = runSpeed;
-                }
+                    curSpeed = runSpeed * Time.timeScale;
+                    
                 if (isGrounded && controles.P1.Correr.ReadValue<float>() == 0)
-                {
-                    curSpeed = walkSpeed;
-                }
+                    curSpeed = walkSpeed * Time.timeScale;
             break;
             case 2:
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
-                    curSpeed = runSpeed;
+                    curSpeed = runSpeed * Time.timeScale;
                     
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 0)
-                    curSpeed = walkSpeed;
+                    curSpeed = walkSpeed * Time.timeScale;
             break;
         }
     }
@@ -288,8 +285,8 @@ public class PlayerController : MonoBehaviour
             open = false;
         }
 
-        if (canvasMenu.activeSelf) { PlayerPrefs.SetString("podeAndar", "false"); }
-        else { PlayerPrefs.SetString("podeAndar", "true"); }
+        if (canvasMenu.activeSelf) { Time.timeScale = 0; } // PlayerPrefs.SetString("podeAndar", "false"); }
+        else { Time.timeScale = 1; } // PlayerPrefs.SetString("podeAndar", "true"); }
     }
 
     public void CloseMenu()

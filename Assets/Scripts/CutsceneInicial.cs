@@ -64,7 +64,7 @@ public class CutsceneInicial : MonoBehaviour
 
         if (timerStart == 2)
         {
-            curTime -= Time.deltaTime;
+            curTime -= Time.deltaTime * Time.timeScale;
             sufocado.GetComponent<Image>().color += new Color(0f, 0f, 0f, ((1/curTime)/100));  
         }
 

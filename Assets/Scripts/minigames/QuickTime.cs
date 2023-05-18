@@ -52,7 +52,7 @@ public class QuickTime : MonoBehaviour
 
         if (curTime > 0)
         {
-            curTime -= Time.deltaTime;
+            curTime -= Time.deltaTime * Time.timeScale;
         }
         else
         {
