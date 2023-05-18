@@ -410,7 +410,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.85
+  m_fontSize: 30.9
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 93.3
+  m_fontSize: 93.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -866,7 +866,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.5
+  m_fontSize: 31.35
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1215,6 +1215,7 @@ GameObject:
   - component: {fileID: 1390282235}
   - component: {fileID: 1390282233}
   - component: {fileID: 1390282236}
+  - component: {fileID: 1390282237}
   m_Layer: 5
   m_Name: Button
   m_TagString: first
@@ -1299,6 +1300,18 @@ MonoBehaviour:
           m_StringArgument: Fase
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1390282237}
+        m_TargetAssemblyTypeName: PlayerPrefsManager, Assembly-CSharp
+        m_MethodName: DeleteComecou
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &1390282235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1320,6 +1333,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cena: 
+--- !u!114 &1390282237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390282231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd1ae5eb0127a9499eda93b19372cd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boss: {fileID: 0}
+  p1: {fileID: 0}
+  p2: {fileID: 0}
+  p1Old: {fileID: 0}
+  p2Old: {fileID: 0}
+  cinematics: {fileID: 0}
+  grid1: {fileID: 0}
+  grid4: {fileID: 0}
+  panel: {fileID: 0}
+  luzes: {fileID: 0}
+  introboss: {fileID: 0}
+  openBoss: 0
+  cutscenePlay: 0
 --- !u!1001 &1649118535
 PrefabInstance:
   m_ObjectHideFlags: 0

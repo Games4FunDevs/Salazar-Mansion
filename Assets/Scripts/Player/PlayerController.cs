@@ -110,54 +110,57 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.name.Contains("Key1") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        if ((this.gameObject.name == "P1" && controles.P1.Interagir.triggered) || (this.gameObject.name == "P2" && controles.P2.Interagir.triggered))
         {
-            this.hasKey = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name.Contains("Key3") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasKey3 = true;
-            Destroy(col.gameObject);
-        }
+            if (col.gameObject.name.Contains("Key1"))
+            {
+                this.hasKey = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name.Contains("Key3"))
+            {
+                this.hasKey3 = true;
+                Destroy(col.gameObject);
+            }
 
-        if (col.gameObject.name.Contains("Key2") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasKey2 = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name.Contains("Peça") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasPeca = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name == "Olho de vidro" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasEye = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name == "Olho de vidro 2" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasEye2 = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name == "Lockpick" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasLockp = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (!hasArma && col.gameObject.name == "Arma" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasArma = true;
-            PlayerPrefs.SetString("ArmaPlayer"+this.gameObject.name, "true");
-            Destroy(col.gameObject);
-        }
+            if (col.gameObject.name.Contains("Key2"))
+            {
+                this.hasKey2 = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name.Contains("Peça"))
+            {
+                this.hasPeca = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name == "Olho de vidro")
+            {
+                this.hasEye = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name == "Olho de vidro 2")
+            {
+                this.hasEye2 = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name == "Lockpick")
+            {
+                this.hasLockp = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (!hasArma && col.gameObject.name == "Arma")
+            {
+                this.hasArma = true;
+                PlayerPrefs.SetString("ArmaPlayer"+this.gameObject.name, "true");
+                Destroy(col.gameObject);
+            }
+        }    
         
         if (col.gameObject.name == "fimfase1")
         {
