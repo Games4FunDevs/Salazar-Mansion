@@ -1928,7 +1928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObject:
   - {fileID: 898532458}
-  - {fileID: 1813147334}
+  - {fileID: 898532458}
   texto: "<br><br>A mans\xE3o Salazar foi fundada por um homem chamado Salazar Grunt,
     um conquistador de terras bastante temido por seus inimigos por sua enorme concentra\xE7\xE3o
     de poder, Salazar tamb\xE9m era conhecido por sua crueldade, tendo cometido diversos
@@ -9708,6 +9708,25 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 346777645}
   m_Mesh: {fileID: 5009161486953370047, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &348620911 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -9056185488951068331, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
+  m_PrefabInstance: {fileID: 710860303}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &348620915
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348620911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2848908281037189520, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
 --- !u!1 &351088415
 GameObject:
   m_ObjectHideFlags: 0
@@ -19475,25 +19494,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540789534}
   m_Mesh: {fileID: -6233881508918280898, guid: 094afe84432f3044c84a07553319071b, type: 3}
---- !u!1 &542138535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -3132025327668544906, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
-  m_PrefabInstance: {fileID: 710860303}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &542138537
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 542138535}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -3819058481068501144, guid: 5c8fbb7b42978de499bbf90450150f33, type: 3}
 --- !u!1001 &543581547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36163,7 +36163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObject:
   - {fileID: 898532458}
-  - {fileID: 1813147334}
+  - {fileID: 898532458}
   texto: "<br><br>DESAPARECIMENTO DE TURISTAS AP\xD3S VISITA \xC0 MANS\xC3O SALAZAR<br><br>O
     mist\xE9rio aterrorizante se intensifica. Um grupo de turistas desapareceu ap\xF3s
     embarcar em uma excurs\xE3o \xE0 infame Mans\xE3o Salazar, conhecida por suas
@@ -54529,7 +54529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gObject:
   - {fileID: 898532458}
-  - {fileID: 1813147334}
+  - {fileID: 898532458}
   texto: "<br>Enquanto algumas pessoas consideram as hist\xF3rias como fic\xE7\xE3o,
     testemunhos de fen\xF4menos estranhos nas proximidades da mans\xE3o aumentam
     a cren\xE7a de uma poss\xEDvel explica\xE7\xE3o sobrenatural para o desaparecimento
@@ -57489,6 +57489,24 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343741327}
   m_Mesh: {fileID: -3593600602754362305, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &1345330385 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5569043992460113364, guid: d0008a5d04c19734e934955ee4db1d0f, type: 3}
+  m_PrefabInstance: {fileID: 652658616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1345330389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345330385}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0000088, y: 2.0000007, z: 2.0000005}
+  m_Center: {x: 0, y: -0.0000009536743, z: 0.00000011920929}
 --- !u!1 &1345502432
 GameObject:
   m_ObjectHideFlags: 0
@@ -75252,11 +75270,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1 &1813147334 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3865708177075099062, guid: 85e45e66e3b4dd74497bf9136f6f9b5c, type: 3}
-  m_PrefabInstance: {fileID: 1467316663}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1813545886 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8335625828575163917, guid: 9186de3a2861c874883cba2089d4664b, type: 3}
