@@ -18,6 +18,7 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Menu")
         {
+            Time.timeScale = 1;
             if (PlayerPrefs.GetString("EndGame") == "true")
             {
                 PlayerPrefs.DeleteAll();

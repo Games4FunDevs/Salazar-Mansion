@@ -28,7 +28,10 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    public void ChangeScene_(string name) => SceneManager.LoadScene(name);
+    public void ChangeScene_(string name)
+    {
+        SceneManager.LoadScene(name);
+    }
 
     public void Sair() => Application.Quit();
 
