@@ -3488,51 +3488,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124721281}
   m_Mesh: {fileID: -3192407847068387414, guid: 094afe84432f3044c84a07553319071b, type: 3}
---- !u!1 &128351215
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 128351216}
-  - component: {fileID: 128351217}
-  m_Layer: 0
-  m_Name: Escuro (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!4 &128351216
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128351215}
-  m_LocalRotation: {x: -0, y: -0.7102637, z: -0, w: 0.7039357}
-  m_LocalPosition: {x: -2.056, y: 0.20100021, z: -3.01}
-  m_LocalScale: {x: 3.298492, y: 1, z: 0.30312985}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2092494240}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &128351217
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128351215}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: -0.08, y: 0, z: -0.45}
 --- !u!95 &128365237 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 350900780808516122, guid: ff0337fa56b787749b66153b81f5715f, type: 3}
@@ -12347,6 +12302,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8845141488953964546, guid: 49dcb5e04392c5a4fb0e949aeb574757, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8927615670833910278, guid: 49dcb5e04392c5a4fb0e949aeb574757, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -18319,30 +18278,6 @@ PrefabInstance:
       propertyPath: gObject.Array.data[1]
       value: 
       objectReference: {fileID: 1605769633}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Size.x
-      value: 3.6610417
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Size.y
-      value: 0.3975985
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Size.z
-      value: 2.1495686
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Center.x
-      value: 6.6250935
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Center.y
-      value: -0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Center.z
-      value: 0.20978427
-      objectReference: {fileID: 0}
     - target: {fileID: 5341236837541455670, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
       propertyPath: m_Name
       value: DescItem Tranca 1 (3)
@@ -31233,6 +31168,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1431217063}
     m_Modifications:
+    - target: {fileID: 2050203676183332852, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -4153401227886929670, guid: 442e34e8b54d5b448b18c56130205b03, type: 3}
+    - target: {fileID: 2050203676183332852, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -4973734387028869240, guid: 094afe84432f3044c84a07553319071b, type: 3}
     - target: {fileID: 3000240408790787077, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
       propertyPath: p2cam
       value: 
@@ -31253,6 +31196,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: p2free
       objectReference: {fileID: 0}
+    - target: {fileID: 4647733847008176100, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 7152903259265234621, guid: 442e34e8b54d5b448b18c56130205b03, type: 3}
     - target: {fileID: 6224987321781643147, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
       propertyPath: p2cam
       value: 
@@ -42428,10 +42375,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1431217063}
     m_Modifications:
+    - target: {fileID: 2050203676183332852, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4393025258833604412, guid: 094afe84432f3044c84a07553319071b, type: 3}
+    - target: {fileID: 2050203676183332852, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -1444460858095362738, guid: aae09bdd91794ec41a674f672c296eab, type: 3}
     - target: {fileID: 3000240408790787077, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
       propertyPath: unlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4647733847008176100, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8321911467079494753, guid: 094afe84432f3044c84a07553319071b, type: 3}
     - target: {fileID: 5564612140782927659, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
       propertyPath: m_NavMeshLayer
       value: 0
@@ -59765,10 +59724,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1431217063}
     m_Modifications:
+    - target: {fileID: 2050203676183332852, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 4393025258833604412, guid: 094afe84432f3044c84a07553319071b, type: 3}
+    - target: {fileID: 2050203676183332852, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: -1444460858095362738, guid: aae09bdd91794ec41a674f672c296eab, type: 3}
     - target: {fileID: 3000240408790787077, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
       propertyPath: unlocked
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4647733847008176100, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -8321911467079494753, guid: 094afe84432f3044c84a07553319071b, type: 3}
     - target: {fileID: 6224987321781643147, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
       propertyPath: unlocked
       value: 1
@@ -70169,6 +70140,10 @@ PrefabInstance:
       propertyPath: p2cam
       value: 
       objectReference: {fileID: 211335072}
+    - target: {fileID: 2482461408084719316, guid: 4182a6afec415b64bb494942e234bed0, type: 3}
+      propertyPath: btninfo
+      value: 
+      objectReference: {fileID: 1952594888}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4182a6afec415b64bb494942e234bed0, type: 3}
 --- !u!1 &1605079240
@@ -71618,30 +71593,6 @@ PrefabInstance:
       propertyPath: gObject.Array.data[1]
       value: 
       objectReference: {fileID: 1605769633}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Size.x
-      value: 3.6610417
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Size.y
-      value: 0.3975985
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Size.z
-      value: 2.1495686
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Center.x
-      value: 6.6250935
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Center.y
-      value: -0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3072803602065593069, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
-      propertyPath: m_Center.z
-      value: 0.20978427
-      objectReference: {fileID: 0}
     - target: {fileID: 5341236837541455670, guid: 2377d1cff119c664e82dbdd647136369, type: 3}
       propertyPath: m_Name
       value: DescItem Tranca 1 (2)
