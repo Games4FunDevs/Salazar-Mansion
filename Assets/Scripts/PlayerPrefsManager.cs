@@ -9,7 +9,6 @@ public class PlayerPrefsManager : MonoBehaviour
     IEnumerator coroutine;
 
     public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss, cutsceneCaveira;
-    public GameObject[] Door;
 
     public bool openBoss, cutscenePlay = false;
     
@@ -54,12 +53,6 @@ public class PlayerPrefsManager : MonoBehaviour
                 p1Old.transform.GetChild(2).gameObject.GetComponent<Camera>().rect = new Rect(0, 0, 0.5f, 1);
                 p2Old.transform.position = new Vector3(-1.86f, 0.94f, -41.83f);
                 p2Old.transform.GetChild(2).gameObject.SetActive(true);
-            }
-
-            if (Door[4].GetComponent<OpenDoon>().unlocked == true)
-            {
-                Destroy(Door[2]);
-                Destroy(Door[3]);
             }
         }
 
