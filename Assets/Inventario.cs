@@ -10,7 +10,7 @@ public class Inventario : MonoBehaviour
     public GameObject slotPrefab; // spawn do slot
     public Sprite[] sprites;
     public GameObject canvas;
-    private string[] desc = { "Chave do freezer", "Fusível", "Olho de vidro", "Chave da sala de armas", "Olho de vidro", "Lockpick", "Arma" };
+    private string[] desc = { "Chave do freezer", "Fusível", "Olho de vidro", "Chave da sala de armas", "Olho de vidro", "Lockpick", "Arma", "Chave pro 2º andar" };
     public bool[] varAux = {false, false, false, false, false, false, false}; 
 
     void Awake()
@@ -51,6 +51,10 @@ public class Inventario : MonoBehaviour
         if (player.hasArma && !varAux[6])
         {
             Instanciar(6, "arma-item");
+        }
+        if (player.hasKey3 && !varAux[7])
+        {
+            Instanciar(7, "key3-item");
         }
     }
 

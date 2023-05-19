@@ -33,10 +33,11 @@ public class PlayerController : MonoBehaviour
                 hasEye = false,
                 hasEye2 = false,
                 hasKey2 = false,
+                hasKey3 = false,
                 hasLockp = false,
                 hasArma = false;
     
-    public GameObject canvasMenu, inimigo;
+    public GameObject canvasMenu, inimigo, falap1, falap2;
 
     private AudioSource audio_, audio_1;
 
@@ -90,6 +91,21 @@ public class PlayerController : MonoBehaviour
            inimigo.SetActive(true);
            PlayerPrefs.SetString("Inimigo1Spawn", "spawnado");
         }
+
+        if (this.gameObject.name == "P1")
+        {
+            if (falap1.activeSelf && controles.P1.Interagir.triggered)
+            {
+                falap1.SetActive(false);
+            }
+        }
+        if (this.gameObject.name == "P2")
+        {
+            if (falap2.activeSelf && controles.P2.Interagir.triggered)
+            {
+                falap2.SetActive(false);
+            }
+        }
     }
 
     void OnTriggerStay(Collider col)
@@ -97,6 +113,12 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.name.Contains("Key1") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
         {
             this.hasKey = true;
+            Destroy(col.gameObject);
+        }
+        
+        if (col.gameObject.name.Contains("Key3") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        {
+            this.hasKey3 = true;
             Destroy(col.gameObject);
         }
 
@@ -240,39 +262,36 @@ public class PlayerController : MonoBehaviour
     {
         if (controles.P1.Menu.triggered) { inv = !inv; }
 
-        if (inv)
+        if (inv == true)
         { 
-            CanvasMenuSet(true, "false");
+            this.canvasMenu.SetActive(true);
             if (open == false) 
             {
-                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(2).transform.GetChild(0).gameObject);
+                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject);
                 open = true;
             }
         }
 
         if (inv == false)
         { 
-            CanvasMenuSet(false, "true"); 
-            canvasMenu.transform.GetChild(2).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(2).transform.GetChild(0).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(2).transform.GetChild(1).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(2).transform.GetChild(2).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(true);
+            canvasMenu.transform.GetChild(2).gameObject.SetActive(false);
             canvasMenu.transform.GetChild(3).gameObject.SetActive(false);
             canvasMenu.transform.GetChild(4).gameObject.SetActive(false);
-            canvasMenu.transform.GetChild(5).gameObject.SetActive(false);
+            this.canvasMenu.SetActive(false); 
             open = false;
         }
+
+        if (canvasMenu.activeSelf) { PlayerPrefs.SetString("podeAndar", "false"); }
+        else { PlayerPrefs.SetString("podeAndar", "true"); }
     }
 
     public void CloseMenu()
     {
         inv = false;
-    }
-
-    void CanvasMenuSet(bool value, string podeandar)
-    {
-        this.canvasMenu.SetActive(value);
-        PlayerPrefs.SetString("podeAndar", podeandar);
     }
 
     // void ShowCursor()
