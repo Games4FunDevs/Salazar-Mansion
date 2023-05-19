@@ -32,7 +32,7 @@ public class OpenDoon : MonoBehaviour
         {
             if (col.gameObject.GetComponent<PlayerController>().hasKey == true 
                 || (col.gameObject.GetComponent<PlayerController>().hasKey2 == true && this.transform.parent.name.Contains("DoorArmas")) 
-                || (col.gameObject.GetComponent<PlayerController>().hasLockp == true && this.transform.parent.name.Contains("DoorCamareira"))
+                || (col.gameObject.GetComponent<PlayerController>().hasLockp == true && (this.transform.parent.name.Contains("DoorCamareira") || this.transform.parent.name.Contains("DoorDespensa")))
                 || (col.gameObject.GetComponent<PlayerController>().hasKey3 == true && this.transform.parent.name.Contains("DoorEscadas"))
                 || (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && this.transform.parent.name.Contains("DoorBoss"))
                 )
@@ -66,6 +66,9 @@ public class OpenDoon : MonoBehaviour
                     Destroy(GameObject.Find("lockpick-item"));
                     if (this.transform.parent.name.Contains("DoorCamareira"))
                         Destroy(GameObject.Find("DescItem Tranca (1)"));
+
+                    if (this.transform.parent.name.Contains("DoorDespensa"))
+                        Destroy(GameObject.Find("DescItem Tranca Despensa"));
                 }
 
                 if (this.transform.parent.name.Contains("DoorArmas"))
