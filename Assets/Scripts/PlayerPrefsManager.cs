@@ -9,6 +9,7 @@ public class PlayerPrefsManager : MonoBehaviour
     IEnumerator coroutine;
 
     public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss, cutsceneCaveira;
+    public GameObject[] descartaveis;
 
     public bool openBoss, aux, cutscenePlay = false;
     
@@ -63,25 +64,21 @@ public class PlayerPrefsManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Fase")
         {
-            if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && PlayerPrefs.GetString("CanOpenBossDoor") == "true"
-                && cutscenePlay == false)
+            if (PlayerPrefs.GetString("SaveStatus") == "Boss")
             {
                 introboss.SetActive(true);
                 Destroy(panel);
                 luzes.SetActive(true);
-                p1Old.SetActive(false);
-                p2Old.SetActive(false);
-                cinematics.SetActive(false);
+                Destroy(p1Old);
+                Destroy(p2Old);
+                Destroy(cinematics);
                 cutscenePlay = true;
+                for (int i = 0; i < descartaveis.Length; i++)
+                {
+                    Destroy(descartaveis[i]);
+                }
+                this.gameObject.GetComponent<PlayerPrefsManager>().enabled = false;
             }
         }
     }
-
-    // public IEnumerator ShowCanvas(string canvas, string btninfo, string value, float time)
-    // {
-    //     GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(true);
-    //     yield return new WaitForSeconds(time * Time.timeScale);
-    //     GameObject.Find(canvas).gameObject.transform.GetChild(3).gameObject.SetActive(false);
-    //     PlayerPrefs.SetString(btninfo, value);
-    // }
 }
