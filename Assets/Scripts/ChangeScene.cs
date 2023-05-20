@@ -28,7 +28,7 @@ public class ChangeScene : MonoBehaviour
 
     public void Continuar()
     {
-        if (PlayerPrefs.GetString("LiberouCaveira") == "true" || PlayerPrefs.GetString("CanOpenBossDoor") == "true")
+        if (PlayerPrefs.HasKey("SaveStatus") || PlayerPrefs.GetString("CanOpenBossDoor") == "true")
         {
             ChangeScene_("Fase");
         }

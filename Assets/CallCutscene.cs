@@ -14,7 +14,7 @@ public class CallCutscene : MonoBehaviour
             Cutscene.SetActive(true);
             if(primeroAndar == true)
             {
-                Destroy(GetComponent<CallCutscene>());
+                Destroy(this.gameObject);
             }
             if(primeroAndar == false)
             {

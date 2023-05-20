@@ -79,9 +79,9 @@ public class PlayerController : MonoBehaviour
             Run(); // pode correr
         }
 
-        if (hasKey2 == true && GameObject.Find("impedirEscadas").activeSelf)
+        if (hasKey2 == true && GameObject.Find("impedirEscadas") != null && GameObject.Find("impedirEscadas").activeSelf)
         {
-            GameObject.Find("impedirEscadas").SetActive(false);
+            Destroy(GameObject.Find("impedirEscadas"));
         }
         
         if (PlayerPrefs.GetString("Inimigo1Spawn") == "true")
@@ -126,6 +126,7 @@ public class PlayerController : MonoBehaviour
             {
                 this.hasKey2 = true;
                 Destroy(col.gameObject);
+                PlayerPrefs.SetString(this.gameObject.name+"HasKey2", "true");
             }
             
             if (col.gameObject.name.Contains("Peça"))
@@ -158,7 +159,12 @@ public class PlayerController : MonoBehaviour
                 PlayerPrefs.SetString("ArmaPlayer"+this.gameObject.name, "true");
                 Destroy(col.gameObject);
             }
-        }    
+        }   
+
+        if (col.gameObject.name.Contains("Chamar Cutscene - Andar 1")) 
+        {
+            PlayerPrefs.SetString("SaveStatus", "andar1");
+        } 
         
         if (col.gameObject.name == "fimfase1")
         {

@@ -51,7 +51,6 @@ public class Inventario : MonoBehaviour
 
     void Instanciar(int x, string name_)
     {
-        print("foi");
         GameObject obj = Instantiate(slotPrefab);
         obj.transform.SetParent(this.transform);
         obj.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = sprites[x];
