@@ -84,7 +84,7 @@ public class ShowCanvasText : MonoBehaviour
     {
         if (col.CompareTag("P1") || col.CompareTag("P2"))
         {
-            if (col.GetComponent<PlayerController>().hasKey && this.gameObject.name == "DescItem Tranca") 
+            if (col.GetComponent<PlayerController>().hasKey1 && this.gameObject.name == "DescItem Tranca") 
             {
                 CloseText();
             }

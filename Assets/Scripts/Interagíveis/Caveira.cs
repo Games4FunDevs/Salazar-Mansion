@@ -41,7 +41,6 @@ public class Caveira : MonoBehaviour
             cinematic.SetActive(true);
             eyes = true;
             PlayerPrefs.SetString("LiberouCaveira", "true");
-            print(PlayerPrefs.GetString("LiberouCaveira"));
             // StartCoroutine("EyeTrue", .3f);
             //this.transform.GetChild(3).gameObject.SetActive(false);
         }

@@ -10,7 +10,7 @@ public class PlayerPrefsManager : MonoBehaviour
 
     public GameObject boss, p1, p2, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss, cutsceneCaveira;
 
-    public bool openBoss, cutscenePlay = false;
+    public bool openBoss, aux = false, cutscenePlay = false;
     
     // public void DeleteComecou() => PlayerPrefs.DeleteKey("ComeçouJogar");
 
@@ -36,23 +36,23 @@ public class PlayerPrefsManager : MonoBehaviour
                 introboss.SetActive(true);
                 Destroy(panel);
                 luzes.SetActive(true);
-                // boss.SetActive(true);
-                // p1.SetActive(true);
-                // p2.SetActive(true);
                 p1Old.SetActive(false);
                 p2Old.SetActive(false);
                 cinematics.SetActive(false);
                 cutscenePlay = true;
             }
 
-            if (PlayerPrefs.GetString("LiberouCaveira") == "true")
+            if (PlayerPrefs.GetString("LiberouCaveira") == "true" && aux == false)
             {
                 Destroy(this.transform.GetChild(0).gameObject);
+                Destroy(this.transform.GetChild(1).gameObject);
+                Destroy(this.transform.GetChild(2).gameObject);
                 cutsceneCaveira.SetActive(true);
                 p1Old.transform.position = new Vector3(-1.77f, 0.94f, -41.83f); 
                 p1Old.transform.GetChild(2).gameObject.GetComponent<Camera>().rect = new Rect(0, 0, 0.5f, 1);
                 p2Old.transform.position = new Vector3(-1.86f, 0.94f, -41.83f);
                 p2Old.transform.GetChild(2).gameObject.SetActive(true);
+                aux = true;
             }
         }
 

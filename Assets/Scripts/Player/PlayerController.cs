@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public int player = 0;
 
     // itens / inventario
-    public bool hasKey = false, 
+    public bool hasKey1 = false, 
                 hasPeca = false, 
                 hasEye = false,
                 hasEye2 = false,
@@ -112,7 +112,7 @@ public class PlayerController : MonoBehaviour
         {
             if (col.gameObject.name.Contains("Key1"))
             {
-                this.hasKey = true;
+                this.hasKey1 = true;
                 Destroy(col.gameObject);
             }
             

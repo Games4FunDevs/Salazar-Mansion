@@ -12595,7 +12595,7 @@ GameObject:
   - component: {fileID: 408933125}
   - component: {fileID: 408933124}
   m_Layer: 0
-  m_Name: Sala de escadas 1
+  m_Name: Escadas 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13903,7 +13903,7 @@ Transform:
   m_GameObject: {fileID: 454873166}
   m_LocalRotation: {x: -0.0047020316, y: 0.70709115, z: 0.70709115, w: 0.0047020316}
   m_LocalPosition: {x: -20.7, y: 2.01, z: 0.04}
-  m_LocalScale: {x: 0.22880507, y: 0.3693287, z: 0.7103183}
+  m_LocalScale: {x: 0.1714116, y: 0.3693287, z: 0.7103183}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 913957537}
@@ -62495,6 +62495,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -28.000122
       objectReference: {fileID: 0}
+    - target: {fileID: 2217388426759891406, guid: 85e45e66e3b4dd74497bf9136f6f9b5c, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1501839239}
     - target: {fileID: 2378177906467539731, guid: 85e45e66e3b4dd74497bf9136f6f9b5c, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.23535156
@@ -68482,6 +68486,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8151387911226101955, guid: d0f600f0e4457fe4c818295a7a8d05a4, type: 3}
+      propertyPath: m_Size.x
+      value: 2.106895
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151387911226101955, guid: d0f600f0e4457fe4c818295a7a8d05a4, type: 3}
+      propertyPath: m_Size.y
+      value: 2.313976
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151387911226101955, guid: d0f600f0e4457fe4c818295a7a8d05a4, type: 3}
+      propertyPath: m_Size.z
+      value: 0.9999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151387911226101955, guid: d0f600f0e4457fe4c818295a7a8d05a4, type: 3}
+      propertyPath: m_Center.x
+      value: -0.08985274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151387911226101955, guid: d0f600f0e4457fe4c818295a7a8d05a4, type: 3}
+      propertyPath: m_Center.y
+      value: 0.65698844
+      objectReference: {fileID: 0}
+    - target: {fileID: 8151387911226101955, guid: d0f600f0e4457fe4c818295a7a8d05a4, type: 3}
+      propertyPath: m_Center.z
+      value: 1.4963684e-15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0f600f0e4457fe4c818295a7a8d05a4, type: 3}
 --- !u!4 &1566251226 stripped
@@ -70482,6 +70510,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8212713484820627519, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 713011243}
     - target: {fileID: 8234990076505537458, guid: 69f77f00181e9654183bd87d4adce1f7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -28.000122
