@@ -46,6 +46,7 @@ public class OpenDoon : MonoBehaviour
                 if (col.gameObject.GetComponent<PlayerController>().hasKey1 == true)
                 { 
                     col.gameObject.GetComponent<PlayerController>().hasKey1 = false; 
+                    Destroy(GameObject.Find("DescTrancaFreezer"));
                     Destroy(GameObject.Find("key1-item"));
                 }
                 
