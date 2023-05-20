@@ -29596,6 +29596,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07026b8ab971a404e8158dc92d8e55f0, type: 3}
+--- !u!1 &647125086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2394624910019355589, guid: 07026b8ab971a404e8158dc92d8e55f0, type: 3}
+  m_PrefabInstance: {fileID: 647125085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &647125087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8710703585364443065, guid: 07026b8ab971a404e8158dc92d8e55f0, type: 3}
+  m_PrefabInstance: {fileID: 647125085}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &647125088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647125086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c18aeed958ee4d99e7ebbe017c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject:
+  - {fileID: 0}
+  - {fileID: 1605769633}
+  texto: Um terno roxo...
+  showing: 0
+  auto: 0
+  cAuto: 0
+--- !u!114 &647125089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647125087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c18aeed958ee4d99e7ebbe017c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject:
+  - {fileID: 859536041}
+  texto: Tem uma parte do quadro destacada.
+  showing: 0
+  auto: 0
+  cAuto: 0
 --- !u!1 &652379204 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9141816029861474070, guid: d0008a5d04c19734e934955ee4db1d0f, type: 3}
@@ -34461,12 +34508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4586d166cd577574dbc200a96c370fcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  P1: {fileID: 713011238}
-  P2: {fileID: 335618744}
-  Items: []
-  ItemSlotsP1:
-  - {fileID: 0}
-  ItemSlotsP2: []
 --- !u!4 &738824198
 Transform:
   m_ObjectHideFlags: 0
@@ -34720,6 +34761,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8649985134135039680, guid: 3ef0f031856a90d45be4bcf84eb38f2e, type: 3}
   m_PrefabInstance: {fileID: 1256713197}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &750815067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 701955797198855737, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+  m_PrefabInstance: {fileID: 1782421919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &750815074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750815067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c18aeed958ee4d99e7ebbe017c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject:
+  - {fileID: 0}
+  - {fileID: 1605769633}
+  texto: Um terno roxo...
+  showing: 0
+  auto: 0
+  cAuto: 0
 --- !u!1 &751141611
 GameObject:
   m_ObjectHideFlags: 0
@@ -35909,6 +35974,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792386501}
   m_Mesh: {fileID: 8691780276856062721, guid: 094afe84432f3044c84a07553319071b, type: 3}
+--- !u!1 &793447181 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5792774251376230981, guid: bb2c942e1b9ace4478f662ad71937754, type: 3}
+  m_PrefabInstance: {fileID: 1782421919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &793447188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 793447181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 905c18aeed958ee4d99e7ebbe017c5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gObject:
+  - {fileID: 859536041}
+  texto: Tem uma parte do quadro destacada.
+  showing: 0
+  auto: 0
+  cAuto: 0
 --- !u!1 &802056430
 GameObject:
   m_ObjectHideFlags: 0

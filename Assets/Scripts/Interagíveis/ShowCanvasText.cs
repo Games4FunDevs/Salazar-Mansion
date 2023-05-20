@@ -33,7 +33,12 @@ public class ShowCanvasText : MonoBehaviour
                     this.showing = false;
                     this.cAuto = false;
                     gObject[0].SetActive(false);
-                    StartCoroutine("ShowCollider", 0.15f);
+                    if (this.gameObject.name.Contains("Billboard-minigame (1)") || this.gameObject.name.Contains("Billboard-minigame"))
+                    {
+                        this.gameObject.GetComponent<ShowCanvasText>().enabled = false;
+                    }
+                    else
+                        StartCoroutine("ShowCollider", 0.15f);
                 }
             } 
             if (player == 2)
@@ -46,7 +51,12 @@ public class ShowCanvasText : MonoBehaviour
                     this.showing = false;
                     this.cAuto = false;
                     gObject[1].SetActive(false);
-                    StartCoroutine("ShowCollider", 0.15f);
+                    if (this.gameObject.name.Contains("Billboard-minigame (1)") || this.gameObject.name.Contains("Billboard-minigame"))
+                    {
+                        this.gameObject.GetComponent<ShowCanvasText>().enabled = false;
+                    } 
+                    else
+                        StartCoroutine("ShowCollider", 0.15f);
                 }
             }
         }
@@ -70,7 +80,10 @@ public class ShowCanvasText : MonoBehaviour
             if ((col.CompareTag("P1") && controles.P1.Interagir.triggered) || (col.CompareTag("P2") && controles.P2.Interagir.triggered))
             {
                 this.showing = true;
-                this.gameObject.GetComponent<BoxCollider>().enabled = false;
+                if (!this.gameObject.name.Contains("Billboard-minigame (1)") && !this.gameObject.name.Contains("Billboard-minigame"))
+                {
+                    this.gameObject.GetComponent<BoxCollider>().enabled = false;
+                }
             }
         }
 
@@ -97,6 +110,12 @@ public class ShowCanvasText : MonoBehaviour
         {
             if (!this.cAuto && this.auto)
                 this.cAuto = true;
+
+            if (this.gameObject.name.Contains("Billboard-minigame (1)") || this.gameObject.name.Contains("Billboard-minigame"))
+            {
+                this.showing = false;
+                this.gameObject.GetComponent<ShowCanvasText>().enabled = true;
+            }
         }
     }
 
