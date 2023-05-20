@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
             Run(); // pode correr
         }
 
-        if (hasKey2 == true)
+        if (hasKey2 == true && GameObject.Find("impedirEscadas").activeSelf)
         {
             GameObject.Find("impedirEscadas").SetActive(false);
         }
