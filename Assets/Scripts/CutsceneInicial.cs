@@ -72,7 +72,7 @@ public class CutsceneInicial : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         else
         {
-            if (portaP2.GetComponent<OpenDoon>().unlocked == true)
+            if (portaP2 != null && portaP2.GetComponent<OpenDoon>().unlocked == true )
                 Destroy(this.gameObject);
         }
     }

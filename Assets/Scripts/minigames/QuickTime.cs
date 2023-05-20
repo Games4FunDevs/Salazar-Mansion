@@ -7,19 +7,19 @@ using UnityEngine.InputSystem;
 
 public class QuickTime : MonoBehaviour
 {
-    public GameObject img, gunshot;
+    public GameObject imgp1, gunshotp1, imgp2, gunshotp2, p1, p2;
     public Animator salazar;
-    public TextMeshProUGUI text_;
-    public string[] botao;
-    public string resposta;
-    public bool open = false, corout;
-    public bool[] acerto; 
+    public TextMeshProUGUI txtp1, txtp2;
+    public string[] botaop1, botaop2;
+    public string respostap1, respostap2;
+    public bool open = false, corout, p1ganhou, p2ganhou;
+    public bool[] acertop1, acertop2; 
     public int qtd = 0;
     public float timer = 2f, curTime = 0;
 
     private Controles controles;
 
-    void Start()
+    void Awake()
     {
         curTime = timer;
 
@@ -29,55 +29,43 @@ public class QuickTime : MonoBehaviour
 
     void Update()
     {
-        if (qtd == 3 && acerto[0] && acerto[1] && acerto[2] && this.gameObject.name.Contains("P1"))
-        {
-            PlayerPrefs.SetString("P1QT", "true");
-        }
-        if (qtd == 3 && acerto[0] && acerto[1] && acerto[2] && this.gameObject.name.Contains("P2"))
-        {
-            PlayerPrefs.SetString("P2QT", "true");
-        }
+        if (qtd == 3) { Ganhou(); }
 
-        if (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" 
-            && ((qtd == 1 && !acerto[0]) || (qtd == 2 && !acerto[1]) || (qtd == 3 && !acerto[2]))) // fez 1 erro
+        // fez 1 erro
+        if ((qtd == 1 && (!acertop1[0] || !acertop2[0])) || (qtd == 2 && (!acertop1[1] || !acertop2[1]) || (qtd == 3 && (!acertop1[2] || !acertop2[2])))) 
         {
             Reset();
         }
 
-        if (PlayerPrefs.GetString("P2QT") == "true" && PlayerPrefs.GetString("P1QT") == "true") 
-        {
-            PlayerPrefs.SetString("EndGame", "true");
-            SceneManager.LoadScene("Menu");
-        }
+        QuickTimeEvent();
+    }
 
+    void QuickTimeEvent()
+    {
         if (curTime > 0)
         {
             curTime -= Time.deltaTime * Time.timeScale;
         }
         else
         {
-            if (this.corout == false)
+            if (corout == false)
             {
-                this.GetComponent<moveBoss>().enabled = true;
-                this.resposta = botao[Random.Range(0, 3)];
+                respostap1 = botaop1[Random.Range(0, 3)];
+                respostap2 = botaop2[Random.Range(0, 3)];
                 salazar.SetLayerWeight(1, 0);
                 StartCoroutine("Shoot", 1f);
-                this.corout = true;
+                corout = true;
             }
             
             if (this.open == true)
             {
-                if (this.gameObject.name.Contains("P1"))
-                {
-                    if (resposta == "A" && controles.P1.A.triggered) { Acerto(); }
-                    if (resposta == "S" && controles.P1.S.triggered) { Acerto(); }
-                    if (resposta == "D" && controles.P1.D.triggered) { Acerto(); }
+                if (respostap1 == "A" && controles.P1.A.triggered || respostap1 == "S" && controles.P1.S.triggered || respostap1 == "D" && controles.P1.D.triggered) 
+                { 
+                    Acerto(p1, acertop1, imgp1, gunshotp1); 
                 }
-                if (this.gameObject.name.Contains("P2"))
-                {
-                    if (resposta == "Left" && controles.P2.Left.triggered) { Acerto(); }
-                    if (resposta == "Down" && controles.P2.Down.triggered) { Acerto(); }
-                    if (resposta == "Right" && controles.P2.Right.triggered) { Acerto(); }
+                if (respostap2 == "Left" && controles.P2.Left.triggered || respostap2 == "Down" && controles.P2.Down.triggered || respostap2 == "Right" && controles.P2.Right.triggered) 
+                { 
+                    Acerto(p2, acertop2, imgp2, gunshotp2); 
                 }
             }
         }
@@ -85,39 +73,59 @@ public class QuickTime : MonoBehaviour
 
     void Reset()
     {
-        PlayerPrefs.SetString("P1QT", "false");
-        PlayerPrefs.SetString("P2QT", "false");
         SceneManager.LoadScene("GameOver");
     }
 
     IEnumerator Shoot()
     {
-        this.open = true;
-        img.SetActive(true);
-        text_.text = resposta;
+        open = true;
+        imgp1.SetActive(true);
+        imgp2.SetActive(true);
+        txtp1.text = respostap1;
+        txtp2.text = respostap2;
         yield return new WaitForSeconds(1f);
-        img.SetActive(false);
+        imgp1.SetActive(false);
+        imgp2.SetActive(false);
         curTime = timer;
-        this.open = false;
+        open = false;
         qtd++;
-        this.corout = false;
+        corout = false;
     }
 
-    void Acerto() 
+    void Acerto(GameObject player, bool[] acerto, GameObject img_, GameObject gunshot) 
     { 
-        this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0.7f);
+        player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0.7f);
         salazar.SetLayerWeight(1, 0.5f);
         salazar.SetTrigger("trigger");
-        StartCoroutine("Gunshot", .1f);
-        this.acerto[qtd] = true; 
-        this.img.SetActive(false);
+        StartCoroutine(Gunshot(gunshot, player));
+        acerto[qtd] = true; 
+        img_.SetActive(false);
     }
 
-    IEnumerator Gunshot()
+    IEnumerator Gunshot(GameObject gunshot, GameObject player)
     {
         gunshot.SetActive(true);
         yield return new WaitForSeconds(.1f);
-        this.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0);
+        player.transform.GetChild(0).gameObject.GetComponent<Animator>().SetLayerWeight(1, 0);
         gunshot.SetActive(false);
+    }
+
+    void Ganhou()
+    {
+        if (acertop1[0] && acertop1[1] && acertop1[2])
+        {
+            p1ganhou = true;
+        }
+
+        if (acertop2[0] && acertop2[1] && acertop2[2])
+        {
+            p2ganhou = true;
+        }
+
+        if (p1ganhou == true && p2ganhou == true) 
+        {
+            PlayerPrefs.SetString("EndGame", "true");
+            SceneManager.LoadScene("Menu");
+        }
     }
 }
