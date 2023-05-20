@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     public Vector2 inputs;
     public Transform cam; // direcao da camera
-    public float curSpeed, walkSpeed = 3f, runSpeed = 6f, pushSpeed = 2f; // velocidades
+    public float curSpeed, runSpeed = 6f; //walkSpeed = 3f, , pushSpeed = 2fvelocidades
     private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
     private Vector3 mover; // direcao e velocidade pra
     public Animator anim;
@@ -216,31 +216,33 @@ public class PlayerController : MonoBehaviour
         switch (player)
         {
             case 1:
-                if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
-                    curSpeed = runSpeed * Time.timeScale;
+                // if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
+                //     curSpeed = runSpeed * Time.timeScale;
                     
                 if (isGrounded && controles.P1.Correr.ReadValue<float>() == 0)
-                    curSpeed = walkSpeed * Time.timeScale;
+                    curSpeed = runSpeed * Time.timeScale;
+                    // curSpeed = walkSpeed * Time.timeScale;
             break;
             case 2:
-                if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
-                    curSpeed = runSpeed * Time.timeScale;
+                // if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
+                //     curSpeed = runSpeed * Time.timeScale;
                     
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 0)
-                    curSpeed = walkSpeed * Time.timeScale;
+                    curSpeed = runSpeed * Time.timeScale;
+                    // curSpeed = walkSpeed * Time.timeScale;
             break;
         }
     }
 
     void Animations()
     {
-        if (curSpeed == walkSpeed)
-        {
-            anim.SetInteger("state", 1);
-            this.audio_.enabled = true;
-            this.audio_1.enabled = false;
-        }
-        else if (curSpeed == runSpeed) 
+        // if (curSpeed == walkSpeed)
+        // {
+        //     anim.SetInteger("state", 1);
+        //     this.audio_.enabled = true;
+        //     this.audio_1.enabled = false;
+        // }
+        if (curSpeed == runSpeed) 
         {
             anim.SetInteger("state", 2);
             this.audio_.enabled = false;
