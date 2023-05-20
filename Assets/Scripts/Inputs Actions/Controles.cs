@@ -364,7 +364,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""J"",
+                    ""name"": ""Left"",
                     ""type"": ""Button"",
                     ""id"": ""9e600e44-9e80-40c1-8b81-854ff3eeefca"",
                     ""expectedControlType"": ""Button"",
@@ -373,7 +373,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""K"",
+                    ""name"": ""Down"",
                     ""type"": ""Button"",
                     ""id"": ""a36e1479-d2ca-4675-8418-3417925ba742"",
                     ""expectedControlType"": ""Button"",
@@ -382,7 +382,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""L"",
+                    ""name"": ""Right"",
                     ""type"": ""Button"",
                     ""id"": ""5201170c-1c26-44cd-9652-8b755235e9df"",
                     ""expectedControlType"": ""Button"",
@@ -395,7 +395,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""f6861f60-0752-45cb-b774-be51c6793f96"",
-                    ""path"": ""<Keyboard>/o"",
+                    ""path"": ""<Keyboard>/rightCtrl"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -428,7 +428,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""61f26cf4-cf32-480a-b646-0f97ffcdfbbe"",
-                    ""path"": ""<Keyboard>/i"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -439,7 +439,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""5ea01af2-c2c3-4b40-8705-7c8c5cbf2e1f"",
-                    ""path"": ""<Keyboard>/k"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -450,7 +450,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""694c6e9f-22fa-4793-a4ea-3c8da8ed4398"",
-                    ""path"": ""<Keyboard>/j"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -461,7 +461,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""039db481-b46a-4622-b29e-10418bee3577"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
@@ -527,11 +527,11 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""aaf13f89-1cfb-489d-af45-73a2dbc306e4"",
-                    ""path"": ""<Keyboard>/j"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
-                    ""action"": ""J"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -542,18 +542,18 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controle"",
-                    ""action"": ""J"",
+                    ""action"": ""Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""a1d884ec-6d72-4d77-9917-d07ad86cbb57"",
-                    ""path"": ""<Keyboard>/k"",
+                    ""path"": ""<Keyboard>/downArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
-                    ""action"": ""K"",
+                    ""action"": ""Down"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -564,18 +564,18 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controle"",
-                    ""action"": ""K"",
+                    ""action"": ""Down"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""4e32f44d-9ea0-4656-8039-27b43927ec83"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Teclado"",
-                    ""action"": ""L"",
+                    ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -586,7 +586,7 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Controle"",
-                    ""action"": ""L"",
+                    ""action"": ""Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -706,9 +706,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         m_P2_Andar = m_P2.FindAction("Andar", throwIfNotFound: true);
         m_P2_Interagir = m_P2.FindAction("Interagir", throwIfNotFound: true);
         m_P2_Menu = m_P2.FindAction("Menu", throwIfNotFound: true);
-        m_P2_J = m_P2.FindAction("J", throwIfNotFound: true);
-        m_P2_K = m_P2.FindAction("K", throwIfNotFound: true);
-        m_P2_L = m_P2.FindAction("L", throwIfNotFound: true);
+        m_P2_Left = m_P2.FindAction("Left", throwIfNotFound: true);
+        m_P2_Down = m_P2.FindAction("Down", throwIfNotFound: true);
+        m_P2_Right = m_P2.FindAction("Right", throwIfNotFound: true);
         // Any
         m_Any = asset.FindActionMap("Any", throwIfNotFound: true);
         m_Any_AnyKey = m_Any.FindAction("AnyKey", throwIfNotFound: true);
@@ -864,9 +864,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
     private readonly InputAction m_P2_Andar;
     private readonly InputAction m_P2_Interagir;
     private readonly InputAction m_P2_Menu;
-    private readonly InputAction m_P2_J;
-    private readonly InputAction m_P2_K;
-    private readonly InputAction m_P2_L;
+    private readonly InputAction m_P2_Left;
+    private readonly InputAction m_P2_Down;
+    private readonly InputAction m_P2_Right;
     public struct P2Actions
     {
         private @Controles m_Wrapper;
@@ -875,9 +875,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         public InputAction @Andar => m_Wrapper.m_P2_Andar;
         public InputAction @Interagir => m_Wrapper.m_P2_Interagir;
         public InputAction @Menu => m_Wrapper.m_P2_Menu;
-        public InputAction @J => m_Wrapper.m_P2_J;
-        public InputAction @K => m_Wrapper.m_P2_K;
-        public InputAction @L => m_Wrapper.m_P2_L;
+        public InputAction @Left => m_Wrapper.m_P2_Left;
+        public InputAction @Down => m_Wrapper.m_P2_Down;
+        public InputAction @Right => m_Wrapper.m_P2_Right;
         public InputActionMap Get() { return m_Wrapper.m_P2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -899,15 +899,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Menu.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
                 @Menu.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
                 @Menu.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnMenu;
-                @J.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnJ;
-                @J.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnJ;
-                @J.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnJ;
-                @K.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnK;
-                @K.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnK;
-                @K.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnK;
-                @L.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnL;
-                @L.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnL;
-                @L.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnL;
+                @Left.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnLeft;
+                @Left.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnLeft;
+                @Left.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnLeft;
+                @Down.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnDown;
+                @Down.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnDown;
+                @Down.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnDown;
+                @Right.started -= m_Wrapper.m_P2ActionsCallbackInterface.OnRight;
+                @Right.performed -= m_Wrapper.m_P2ActionsCallbackInterface.OnRight;
+                @Right.canceled -= m_Wrapper.m_P2ActionsCallbackInterface.OnRight;
             }
             m_Wrapper.m_P2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -924,15 +924,15 @@ public partial class @Controles : IInputActionCollection2, IDisposable
                 @Menu.started += instance.OnMenu;
                 @Menu.performed += instance.OnMenu;
                 @Menu.canceled += instance.OnMenu;
-                @J.started += instance.OnJ;
-                @J.performed += instance.OnJ;
-                @J.canceled += instance.OnJ;
-                @K.started += instance.OnK;
-                @K.performed += instance.OnK;
-                @K.canceled += instance.OnK;
-                @L.started += instance.OnL;
-                @L.performed += instance.OnL;
-                @L.canceled += instance.OnL;
+                @Left.started += instance.OnLeft;
+                @Left.performed += instance.OnLeft;
+                @Left.canceled += instance.OnLeft;
+                @Down.started += instance.OnDown;
+                @Down.performed += instance.OnDown;
+                @Down.canceled += instance.OnDown;
+                @Right.started += instance.OnRight;
+                @Right.performed += instance.OnRight;
+                @Right.canceled += instance.OnRight;
             }
         }
     }
@@ -1005,9 +1005,9 @@ public partial class @Controles : IInputActionCollection2, IDisposable
         void OnAndar(InputAction.CallbackContext context);
         void OnInteragir(InputAction.CallbackContext context);
         void OnMenu(InputAction.CallbackContext context);
-        void OnJ(InputAction.CallbackContext context);
-        void OnK(InputAction.CallbackContext context);
-        void OnL(InputAction.CallbackContext context);
+        void OnLeft(InputAction.CallbackContext context);
+        void OnDown(InputAction.CallbackContext context);
+        void OnRight(InputAction.CallbackContext context);
     }
     public interface IAnyActions
     {

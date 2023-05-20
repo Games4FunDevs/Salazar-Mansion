@@ -75,9 +75,9 @@ public class QuickTime : MonoBehaviour
                 }
                 if (this.gameObject.name.Contains("P2"))
                 {
-                    if (resposta == "J" && controles.P2.J.triggered) { Acerto(); }
-                    if (resposta == "K" && controles.P2.K.triggered) { Acerto(); }
-                    if (resposta == "L" && controles.P2.L.triggered) { Acerto(); }
+                    if (resposta == "Left" && controles.P2.Left.triggered) { Acerto(); }
+                    if (resposta == "Down" && controles.P2.Down.triggered) { Acerto(); }
+                    if (resposta == "Right" && controles.P2.Right.triggered) { Acerto(); }
                 }
             }
         }
