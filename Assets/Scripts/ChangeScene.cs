@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
@@ -20,17 +21,27 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        if (this.gameObject.name == "proximaCena")
-        {
-            ChangeScene_(cena);
-        }
-    }
-
     public void ChangeScene_(string name)
     {
         SceneManager.LoadScene(name);
+    }
+
+    public void Continuar()
+    {
+        if (PlayerPrefs.GetString("LiberouCaveira") == "true" || PlayerPrefs.GetString("CanOpenBossDoor") == "true")
+        {
+            ChangeScene_("Fase");
+        }
+        else
+        {
+            this.gameObject.GetComponent<Button>().interactable = false;
+        }
+    }
+
+    public void DeleteAll_()
+    {
+        PlayerPrefs.DeleteAll();
+        ChangeScene_("Fase");
     }
 
     public void Sair() => Application.Quit();
