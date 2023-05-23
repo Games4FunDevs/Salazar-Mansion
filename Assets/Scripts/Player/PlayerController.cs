@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     // controles (new input system)
     private Controles controles;
+
+    [SerializeField] private string modoMov;
 
     // movimentação
     private CharacterController controller;
@@ -59,9 +62,11 @@ public class PlayerController : MonoBehaviour
         {
             case "P1":
                 this.player = 1;
+                this.modoMov = PlayerPrefs.GetString("P1ModoMov");
                 break;
             case "P2":
                 this.player = 2;
+                this.modoMov = PlayerPrefs.GetString("P2ModoMov");
                 break;
         }
 
@@ -186,24 +191,27 @@ public class PlayerController : MonoBehaviour
             this.inputs = controles.P2.Andar.ReadValue<Vector2>();
 
     
-        if (this.inputs.magnitude >= 0.01f) // se ta movendo pra qualquer direcao == apertou botão
+        if (this.inputs.magnitude >= 0.01f)  
         {
-            float targetAngle = Mathf.Atan2(this.inputs.x, this.inputs.y) * Mathf.Rad2Deg + cameuleranglesy;  // direcao que player vai rotacionar + onde a camera tiver olhando
-            this.angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TURNSMOOTHTIME); // calcula o angulo e tempo pra virar smooth
-            this.transform.rotation = Quaternion.Euler(0f, this.angle, 0f); // rotaciona player
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
-            this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
-            this.controller.Move(mover); // actually move player
+            if (this.modoMov == "Tank") // tank
+            {
+                Vector3 movDir;
+                transform.Rotate(0, inputs.x * 400 * Time.deltaTime, 0);
+                movDir = transform.forward * (inputs.y) * curSpeed;
+                // moves the character in horizontal direction
+                controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
+            }
+            else // moderno
+            {
+                float targetAngle = Mathf.Atan2(this.inputs.x, this.inputs.y) * Mathf.Rad2Deg + cameuleranglesy;  // direcao que player vai rotacionar + onde a camera tiver olhando
+                this.angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TURNSMOOTHTIME); // calcula o angulo e tempo pra virar smooth
+                this.transform.rotation = Quaternion.Euler(0f, this.angle, 0f); // rotaciona player
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
+                this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
+                this.controller.Move(mover); // actually move player
+                
+            }
         }
-
-        // if (this.inputs.magnitude >= 0.01f)
-        // {
-        //     Vector3 movDir;
-        //     transform.Rotate(0, inputs.x * 180 * Time.deltaTime, 0);
-        //     movDir = transform.forward * (inputs.y) * curSpeed;
-        //     // moves the character in horizontal direction
-        //     controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
-        // }
     }
 
     void Gravity() // adiciona gravidade

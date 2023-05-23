@@ -40,7 +40,7 @@ public class ChangeScene : MonoBehaviour
 
     public void DeleteAll_()
     {
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteKey("SaveStatus");
         ChangeScene_("Fase");
     }
 
