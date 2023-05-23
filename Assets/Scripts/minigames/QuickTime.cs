@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 
 public class QuickTime : MonoBehaviour
 {
-    public GameObject imgp1, gunshotp1, imgp2, gunshotp2, p1, p2;
+    public GameObject imgp1, gunshotp1, imgp2, gunshotp2, p1, p2, cutscFim; 
     public Animator salazar;
     public TextMeshProUGUI txtp1, txtp2;
     public string[] botaop1, botaop2;
@@ -125,7 +125,7 @@ public class QuickTime : MonoBehaviour
         if (p1ganhou == true && p2ganhou == true) 
         {
             PlayerPrefs.SetString("EndGame", "true");
-            SceneManager.LoadScene("Menu");
+            cutscFim.SetActive(true);
         }
     }
 }

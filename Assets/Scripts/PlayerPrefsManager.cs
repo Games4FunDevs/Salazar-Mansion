@@ -23,9 +23,6 @@ public class PlayerPrefsManager : MonoBehaviour
             if (PlayerPrefs.GetString("EndGame") == "true")
             {
                 PlayerPrefs.DeleteAll();
-                grid1.SetActive(false);
-                grid4.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(GameObject.Find("Button (3)"));
             }
         }
 

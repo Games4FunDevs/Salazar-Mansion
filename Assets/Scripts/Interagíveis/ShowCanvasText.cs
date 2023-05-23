@@ -27,15 +27,21 @@ public class ShowCanvasText : MonoBehaviour
         {
             if (player == 1)
             {
-		gObject[0].SetActive(true);
-		if (image == false)
-		{
-                	gObject[0].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
-		}
-		else
-		{
-			gObject[0].transform.GetChild(0).GetComponent<Image>().sprite = imageInspect;
-		}
+                gObject[0].SetActive(true);
+                if (image == false)
+                {
+                    gObject[0].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
+                    gObject[0].transform.GetChild(0).gameObject.SetActive(true);
+                    gObject[0].transform.GetChild(1).gameObject.SetActive(false);
+                    gObject[0].transform.gameObject.GetComponent<Image>().enabled = true;
+                }
+                else
+                {
+                    gObject[0].transform.GetChild(1).GetComponent<Image>().sprite = imageInspect;
+                    gObject[0].transform.gameObject.GetComponent<Image>().enabled = false;
+                    gObject[0].transform.GetChild(0).gameObject.SetActive(false);
+                    gObject[0].transform.GetChild(1).gameObject.SetActive(true);
+                }
 
                 if (controles.P1.Interagir.triggered)
                 {
@@ -44,7 +50,7 @@ public class ShowCanvasText : MonoBehaviour
                     gObject[0].SetActive(false);
                     if (this.gameObject.name.Contains("Billboard-minigame (1)") || this.gameObject.name.Contains("Billboard-minigame"))
                     {
-			this.gameObject.GetComponent<ShowCanvasText>().enabled = false;
+			            this.gameObject.GetComponent<ShowCanvasText>().enabled = false;
                     }
                     else
                         StartCoroutine("ShowCollider", 0.15f);
