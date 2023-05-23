@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class ShowCanvasText : MonoBehaviour
 {
     public GameObject[] gObject;
+	public Sprite imageInspect;
     public string texto;
     private int player = 0;
-    public bool showing, auto, cAuto;
+    public bool showing, auto, cAuto, image;
 
     private Controles controles;
     private Vector2 inputs;
@@ -25,8 +27,15 @@ public class ShowCanvasText : MonoBehaviour
         {
             if (player == 1)
             {
-                gObject[0].SetActive(true);
-                gObject[0].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
+		gObject[0].SetActive(true);
+		if (image == false)
+		{
+                	gObject[0].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
+		}
+		else
+		{
+			gObject[0].transform.GetChild(0).GetComponent<Image>().sprite = imageInspect;
+		}
 
                 if (controles.P1.Interagir.triggered)
                 {
@@ -35,7 +44,7 @@ public class ShowCanvasText : MonoBehaviour
                     gObject[0].SetActive(false);
                     if (this.gameObject.name.Contains("Billboard-minigame (1)") || this.gameObject.name.Contains("Billboard-minigame"))
                     {
-                        this.gameObject.GetComponent<ShowCanvasText>().enabled = false;
+			this.gameObject.GetComponent<ShowCanvasText>().enabled = false;
                     }
                     else
                         StartCoroutine("ShowCollider", 0.15f);
@@ -44,7 +53,14 @@ public class ShowCanvasText : MonoBehaviour
             if (player == 2)
             {
                 gObject[1].SetActive(true);
-                gObject[1].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
+                if (image == false)
+		{
+                	gObject[1].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
+		}
+		else
+		{
+			gObject[1].transform.GetChild(0).GetComponent<Image>().sprite = imageInspect;
+		}
 
                 if (controles.P2.Interagir.triggered)
                 {
