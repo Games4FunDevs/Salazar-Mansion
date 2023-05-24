@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     // controles (new input system)
     private Controles controles;
 
-    [SerializeField] private string modoMov;
+    public string modoMov;
 
     // movimentação
     private CharacterController controller;

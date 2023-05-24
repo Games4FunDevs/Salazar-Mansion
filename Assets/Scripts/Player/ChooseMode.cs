@@ -7,15 +7,21 @@ using TMPro;
 public class ChooseMode : MonoBehaviour
 {
     public string texto;
-    private int valor;
+    public GameObject player;
 
     void Awake()
     {
         texto = this.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text;
         if (this.gameObject.name.Contains("P1") && PlayerPrefs.HasKey("P1ModoMov"))
-            { this.texto = PlayerPrefs.GetString("P1ModoMov"); }
+        { 
+            this.texto = PlayerPrefs.GetString("P1ModoMov"); 
+            this.player = GameObject.FindWithTag("P1");
+        }
         if (this.gameObject.name.Contains("P2") && PlayerPrefs.HasKey("P2ModoMov"))
-            { this.texto = PlayerPrefs.GetString("P2ModoMov"); }
+        { 
+            this.texto = PlayerPrefs.GetString("P2ModoMov"); 
+            this.player = GameObject.FindWithTag("P2");
+        }
     }
 
     void Start()
@@ -27,8 +33,11 @@ public class ChooseMode : MonoBehaviour
     public void Mode(TextMeshProUGUI text)
     {
         if (this.gameObject.name.Contains("P1"))
-            PlayerPrefs.SetString("P1ModoMov", text.text);
+            { PlayerPrefs.SetString("P1ModoMov", text.text); }
+            
         if (this.gameObject.name.Contains("P2"))
-            PlayerPrefs.SetString("P2ModoMov", text.text);
+            { PlayerPrefs.SetString("P2ModoMov", text.text); }
+
+        player.GetComponent<PlayerController>().modoMov = text.text;
     }
 }
