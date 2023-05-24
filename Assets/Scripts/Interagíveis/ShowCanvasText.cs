@@ -10,7 +10,7 @@ public class ShowCanvasText : MonoBehaviour
 	public Sprite imageInspect;
     public string texto;
     private int player = 0;
-    public bool showing, auto, cAuto, image;
+    public bool showing, auto, cAuto, image, aux;
 
     private Controles controles;
     private Vector2 inputs;
@@ -28,14 +28,13 @@ public class ShowCanvasText : MonoBehaviour
             if (player == 1)
             {
                 gObject[0].SetActive(true);
-                if (image == false)
+                if (image == false && this.aux == false)
                 {
                     gObject[0].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
-                    gObject[0].transform.GetChild(0).gameObject.SetActive(true);
-                    gObject[0].transform.GetChild(1).gameObject.SetActive(false);
-                    gObject[0].transform.gameObject.GetComponent<Image>().enabled = true;
+                    this.aux = true;
                 }
-                else
+                
+                if (image == true)
                 {
                     gObject[0].transform.GetChild(1).GetComponent<Image>().sprite = imageInspect;
                     gObject[0].transform.gameObject.GetComponent<Image>().enabled = false;
@@ -147,6 +146,7 @@ public class ShowCanvasText : MonoBehaviour
         this.cAuto = false;
         gObject[0].SetActive(false);
         gObject[1].SetActive(false);
+        this.aux = false;
         StartCoroutine("ShowCollider", 0.15f);
         Destroy(this.gameObject);
     }
