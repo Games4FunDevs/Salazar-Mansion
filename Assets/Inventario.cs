@@ -10,7 +10,8 @@ public class Inventario : MonoBehaviour
     public GameObject slotPrefab; // spawn do slot
     public Sprite[] sprites;
     public GameObject canvas;
-    private string[] desc = { "Chave do freezer", "Fusível", "Olho de vidro", "Chave da sala de armas", "Olho de vidro", "Lockpick", "Arma", "Chave pro 2º andar" };
+    private string[] desc = { "CHAVE DO FREEZER", "FUSÍVEL", "OLHO DE VIDRO", "CHAVE DA SALA DE ARMAS", "OLHO DE VIDRO", 
+                                "GAZUA", "ARMA", "CHAVE DO 2º ANDAR" };
     public bool[] varAux = {false, false, false, false, false, false, false}; 
 
     void Update()
@@ -54,8 +55,8 @@ public class Inventario : MonoBehaviour
         GameObject obj = Instantiate(slotPrefab);
         obj.transform.SetParent(this.transform);
         obj.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = sprites[x];
-        canvas.GetComponent<Image>().sprite = sprites[x];
-        canvas.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = desc[x];
+        canvas.transform.GetChild(0).GetComponent<Image>().sprite = sprites[x];
+        canvas.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = desc[x];
         obj.name = name_;
         varAux[x] = !varAux[x];
         StartCoroutine("ShowAndHide", 2f);
