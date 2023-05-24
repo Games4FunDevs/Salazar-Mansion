@@ -24,7 +24,7 @@ public class ChooseMode : MonoBehaviour
     {
         if (this.gameObject.name.Contains("P1"))
             PlayerPrefs.SetString("P1ModoMov", text.text);
-        else if (this.gameObject.name.Contains("P2"))
+        if (this.gameObject.name.Contains("P2"))
             PlayerPrefs.SetString("P2ModoMov", text.text);
     }
 }

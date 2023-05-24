@@ -2099,6 +2099,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389882387}
   m_CullTransparentMesh: 1
+--- !u!1 &392786796 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5336601290635702857, guid: dcf7bacc99f3ed24582f9d0d64fcfe60, type: 3}
+  m_PrefabInstance: {fileID: 684319631}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &407526035
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,11 +4094,6 @@ PrefabInstance:
 --- !u!224 &684319632 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5336601290563238057, guid: dcf7bacc99f3ed24582f9d0d64fcfe60, type: 3}
-  m_PrefabInstance: {fileID: 684319631}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &684319633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1014910433499956151, guid: dcf7bacc99f3ed24582f9d0d64fcfe60, type: 3}
   m_PrefabInstance: {fileID: 684319631}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &684319634 stripped
@@ -6896,7 +6896,7 @@ MonoBehaviour:
         m_MethodName: SetSelectedGameObject
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 684319633}
+          m_ObjectArgument: {fileID: 392786796}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
