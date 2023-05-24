@@ -41,6 +41,7 @@ public class Pause : MonoBehaviour
 
         if (inv == false)
         { 
+            canvasMenu.transform.GetChild(0).transform.GetChild(0).gameObject.SetActive(true);
             canvasMenu.transform.GetChild(1).gameObject.SetActive(true);
             canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject.SetActive(true);
             canvasMenu.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(true);
@@ -48,6 +49,7 @@ public class Pause : MonoBehaviour
             canvasMenu.transform.GetChild(2).gameObject.SetActive(false);
             canvasMenu.transform.GetChild(3).gameObject.SetActive(false);
             canvasMenu.transform.GetChild(4).gameObject.SetActive(false);
+            canvasMenu.transform.GetChild(5).gameObject.SetActive(false);
             this.canvasMenu.SetActive(false); 
             open = false;
         }

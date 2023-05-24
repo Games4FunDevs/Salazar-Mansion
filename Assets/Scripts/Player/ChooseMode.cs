@@ -18,7 +18,11 @@ public class ChooseMode : MonoBehaviour
             { this.texto = PlayerPrefs.GetString("P2ModoMov"); }
     }
 
-    void Start() => this.GetComponent<TMPro.TMP_Dropdown>().captionText.text = this.texto;
+    void Start()
+    {
+        this.GetComponent<TMPro.TMP_Dropdown>().captionText.text = this.texto;
+        this.GetComponent<TMPro.TMP_Dropdown>().value = this.GetComponent<TMPro.TMP_Dropdown>().options.FindIndex(option => option.text == this.texto);
+    }
 
     public void Mode(TextMeshProUGUI text)
     {
