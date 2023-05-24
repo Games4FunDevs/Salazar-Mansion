@@ -193,7 +193,7 @@ public class PlayerController : MonoBehaviour
     
         if (this.inputs.magnitude >= 0.01f)  
         {
-            if (this.modoMov == "Tank") // tank
+            if (this.modoMov == "Tanque") // tank
             {
                 Vector3 movDir;
                 transform.Rotate(0, inputs.x * 400 * Time.deltaTime, 0);
