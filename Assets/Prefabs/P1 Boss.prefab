@@ -236,18 +236,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db6973306f9eba145bca2d0ccf0a1891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  img: {fileID: 124878155390604781}
-  gunshot: {fileID: 3114730030080530086}
+  imgp1: {fileID: 124878155390604781}
+  gunshotp1: {fileID: 3114730030080530086}
+  imgp2: {fileID: 0}
+  gunshotp2: {fileID: 0}
+  p1: {fileID: 644887763379857340}
+  p2: {fileID: 0}
   salazar: {fileID: 0}
-  text_: {fileID: 1191704111206648631}
-  botao:
+  txtp1: {fileID: 1191704111206648631}
+  txtp2: {fileID: 0}
+  botaop1:
   - A
   - S
   - D
-  resposta: 
+  botaop2:
+  - Left
+  - Down
+  - Right
+  respostap1: 
+  respostap2: 
   open: 0
   corout: 0
-  acerto: 000000
+  p1ganhou: 0
+  p2ganhou: 0
+  acertop1: 000000
+  acertop2: 000000
   qtd: 0
   timer: 2
   curTime: 0

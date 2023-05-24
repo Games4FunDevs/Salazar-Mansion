@@ -11,7 +11,7 @@ public class showComands : MonoBehaviour
 
     public IEnumerator ShowCanvas()
     {
-        yield return new WaitForSeconds(10 * Time.timeScale);
+        yield return new WaitForSeconds(10);
         this.gameObject.SetActive(false);
     }
 }

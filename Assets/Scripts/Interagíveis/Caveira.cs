@@ -40,6 +40,8 @@ public class Caveira : MonoBehaviour
         {
             cinematic.SetActive(true);
             eyes = true;
+            if (PlayerPrefs.GetString("SaveStatus") != "caveira") 
+                { PlayerPrefs.SetString("SaveStatus", "caveira"); }
             // StartCoroutine("EyeTrue", .3f);
             //this.transform.GetChild(3).gameObject.SetActive(false);
         }

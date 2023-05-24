@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
@@ -9,11 +9,13 @@ public class PlayerController : MonoBehaviour
     // controles (new input system)
     private Controles controles;
 
+    public string modoMov;
+
     // movimentação
     private CharacterController controller;
     public Vector2 inputs;
     public Transform cam; // direcao da camera
-    public float curSpeed, walkSpeed = 3f, runSpeed = 6f, pushSpeed = 2f; // velocidades
+    public float curSpeed, runSpeed = 6f; //walkSpeed = 3f, , pushSpeed = 2fvelocidades
     private float turnSmoothVelocity, TURNSMOOTHTIME = 0.135f, angle; // velocidade de rotacao
     private Vector3 mover; // direcao e velocidade pra
     public Animator anim;
@@ -28,7 +30,7 @@ public class PlayerController : MonoBehaviour
     public int player = 0;
 
     // itens / inventario
-    public bool hasKey = false, 
+    public bool hasKey1 = false, 
                 hasPeca = false, 
                 hasEye = false,
                 hasEye2 = false,
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
                 hasLockp = false,
                 hasArma = false;
     
-    public GameObject canvasMenu, inimigo, falap1, falap2;
+    public GameObject inimigo, falap1, falap2;
 
     private AudioSource audio_, audio_1;
 
@@ -60,9 +62,11 @@ public class PlayerController : MonoBehaviour
         {
             case "P1":
                 this.player = 1;
+                this.modoMov = PlayerPrefs.GetString("P1ModoMov");
                 break;
             case "P2":
                 this.player = 2;
+                this.modoMov = PlayerPrefs.GetString("P2ModoMov");
                 break;
         }
 
@@ -73,7 +77,6 @@ public class PlayerController : MonoBehaviour
     {
         Gravity();
         Animations();
-        ShowMenu();
 
         if (PlayerPrefs.GetString("podeAndar") == "true")
         {
@@ -81,9 +84,9 @@ public class PlayerController : MonoBehaviour
             Run(); // pode correr
         }
 
-        if (hasKey2 == true)
+        if (hasKey2 == true && GameObject.Find("impedirEscadas") != null && GameObject.Find("impedirEscadas").activeSelf)
         {
-            GameObject.Find("impedirEscadas").SetActive(false);
+            Destroy(GameObject.Find("impedirEscadas"));
         }
         
         if (PlayerPrefs.GetString("Inimigo1Spawn") == "true")
@@ -110,54 +113,63 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if (col.gameObject.name.Contains("Key1") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+        if ((this.gameObject.name == "P1" && controles.P1.Interagir.triggered) || (this.gameObject.name == "P2" && controles.P2.Interagir.triggered))
         {
-            this.hasKey = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name.Contains("Key3") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasKey3 = true;
-            Destroy(col.gameObject);
-        }
+            if (col.gameObject.name.Contains("Key1"))
+            {
+                this.hasKey1 = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name.Contains("Key3"))
+            {
+                this.hasKey3 = true;
+                Destroy(col.gameObject);
+            }
 
-        if (col.gameObject.name.Contains("Key2") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
+            if (col.gameObject.name.Contains("Key2"))
+            {
+                this.hasKey2 = true;
+                Destroy(col.gameObject);
+                PlayerPrefs.SetString(this.gameObject.name+"HasKey2", "true");
+            }
+            
+            if (col.gameObject.name.Contains("Peça"))
+            {
+                this.hasPeca = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name == "Olho de vidro")
+            {
+                this.hasEye = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name == "Olho de vidro 2")
+            {
+                this.hasEye2 = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (col.gameObject.name == "Lockpick")
+            {
+                this.hasLockp = true;
+                Destroy(col.gameObject);
+            }
+            
+            if (!hasArma && col.gameObject.name == "Arma")
+            {
+                this.hasArma = true;
+                PlayerPrefs.SetString("ArmaPlayer"+this.gameObject.name, "true");
+                Destroy(col.gameObject);
+            }
+        }   
+
+        if (col.gameObject.name.Contains("Chamar Cutscene - Andar 1")) 
         {
-            this.hasKey2 = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name.Contains("Peça") && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasPeca = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name == "Olho de vidro" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasEye = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name == "Olho de vidro 2" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasEye2 = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (col.gameObject.name == "Lockpick" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasLockp = true;
-            Destroy(col.gameObject);
-        }
-        
-        if (!hasArma && col.gameObject.name == "Arma" && (controles.P1.Interagir.triggered || controles.P2.Interagir.triggered))
-        {
-            this.hasArma = true;
-            PlayerPrefs.SetString("ArmaPlayer"+this.gameObject.name, "true");
-            Destroy(col.gameObject);
-        }
+            PlayerPrefs.SetString("SaveStatus", "andar1");
+        } 
         
         if (col.gameObject.name == "fimfase1")
         {
@@ -179,35 +191,38 @@ public class PlayerController : MonoBehaviour
             this.inputs = controles.P2.Andar.ReadValue<Vector2>();
 
     
-        if (this.inputs.magnitude >= 0.01f) // se ta movendo pra qualquer direcao == apertou botão
+        if (this.inputs.magnitude >= 0.01f)  
         {
-            float targetAngle = Mathf.Atan2(this.inputs.x, this.inputs.y) * Mathf.Rad2Deg + cameuleranglesy;  // direcao que player vai rotacionar + onde a camera tiver olhando
-            this.angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TURNSMOOTHTIME); // calcula o angulo e tempo pra virar smooth
-            this.transform.rotation = Quaternion.Euler(0f, this.angle, 0f); // rotaciona player
-            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
-            this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
-            this.controller.Move(mover); // actually move player
+            if (this.modoMov == "Tanque") // tank
+            {
+                Vector3 movDir;
+                transform.Rotate(0, inputs.x * 400 * Time.deltaTime, 0);
+                movDir = transform.forward * (inputs.y) * curSpeed;
+                // moves the character in horizontal direction
+                controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
+            }
+            else // moderno
+            {
+                float targetAngle = Mathf.Atan2(this.inputs.x, this.inputs.y) * Mathf.Rad2Deg + cameuleranglesy;  // direcao que player vai rotacionar + onde a camera tiver olhando
+                this.angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, TURNSMOOTHTIME); // calcula o angulo e tempo pra virar smooth
+                this.transform.rotation = Quaternion.Euler(0f, this.angle, 0f); // rotaciona player
+                Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward; // vira pra direcao
+                this.mover = moveDir.normalized * curSpeed * Time.deltaTime;
+                this.controller.Move(mover); // actually move player
+                
+            }
         }
-
-        // if (this.inputs.magnitude >= 0.01f)
-        // {
-        //     Vector3 movDir;
-        //     transform.Rotate(0, inputs.x * 180 * Time.deltaTime, 0);
-        //     movDir = transform.forward * (inputs.y) * curSpeed;
-        //     // moves the character in horizontal direction
-        //     controller.Move(movDir * Time.deltaTime - Vector3.up * 0.1f); 
-        // }
     }
 
     void Gravity() // adiciona gravidade
     {
         // checa se ta no chao
         isGrounded = Physics.CheckSphere(GameObject.FindWithTag("GCheck").transform.position, 0.2f, Ground, QueryTriggerInteraction.Ignore);
-        _velocity.y += gravidade * Time.deltaTime; // direcao da gravidade
-        controller.Move(_velocity * Time.deltaTime); // aplica gravidade
+        _velocity.y += gravidade * Time.deltaTime * Time.timeScale; // direcao da gravidade
+        controller.Move(_velocity * Time.deltaTime * Time.timeScale); // aplica gravidade
 
         if (isGrounded && _velocity.y < 0)
-            _velocity.y = -2f;
+            _velocity.y = -2f * Time.timeScale;
     }
 
     void Run() 
@@ -215,34 +230,33 @@ public class PlayerController : MonoBehaviour
         switch (player)
         {
             case 1:
-                if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
-                {
-                    curSpeed = runSpeed;
-                }
+                // if (isGrounded && controles.P1.Correr.ReadValue<float>() == 1)
+                //     curSpeed = runSpeed * Time.timeScale;
+                    
                 if (isGrounded && controles.P1.Correr.ReadValue<float>() == 0)
-                {
-                    curSpeed = walkSpeed;
-                }
+                    curSpeed = runSpeed * Time.timeScale;
+                    // curSpeed = walkSpeed * Time.timeScale;
             break;
             case 2:
-                if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
-                    curSpeed = runSpeed;
+                // if (isGrounded && controles.P2.Correr.ReadValue<float>() == 1)
+                //     curSpeed = runSpeed * Time.timeScale;
                     
                 if (isGrounded && controles.P2.Correr.ReadValue<float>() == 0)
-                    curSpeed = walkSpeed;
+                    curSpeed = runSpeed * Time.timeScale;
+                    // curSpeed = walkSpeed * Time.timeScale;
             break;
         }
     }
 
     void Animations()
     {
-        if (curSpeed == walkSpeed)
-        {
-            anim.SetInteger("state", 1);
-            this.audio_.enabled = true;
-            this.audio_1.enabled = false;
-        }
-        else if (curSpeed == runSpeed) 
+        // if (curSpeed == walkSpeed)
+        // {
+        //     anim.SetInteger("state", 1);
+        //     this.audio_.enabled = true;
+        //     this.audio_1.enabled = false;
+        // }
+        if (curSpeed == runSpeed) 
         {
             anim.SetInteger("state", 2);
             this.audio_.enabled = false;
@@ -255,43 +269,6 @@ public class PlayerController : MonoBehaviour
             audio_.enabled = false;
             audio_1.enabled = false;
         }
-    }
-
-    public bool inv = false, open = false;
-    void ShowMenu()
-    {
-        if (controles.P1.Menu.triggered) { inv = !inv; }
-
-        if (inv == true)
-        { 
-            this.canvasMenu.SetActive(true);
-            if (open == false) 
-            {
-                EventSystem.current.SetSelectedGameObject(canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject);
-                open = true;
-            }
-        }
-
-        if (inv == false)
-        { 
-            canvasMenu.transform.GetChild(1).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(1).transform.GetChild(0).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(1).transform.GetChild(1).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(1).transform.GetChild(2).gameObject.SetActive(true);
-            canvasMenu.transform.GetChild(2).gameObject.SetActive(false);
-            canvasMenu.transform.GetChild(3).gameObject.SetActive(false);
-            canvasMenu.transform.GetChild(4).gameObject.SetActive(false);
-            this.canvasMenu.SetActive(false); 
-            open = false;
-        }
-
-        if (canvasMenu.activeSelf) { PlayerPrefs.SetString("podeAndar", "false"); }
-        else { PlayerPrefs.SetString("podeAndar", "true"); }
-    }
-
-    public void CloseMenu()
-    {
-        inv = false;
     }
 
     // void ShowCursor()

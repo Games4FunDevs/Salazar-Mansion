@@ -64,7 +64,7 @@ public class CutsceneInicial : MonoBehaviour
 
         if (timerStart == 2)
         {
-            curTime -= Time.deltaTime;
+            curTime -= Time.deltaTime * Time.timeScale;
             sufocado.GetComponent<Image>().color += new Color(0f, 0f, 0f, ((1/curTime)/100));  
         }
 
@@ -72,7 +72,7 @@ public class CutsceneInicial : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         else
         {
-            if (portaP2.GetComponent<OpenDoon>().unlocked == true)
+            if (portaP2 != null && portaP2.GetComponent<OpenDoon>().unlocked == true )
                 Destroy(this.gameObject);
         }
     }

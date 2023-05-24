@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 
@@ -20,15 +21,28 @@ public class ChangeScene : MonoBehaviour
         }
     }
 
-    void Update()
+    public void ChangeScene_(string name)
     {
-        if (this.gameObject.name == "proximaCena")
+        SceneManager.LoadScene(name);
+    }
+
+    public void Continuar()
+    {
+        if (PlayerPrefs.HasKey("SaveStatus") || PlayerPrefs.GetString("CanOpenBossDoor") == "true")
         {
-            ChangeScene_(cena);
+            ChangeScene_("Fase");
+        }
+        else
+        {
+            this.gameObject.GetComponent<Button>().interactable = false;
         }
     }
 
-    public void ChangeScene_(string name) => SceneManager.LoadScene(name);
+    public void DeleteAll_()
+    {
+        PlayerPrefs.DeleteKey("SaveStatus");
+        ChangeScene_("Fase");
+    }
 
     public void Sair() => Application.Quit();
 

@@ -30,9 +30,10 @@ public class OpenDoon : MonoBehaviour
         if (!this.unlocked && ((col.CompareTag("P1") && controles.P1.Interagir.ReadValue<float>() == 1) || 
             (col.CompareTag("P2") && controles.P2.Interagir.ReadValue<float>() == 1)))
         {
-            if (col.gameObject.GetComponent<PlayerController>().hasKey == true 
+            if (col.gameObject.GetComponent<PlayerController>().hasKey1 == true 
                 || (col.gameObject.GetComponent<PlayerController>().hasKey2 == true && this.transform.parent.name.Contains("DoorArmas")) 
-                || (col.gameObject.GetComponent<PlayerController>().hasLockp == true && this.transform.parent.name.Contains("DoorCamareira"))
+                || (col.gameObject.GetComponent<PlayerController>().hasLockp == true && (this.transform.parent.name.Contains("DoorCamareira") || this.transform.parent.name.Contains("DoorDespensa")))
+                || (col.gameObject.GetComponent<PlayerController>().hasKey3 == true && this.transform.parent.name.Contains("DoorEscadas"))
                 || (PlayerPrefs.GetString("ArmaPlayerP1") == "true" && PlayerPrefs.GetString("ArmaPlayerP2") == "true" && this.transform.parent.name.Contains("DoorBoss"))
                 )
             {
@@ -42,13 +43,23 @@ public class OpenDoon : MonoBehaviour
                 other.GetComponent<OpenDoon>().unlocked = true;
                 StartCoroutine("Unlock", 0.3f);
 
-                if (col.gameObject.GetComponent<PlayerController>().hasKey == true)
+                if (col.gameObject.GetComponent<PlayerController>().hasKey1 == true)
                 { 
-                    col.gameObject.GetComponent<PlayerController>().hasKey = false; 
+                    col.gameObject.GetComponent<PlayerController>().hasKey1 = false; 
+                    Destroy(GameObject.Find("DescTrancaFreezer"));
                     Destroy(GameObject.Find("key1-item"));
-                    if (this.transform.parent.name.Contains("DoorEscadas"))
-                        Destroy(GameObject.Find("DescItem Tranca (2)"));
                 }
+                
+                if (this.transform.parent.name.Contains("DoorEscadas"))
+                {
+                    if (col.gameObject.GetComponent<PlayerController>().hasKey3 == true)
+                    { 
+                        col.gameObject.GetComponent<PlayerController>().hasKey3 = false; 
+                        Destroy(GameObject.Find("key3-item"));
+                        Destroy(GameObject.Find("DescItem Tranca (2)"));
+                    }
+                }
+                
 
                 if (col.gameObject.GetComponent<PlayerController>().hasLockp == true)
                 { 
@@ -56,6 +67,9 @@ public class OpenDoon : MonoBehaviour
                     Destroy(GameObject.Find("lockpick-item"));
                     if (this.transform.parent.name.Contains("DoorCamareira"))
                         Destroy(GameObject.Find("DescItem Tranca (1)"));
+
+                    if (this.transform.parent.name.Contains("DoorDespensa"))
+                        Destroy(GameObject.Find("DescItem Tranca Despensa"));
                 }
 
                 if (this.transform.parent.name.Contains("DoorArmas"))
@@ -66,7 +80,7 @@ public class OpenDoon : MonoBehaviour
                 if (this.transform.parent.name.Contains("DoorBoss"))
                 {
                     Destroy(GameObject.Find("DescItem boss"));
-                    PlayerPrefs.SetString("CanOpenBossDoor", "true");
+                    PlayerPrefs.SetString("SaveStatus", "Boss");
                 }
             }
         }

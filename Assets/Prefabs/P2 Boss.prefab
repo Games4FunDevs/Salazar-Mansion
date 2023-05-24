@@ -172,7 +172,6 @@ GameObject:
   - component: {fileID: 3164678453414389704}
   - component: {fileID: 3391913690408011646}
   - component: {fileID: 3207446526956400926}
-  - component: {fileID: 3047692571171177278}
   m_Layer: 0
   m_Name: P2 Boss
   m_TagString: P2
@@ -306,33 +305,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3047692571171177278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3164678453414389711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db6973306f9eba145bca2d0ccf0a1891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  img: {fileID: 1526989697370531604}
-  gunshot: {fileID: 994837191829866884}
-  salazar: {fileID: 0}
-  text_: {fileID: 8473621652319177083}
-  botao:
-  - J
-  - K
-  - L
-  resposta: 
-  open: 0
-  corout: 0
-  acerto: 000000
-  qtd: 0
-  timer: 2
-  curTime: 0
 --- !u!1 &3205415777514370179
 GameObject:
   m_ObjectHideFlags: 0

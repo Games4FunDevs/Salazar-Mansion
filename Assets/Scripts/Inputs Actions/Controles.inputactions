@@ -342,7 +342,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "J",
+                    "name": "Left",
                     "type": "Button",
                     "id": "9e600e44-9e80-40c1-8b81-854ff3eeefca",
                     "expectedControlType": "Button",
@@ -351,7 +351,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "K",
+                    "name": "Down",
                     "type": "Button",
                     "id": "a36e1479-d2ca-4675-8418-3417925ba742",
                     "expectedControlType": "Button",
@@ -360,7 +360,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "L",
+                    "name": "Right",
                     "type": "Button",
                     "id": "5201170c-1c26-44cd-9652-8b755235e9df",
                     "expectedControlType": "Button",
@@ -373,7 +373,7 @@
                 {
                     "name": "",
                     "id": "f6861f60-0752-45cb-b774-be51c6793f96",
-                    "path": "<Keyboard>/o",
+                    "path": "<Keyboard>/rightCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
@@ -406,7 +406,7 @@
                 {
                     "name": "up",
                     "id": "61f26cf4-cf32-480a-b646-0f97ffcdfbbe",
-                    "path": "<Keyboard>/i",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
@@ -417,7 +417,7 @@
                 {
                     "name": "down",
                     "id": "5ea01af2-c2c3-4b40-8705-7c8c5cbf2e1f",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
@@ -428,7 +428,7 @@
                 {
                     "name": "left",
                     "id": "694c6e9f-22fa-4793-a4ea-3c8da8ed4398",
-                    "path": "<Keyboard>/j",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
@@ -439,7 +439,7 @@
                 {
                     "name": "right",
                     "id": "039db481-b46a-4622-b29e-10418bee3577",
-                    "path": "<Keyboard>/l",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
@@ -505,11 +505,11 @@
                 {
                     "name": "",
                     "id": "aaf13f89-1cfb-489d-af45-73a2dbc306e4",
-                    "path": "<Keyboard>/j",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
-                    "action": "J",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -520,18 +520,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controle",
-                    "action": "J",
+                    "action": "Left",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "a1d884ec-6d72-4d77-9917-d07ad86cbb57",
-                    "path": "<Keyboard>/k",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
-                    "action": "K",
+                    "action": "Down",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -542,18 +542,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controle",
-                    "action": "K",
+                    "action": "Down",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "4e32f44d-9ea0-4656-8039-27b43927ec83",
-                    "path": "<Keyboard>/l",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "Teclado",
-                    "action": "L",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -564,7 +564,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Controle",
-                    "action": "L",
+                    "action": "Right",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
