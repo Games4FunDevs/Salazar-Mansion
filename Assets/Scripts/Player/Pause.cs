@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class Pause : MonoBehaviour
 {
     public bool inv = false, open = false;
-    public GameObject canvasMenu;
+    public GameObject canvasMenu, gameover;
     private Controles controles;
 
     void Awake() 

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Inimigo : MonoBehaviour
 {
     private NavMeshAgent nma;
+    public GameObject gameover;
     public Transform[] targetPlayer; 
 
     void Start() => nma = GetComponent<NavMeshAgent>();
@@ -27,7 +28,8 @@ public class Inimigo : MonoBehaviour
     {
         if (col.gameObject.tag == "P1" || col.gameObject.tag == "P2")
         {
-            SceneManager.LoadScene("GameOver");
+            gameover.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 }

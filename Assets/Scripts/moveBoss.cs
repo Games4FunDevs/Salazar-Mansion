@@ -6,7 +6,7 @@ public class moveBoss : MonoBehaviour
 {
     public bool front = false;
 
-    void Update()
+    void LateUpdate()
     {
         if (front == true)
             transform.Translate(Vector3.forward * Time.deltaTime * Time.timeScale);
