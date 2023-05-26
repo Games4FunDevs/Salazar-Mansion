@@ -8,7 +8,7 @@ public class PlayerPrefsManager : MonoBehaviour
 {
     IEnumerator coroutine;
 
-    public GameObject boss, p1, p2, salazar, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss, cutsceneCaveira;
+    public GameObject boss, p1, p2, salazar, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss, cutsceneCaveira, musboss, brutos;
     public GameObject[] descartaveis;
 
     public bool openBoss, aux, cutscenePlay = false;
@@ -49,22 +49,24 @@ public class PlayerPrefsManager : MonoBehaviour
                 {
                     Destroy(descartaveis[i]);
                 }
-                Time.timeScale = 1;
                 this.gameObject.GetComponent<PlayerPrefsManager>().enabled = false;
             }
-            else if (PlayerPrefs.GetString("SaveStatus") == "caveira" && aux == false)
+            else if (PlayerPrefs.GetString("SaveStatus") == "caveira")
             {
                 Destroy(this.transform.GetChild(0).gameObject);
                 cutsceneCaveira.SetActive(true);
+                p1Old.SetActive(true);
+                p2Old.SetActive(true);
+                musboss.SetActive(false);
                 p1Old.transform.position = new Vector3(-1.77f, 0.94f, -41.83f); 
+                brutos.transform.position = new Vector3(-7.5f,-0.0500000007f,-20.2299995f); 
+                brutos.transform.rotation = new Quaternion(0,1,0,0); 
                 p1Old.transform.GetChild(2).gameObject.GetComponent<Camera>().rect = new Rect(0, 0, 0.5f, 1);
                 p2Old.transform.position = new Vector3(-1.86f, 0.94f, -41.83f);
                 p2Old.transform.GetChild(2).gameObject.SetActive(true);
-                aux = true;
-                Time.timeScale = 1;
                 this.gameObject.GetComponent<PlayerPrefsManager>().enabled = false;
             }
-            else if (PlayerPrefs.GetString("SaveStatus") == "andar1" && aux == false)
+            else if (PlayerPrefs.GetString("SaveStatus") == "andar1")
             {
                 Destroy(this.transform.GetChild(0).gameObject);
                 if (PlayerPrefs.GetString("P1HasKey2") == "true")
@@ -72,12 +74,12 @@ public class PlayerPrefsManager : MonoBehaviour
                 if (PlayerPrefs.GetString("P2HasKey2") == "true")
                     { p2Old.GetComponent<PlayerController>().hasKey2 = true; }
                 p1Old.SetActive(true);
+                musboss.SetActive(false);
                 p2Old.SetActive(true);
                 p1Old.transform.position = new Vector3(-13.39f, 7.73f, -48f); 
                 p1Old.transform.GetChild(2).gameObject.GetComponent<Camera>().rect = new Rect(0, 0, 0.5f, 1);
                 p2Old.transform.position = new Vector3(-15f, 7.73f, -48.5f);
                 p2Old.transform.GetChild(2).gameObject.SetActive(true);
-                aux = true;
                 Time.timeScale = 1;
                 this.gameObject.GetComponent<PlayerPrefsManager>().enabled = false;
             }

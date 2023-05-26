@@ -37495,6 +37495,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4816147883862898340, guid: 604800daf217bc04cb41410cb462e364, type: 3}
+      propertyPath: p1
+      value: 
+      objectReference: {fileID: 713011238}
+    - target: {fileID: 4816147883862898340, guid: 604800daf217bc04cb41410cb462e364, type: 3}
+      propertyPath: p2
+      value: 
+      objectReference: {fileID: 335618744}
+    - target: {fileID: 4816147883862898340, guid: 604800daf217bc04cb41410cb462e364, type: 3}
+      propertyPath: btn
+      value: 
+      objectReference: {fileID: 1032558355}
+    - target: {fileID: 4816147883862898340, guid: 604800daf217bc04cb41410cb462e364, type: 3}
+      propertyPath: black
+      value: 
+      objectReference: {fileID: 1182246045}
+    - target: {fileID: 4816147883862898340, guid: 604800daf217bc04cb41410cb462e364, type: 3}
       propertyPath: gameover
       value: 
       objectReference: {fileID: 2095909129}
@@ -44733,6 +44749,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1289386675}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1182246045}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -44780,18 +44808,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1289386675}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!222 &1032558360
 CanvasRenderer:
@@ -51118,6 +51134,14 @@ PrefabInstance:
       propertyPath: p2Old
       value: 
       objectReference: {fileID: 335618744}
+    - target: {fileID: 5678479751174899267, guid: 4899d31c0ea48634aa57a13b62bc85c7, type: 3}
+      propertyPath: brutos
+      value: 
+      objectReference: {fileID: 2100844790}
+    - target: {fileID: 5678479751174899267, guid: 4899d31c0ea48634aa57a13b62bc85c7, type: 3}
+      propertyPath: musboss
+      value: 
+      objectReference: {fileID: 1289386675}
     - target: {fileID: 5678479751174899267, guid: 4899d31c0ea48634aa57a13b62bc85c7, type: 3}
       propertyPath: salazar
       value: 
@@ -91749,7 +91773,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2100500562
 Animator:
   serializedVersion: 4

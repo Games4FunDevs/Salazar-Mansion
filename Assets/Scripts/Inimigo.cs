@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class Inimigo : MonoBehaviour
 {
     private NavMeshAgent nma;
-    public GameObject gameover;
+    public GameObject gameover, btn, p1, p2;
     public Transform[] targetPlayer; 
 
     void Start() => nma = GetComponent<NavMeshAgent>();
@@ -29,7 +29,10 @@ public class Inimigo : MonoBehaviour
         if (col.gameObject.tag == "P1" || col.gameObject.tag == "P2")
         {
             gameover.SetActive(true);
-            Time.timeScale = 0;
+            EventSystem.current.SetSelectedGameObject(btn);
+            p1.SetActive(false);
+            p2.SetActive(false);
+            this.gameObject.SetActive(false);
         }
     }
 }
