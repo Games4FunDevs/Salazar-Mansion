@@ -17,10 +17,12 @@ public class EnergyUnlock : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if (peca == false && (col.CompareTag("P1") && col.GetComponent<PlayerController>().hasPeca == true && controles.P1.Interagir.ReadValue<float>() == 1) || (col.CompareTag("P2") && col.GetComponent<PlayerController>().hasPeca == true && controles.P2.Interagir.ReadValue<float>() == 1))
+        if (peca == false && (col.CompareTag("P1") && col.GetComponent<PlayerController>().hasPeca == true && controles.P1.Interagir.ReadValue<float>() == 1) 
+                            || (col.CompareTag("P2") && col.GetComponent<PlayerController>().hasPeca == true && controles.P2.Interagir.ReadValue<float>() == 1))
         {
             //StartCoroutine("PecaTrue", .3f);
             this.transform.GetChild(3).gameObject.GetComponent<ShowCanvasText>().texto = "Encaixou! Ligou a energia em algum lugar.";
+            this.transform.GetChild(3).gameObject.GetComponent<ShowCanvasText>().auto = false;
             
             this.transform.GetChild(2).gameObject.SetActive(true);
             this.transform.GetChild(1).gameObject.SetActive(true);

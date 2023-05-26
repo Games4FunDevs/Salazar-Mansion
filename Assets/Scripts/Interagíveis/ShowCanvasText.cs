@@ -46,6 +46,7 @@ public class ShowCanvasText : MonoBehaviour
                 {
                     this.showing = false;
                     this.cAuto = false;
+                    this.aux = false;
                     gObject[0].SetActive(false);
                     if (this.gameObject.name.Contains("Billboard-minigame (1)") || this.gameObject.name.Contains("Billboard-minigame"))
                     {
@@ -58,19 +59,25 @@ public class ShowCanvasText : MonoBehaviour
             if (player == 2)
             {
                 gObject[1].SetActive(true);
-                if (image == false)
-		{
-                	gObject[1].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
-		}
-		else
-		{
-			gObject[1].transform.GetChild(0).GetComponent<Image>().sprite = imageInspect;
-		}
+                if (image == false && this.aux == false)
+                {
+                    gObject[1].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = texto;
+                    this.aux = true;
+                }
+                
+                if (image == true)
+                {
+                    gObject[1].transform.GetChild(1).GetComponent<Image>().sprite = imageInspect;
+                    gObject[1].transform.gameObject.GetComponent<Image>().enabled = false;
+                    gObject[1].transform.GetChild(0).gameObject.SetActive(false);
+                    gObject[1].transform.GetChild(1).gameObject.SetActive(true);
+                }
 
                 if (controles.P2.Interagir.triggered)
                 {
                     this.showing = false;
                     this.cAuto = false;
+                    this.aux = false;
                     gObject[1].SetActive(false);
                     if (this.gameObject.name.Contains("Billboard-minigame (1)") || this.gameObject.name.Contains("Billboard-minigame"))
                     {
@@ -137,6 +144,8 @@ public class ShowCanvasText : MonoBehaviour
                 this.showing = false;
                 this.gameObject.GetComponent<ShowCanvasText>().enabled = true;
             }
+
+            this.aux = false;
         }
     }
 
