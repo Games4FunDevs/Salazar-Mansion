@@ -8,7 +8,8 @@ public class PlayerPrefsManager : MonoBehaviour
 {
     IEnumerator coroutine;
 
-    public GameObject boss, p1, p2, salazar, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss, cutsceneCaveira, musboss, brutos;
+    public GameObject boss, p1, p2, salazar, p1Old, p2Old, cinematics, grid1, grid4, panel, luzes, introboss, cutsceneCaveira, musboss, brutos, sufocado, painel;
+    public CutsceneInicial cutsinicial;
     public GameObject[] descartaveis;
 
     public bool openBoss, aux, cutscenePlay = false;
@@ -82,6 +83,17 @@ public class PlayerPrefsManager : MonoBehaviour
                 p2Old.transform.GetChild(2).gameObject.SetActive(true);
                 Time.timeScale = 1;
                 this.gameObject.GetComponent<PlayerPrefsManager>().enabled = false;
+            }
+            else 
+            {
+                p1Old.transform.position = new Vector3(5.5999999f,1.00999999f,-24.4300003f);
+                p2Old.transform.position = new Vector3(-2.56999993f,1.00999999f,-14.4700003f);
+                p1Old.SetActive(false);
+                p2Old.SetActive(false);
+                p1Old.transform.GetChild(2).gameObject.GetComponent<Camera>().rect = new Rect(0, 0, 1, 1);
+                cutsinicial.count = 0;
+                painel.SetActive(true);
+                sufocado.SetActive(false);
             }
         }
     }

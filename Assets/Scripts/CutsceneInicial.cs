@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
@@ -9,7 +9,7 @@ public class CutsceneInicial : MonoBehaviour
 {
     private Controles controles;
 
-    public GameObject cinematica, cinematica2;
+    public GameObject cinematica, cinematica2, gameover, btnGO;
 
     public string[] textos;
     public TextMeshProUGUI text_;
@@ -53,7 +53,7 @@ public class CutsceneInicial : MonoBehaviour
             PlayerPrefs.SetString("ShowBtnInfo1", "true");
             if (cinematica != null) { cinematica.SetActive(true); }
             timerStart = 1;
-            Destroy(painel);
+            painel.SetActive(false);
             sufocado.SetActive(true);
             count++;
         }
@@ -69,11 +69,20 @@ public class CutsceneInicial : MonoBehaviour
         }
 
         if (curTime <= 0)
-            SceneManager.LoadScene("GameOver");
+        {
+            gameover.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(btnGO);
+            sufocado.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f);
+            curTime = 60;
+            timerStart = 0;
+            count = 0;
+        }
         else
         {
             if (portaP2 != null && portaP2.GetComponent<OpenDoon>().unlocked == true )
                 Destroy(this.gameObject);
         }
     }
+
+    public void SetTimer60() => curTime = timer;
 }

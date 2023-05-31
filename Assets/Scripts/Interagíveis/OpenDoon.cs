@@ -81,6 +81,7 @@ public class OpenDoon : MonoBehaviour
                 {
                     Destroy(GameObject.Find("DescItem boss"));
                     PlayerPrefs.SetString("SaveStatus", "Boss");
+                    GameObject.Find("SceneManager").GetComponent<PlayerPrefsManager>().Save();
                 }
             }
         }
